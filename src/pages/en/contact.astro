@@ -6,9 +6,9 @@ import { route } from '../../i18n/routes';
 import { contactPageSchema } from '../../lib/seo';
 const lang = 'en';
 const path = route('contact', lang);
-const description = 'Write to the publisher of Home Cost Ledger about a figure, a source or a calculator. We answer data questions; we do not refer contractors or review individual quotes.';
+const description = 'Write to the publisher of Home Costs by State about a figure, a source or a calculator. We answer data questions; we do not refer contractors or review individual quotes.';
 ---
-<PageLayout title="Contact Home Cost Ledger: corrections, data and embed questions" description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contact', description, path, lang })]} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+<PageLayout title="Contact Home Costs by State: corrections, data and embed questions" description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contact', description, path, lang })]} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
   <div class="prose prose-slate max-w-none prose-headings:font-serif">
     <h1>Contact</h1>
     <p>E-mail: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. There is no form on purpose: a form would be one more place where a phone number gets typed.</p>

@@ -18,7 +18,7 @@ const rowsJobs = jobs.map((k) => { const a = K.ahs(k); const sh = K.shares(k); r
 const rowsCpi = Object.entries(cpi.annual).filter(([y]) => ['2021', '2022', '2023'].includes(y)).map(([y, v]) => [y, K.num(v as number, 3), K.num(cpi.value / (v as number), 3)]);
 const src = (k: string, t?: string) => `<a href="${SOURCES[k].url}" target="_blank" rel="nofollow noopener noreferrer">${t ?? SOURCES[k].label}</a>`;
 const title = 'Home Cost Data 2026: Census, BLS and EIA Sources Explained';
-const description = 'How each price on Home Cost Ledger is built in 2026: Census survey jobs, BLS wages by state, Economic Census cost shares, EIA energy prices, and their limits.';
+const description = 'How each price on Home Costs by State is built in 2026: Census survey jobs, BLS wages by state, Economic Census cost shares, EIA energy prices and their limits.';
 ---
 <PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: 'How prices are built', description, path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'How prices are built', path }])]} breadcrumbs={[{ label: 'How prices are built' }]}>
   <article class="prose prose-slate max-w-none prose-headings:font-serif">

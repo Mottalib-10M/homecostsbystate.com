@@ -1,6 +1,6 @@
 /** Configuration centrale du site (générée par new-site.py). */
-export const SITE_URL = "https://us-home-costs.example";
-export const SITE_NAMES: Record<string, string> = {"en": "Home Cost Ledger"};
+export const SITE_URL = "https://homecostsbystate.com";
+export const SITE_NAMES: Record<string, string> = {"en": "Home Costs by State"};
 export const LANG_TAGS: Record<string, string> = {"en": "en-US"};
 export const OG_LOCALES: Record<string, string> = {"en": "en_US"};
 export const LOCALE_TAG = 'en-US';
@@ -16,7 +16,7 @@ export const AUTHOR_DESC: Record<string, string> = {"en": "Radif Partners builds
  *  themes reellement traites par le site, pas une liste de mots-cles : un sujet
  *  declare ici sans page qui le couvre est une declaration fausse. */
 export const KNOWS_ABOUT: Record<string, string[]> = {"en": ["Roof replacement cost", "Water heater replacement cost", "HVAC and heat pump replacement cost", "Residential solar panel cost and payback", "Concrete, gravel, mulch, paint and drywall quantities", "Construction trade wages by state"]};
-export const CONTACT_EMAIL = "contact@us-home-costs.example";
+export const CONTACT_EMAIL = "contact@homecostsbystate.com";
 export const THEME_COLOR = '#B22234';
 export const LOGO_SYMBOL = 'maison';
 export const BING_VERIFY_CODE = '';
@@ -27,7 +27,7 @@ export const GOOGLE_VERIFY_CODE = '';
 export const CONSENT_MODE: 'opt-in' | 'notice' | 'none' = 'none';
 export const GA4_ID = '';
 /** Projet Microsoft Clarity (compte amradif), chargé sans cookie. Vide = aucune mesure. */
-export const CLARITY_ID = '';
+export const CLARITY_ID = 'yvjqdcg5wf';
 export const INDEXNOW_KEY = '3e8b1c7a9d2f4e60b5a1c9d8e7f2a4b6';
 
 /* ------------------------------------------------------------------------- *

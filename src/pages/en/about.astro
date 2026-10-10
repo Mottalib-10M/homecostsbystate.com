@@ -7,12 +7,12 @@ import { KIT as K } from '../../lib/kit';
 import { profilePageSchema, breadcrumbSchema } from '../../lib/seo';
 const lang = 'en';
 const path = route('about', lang);
-const title = 'Home Cost Ledger 2026: Who Publishes It and How Prices Work';
-const description = 'Home Cost Ledger is published by Radif Partners: free 2026 home cost calculators built on Census, BLS and EIA data, no lead form and no contractor referral.';
+const title = 'Home repair costs 2026: who publishes them and how it works';
+const description = 'Home Costs by State is published by Radif Partners: free 2026 home cost calculators built on Census, BLS and EIA data, no lead form and no contractor referral.';
 ---
 <PageLayout title={title} description={description} lang={lang} jsonLd={[profilePageSchema({ path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path }])]} breadcrumbs={[{ label: 'About' }]}>
   <article class="prose prose-slate max-w-none prose-headings:font-serif">
-    <h1>About Home Cost Ledger</h1>
+    <h1>About Home Costs by State</h1>
     <p>{AUTHOR_DESC.en}</p>
     <h2>Why this site exists</h2>
     <p>Most pages that answer "how much does a new roof cost" end in a form: a ZIP code, then a name and a phone number, and the price arrives later from a contractor who paid for the contact. This site does better than the first Google result for those searches because it gives the price at once, without a ZIP code or a phone number, from what homeowners actually paid according to the Census Bureau, adjusted to each state with the May 2025 BLS wages of the trade, and it publishes the method and the sources behind every figure.</p>

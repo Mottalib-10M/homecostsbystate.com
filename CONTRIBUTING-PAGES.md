@@ -1,4 +1,4 @@
-# Écrire ou étoffer une page de « Home Cost Ledger » (us-home-costs)
+# Écrire ou étoffer une page de « Home Costs by State » (us-home-costs)
 
 Notice pour les agents qui écrivent ou prolongent le site. À lire en entier avant d'écrire, avec
 `~/Documents/GitHub/RECETTE-SITE.md` (§0, §6, §6.5, §7, §9, §9.3, §11, §17.4, §21, §26).

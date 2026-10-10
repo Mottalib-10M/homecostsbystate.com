@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /*?*
 
-Sitemap: https://us-home-costs.example/sitemap-index.xml
+Sitemap: https://homecostsbystate.com/sitemap-index.xml
