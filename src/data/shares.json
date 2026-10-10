@@ -1,0 +1,80 @@
+{
+ "236118": {
+  "label": "Residential remodelers",
+  "valueOfWorkK": 125945502.0,
+  "materials": 0.3591,
+  "payroll": 0.1855,
+  "benefits": 0.0354,
+  "subcontracted": 0.1977
+ },
+ "238110": {
+  "label": "Poured concrete foundation and structure contractors",
+  "valueOfWorkK": 77131396.0,
+  "materials": 0.3525,
+  "payroll": 0.233,
+  "benefits": 0.0573,
+  "subcontracted": 0.0994
+ },
+ "238130": {
+  "label": "Framing contractors",
+  "valueOfWorkK": 27934626.0,
+  "materials": 0.3735,
+  "payroll": 0.1965,
+  "benefits": 0.0458,
+  "subcontracted": 0.1376
+ },
+ "238160": {
+  "label": "Roofing contractors",
+  "valueOfWorkK": 67914485.0,
+  "materials": 0.3792,
+  "payroll": 0.1982,
+  "benefits": 0.0504,
+  "subcontracted": 0.0885
+ },
+ "238210": {
+  "label": "Electrical contractors and other wiring installation contractors",
+  "valueOfWorkK": 244852717.0,
+  "materials": 0.3143,
+  "payroll": 0.2823,
+  "benefits": 0.0851,
+  "subcontracted": 0.0575
+ },
+ "238220": {
+  "label": "Plumbing, heating, and air-conditioning contractors",
+  "valueOfWorkK": 288331268.0,
+  "materials": 0.3249,
+  "payroll": 0.2787,
+  "benefits": 0.0818,
+  "subcontracted": 0.0735
+ },
+ "238310": {
+  "label": "Drywall and insulation contractors",
+  "valueOfWorkK": 55407645.0,
+  "materials": 0.3168,
+  "payroll": 0.2636,
+  "benefits": 0.0857,
+  "subcontracted": 0.0849
+ },
+ "238320": {
+  "label": "Painting and wall covering contractors",
+  "valueOfWorkK": 30815533.0,
+  "materials": 0.2034,
+  "payroll": 0.3254,
+  "benefits": 0.085,
+  "subcontracted": 0.059
+ },
+ "238990": {
+  "label": "All other specialty trade contractors",
+  "valueOfWorkK": 77926199.0,
+  "materials": 0.332,
+  "payroll": 0.2413,
+  "benefits": 0.0569,
+  "subcontracted": 0.0816
+ },
+ "484210": {
+  "label": "Used household and office goods moving",
+  "revenueK": 20117014.0,
+  "payrollK": 4678982.0,
+  "revenuePerPayrollDollar": 4.299
+ }
+}

@@ -1,0 +1,66 @@
+---
+/**
+ * Renders the calculator of a page with the figures it needs (prepared server side, from src/data via
+ * lib/data.ts), as a hydrated island. `state` preselects or, with `lock`, fixes the state.
+ */
+import JobCalc from './calc/JobCalc';
+import ConcreteCalc from './calc/ConcreteCalc';
+import SqftCalc from './calc/SqftCalc';
+import LooseCalc from './calc/LooseCalc';
+import PaintCalc from './calc/PaintCalc';
+import DrywallCalc from './calc/DrywallCalc';
+import RoofingCalc from './calc/RoofingCalc';
+import EnergyCalc from './calc/EnergyCalc';
+import HeatingCalc from './calc/HeatingCalc';
+import SolarCalc from './calc/SolarCalc';
+import MovingCalc from './calc/MovingCalc';
+import { route } from '../i18n/routes';
+import { month, day } from '../lib/fmt';
+import {
+  P, STATE_LIST, jobInput, JOB_DEFS, OCCUPATIONS, nationalWage, stateWage, AHS_META, centsPerKwh, usage2024, gasPerMcf, propanePerGal, oilPerGal,
+  US_ENERGY, ENERGY_META, recsHeating, pvwatts, solarQuote, reportedToQuote, sharesOf,
+} from '../lib/data';
+import SOLAR from '../data/solar.json';
+import type { ToolKind } from '../lib/page-types';
+interface Props { kind: ToolKind; state?: string; lock?: boolean; idPrefix?: string; methodHref?: string }
+const { kind, state, lock = false, idPrefix, methodHref = route('method', 'en') } = Astro.props;
+const M = P.materials;
+const states = STATE_LIST.map((s) => ({ value: s.slug, label: s.name }));
+const withUs = [{ value: 'us', label: 'United States (national figure)' }, ...states];
+const job = (key: string) => {
+  const d = JOB_DEFS[key];
+  return { input: jobInput(key), label: d.label, occTitle: OCCUPATIONS[d.occ].title, natWage: nationalWage(d.occ).mean, wages: Object.fromEntries(STATE_LIST.map((s) => [s.slug, stateWage(s.slug, d.occ)?.mean ?? 0]).filter(([, v]) => v)) };
+};
+const years = AHS_META.years;
+const cpiTo = month(AHS_META.cpi.to);
+const pre = idPrefix ?? kind.slice(0, 4);
+const energyBy = Object.fromEntries(STATE_LIST.map((s) => [s.slug, { cents: centsPerKwh(s.slug), kwhMonth: usage2024(s.slug).kwhMonth, bill: usage2024(s.slug).bill }]));
+const fuelPeriod = ENERGY_META.gas;
+const heatBy = Object.fromEntries(STATE_LIST.map((s) => [s.slug, {
+  cents: centsPerKwh(s.slug), gas: gasPerMcf(s.slug) ?? US_ENERGY.gas, propane: propanePerGal(s.slug) ?? US_ENERGY.propane, oil: oilPerGal(s.slug) ?? US_ENERGY.oil,
+  recs: { gas: recsHeating(s.slug, 'gas').value, propane: recsHeating(s.slug, 'propane').value, oil: recsHeating(s.slug, 'oil').value, electricity: recsHeating(s.slug, 'electricity').value },
+  recsLevel: { gas: recsHeating(s.slug, 'gas').level, propane: recsHeating(s.slug, 'propane').level, oil: recsHeating(s.slug, 'oil').level, electricity: recsHeating(s.slug, 'electricity').level },
+}]));
+const solarBy = Object.fromEntries(STATE_LIST.filter((s) => pvwatts(s.slug)).map((s) => [s.slug, { kwhPerKw: pvwatts(s.slug)!.kwhPerKw, city: pvwatts(s.slug)!.city, quote: solarQuote(s.slug).perW, quoteScope: solarQuote(s.slug).scope, cents: centsPerKwh(s.slug), kwhMonth: usage2024(s.slug).kwhMonth }]));
+const solarStates = states.filter((s) => solarBy[s.value]);
+const solarState = state && solarBy[state] ? state : solarBy.texas ? 'texas' : solarStates[0]?.value;
+const movers = Object.fromEntries(STATE_LIST.map((s) => { const w = stateWage(s.slug, 'movers') ?? nationalWage('movers'); return [s.slug, { p25: w.p25 ?? w.mean, mean: w.mean, p75: w.p75 ?? w.mean }]; }));
+const moveRatio = (sharesOf(P.moving.naics) as unknown as { revenuePerPayrollDollar: number }).revenuePerPayrollDollar;
+const evs = P.ev.kwhPer100mi as Record<string, number>;
+---
+{kind === 'roof-cost' && <JobCalc client:load jobs={[job('roof')]} states={withUs} state={state ?? 'us'} lock={lock} sqft={true} years={years} cpiTo={cpiTo} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'water-heater' && <JobCalc client:load jobs={[job('waterHeater')]} states={withUs} state={state ?? 'us'} lock={lock} years={years} cpiTo={cpiTo} methodHref={methodHref} idPrefix={pre} />}
+{(kind === 'hvac' || kind === 'heat-pump') && <JobCalc client:load jobs={kind === 'hvac' ? [job('centralAc'), job('heating')] : [job('heating'), job('centralAc')]} states={withUs} state={state ?? 'us'} lock={lock} years={years} cpiTo={cpiTo} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'fence' && <JobCalc client:load jobs={[job('fence')]} states={withUs} state={state ?? 'us'} lock={lock} extra="fence" fence={{ panelFt: M.woodFencePanelFt.width, holeIn: M.fenceHoleDiameterIn, yields: M.concreteYieldCuFt }} years={years} cpiTo={cpiTo} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'deck' && <JobCalc client:load jobs={[job('deckPatio')]} states={withUs} state={state ?? 'us'} lock={lock} extra="deck" deck={{ spansIn: M.deckJoistSpanSP16In, spansText: M.deckJoistSpanSP16 }} years={years} cpiTo={cpiTo} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'concrete' && <ConcreteCalc client:load yields={M.concreteYieldCuFt} overage={M.concreteOveragePct} truck={M.truckCuYd} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'square-footage' && <SqftCalc client:load methodHref={methodHref} idPrefix={pre} />}
+{kind === 'gravel' && <LooseCalc client:load mode="gravel" densities={M.aggregateTonsPerCuYd} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'mulch' && <LooseCalc client:load mode="mulch" mulchDepth={M.mulchDepthIn} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'paint' && <PaintCalc client:load coverage={M.paintCoverage.default} coats={M.paintCoatsRecommended} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'drywall' && <DrywallCalc client:load sheets={M.drywallSheets} per1000={M.drywallPer1000} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'roofing' && <RoofingCalc client:load bundles={M.shingleBundlesPerSquare} rollSquares={M.underlaymentSquaresPerRoll} starterFt={M.starterFtPerBundle} ridgeFt={M.ridgeFtPerCarton} methodHref={methodHref} idPrefix={pre} />}
+{(kind === 'electricity' || kind === 'electric-bill' || kind === 'ev') && <EnergyCalc client:load mode={kind === 'electricity' ? 'appliance' : kind === 'electric-bill' ? 'bill' : 'ev'} states={states} byState={energyBy} state={state ?? 'texas'} lock={lock} period={ENERGY_META.electricityText} gasoline={US_ENERGY.gasoline} gasolineWeek={ENERGY_META.gasoline} evs={evs} evDefault={P.ev.default} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'heating-compare' && <HeatingCalc client:load states={states} byState={heatBy} state={state ?? 'ohio'} lock={lock} btu={P.btu} afue={P.efficiency.gasFurnaceAfue} hspf2={P.efficiency.heatPumpSplit.hspf2} periods={{ electricity: ENERGY_META.electricityText, fuels: fuelPeriod }} methodHref={methodHref} idPrefix={pre} />}
+{(kind === 'solar-cost' || kind === 'solar-size' || kind === 'solar-payback') && solarState && <SolarCalc client:load mode={kind === 'solar-cost' ? 'cost' : kind === 'solar-size' ? 'size' : 'payback'} states={solarStates} byState={solarBy} state={solarState} lock={lock} ratio={reportedToQuote()} panelW={SOLAR.nyPanelWattsMedian} medianKw={P.solar.medianResidentialKw2023} creditEnded={day(P.solar.residentialCreditEnded)} methodHref={methodHref} idPrefix={pre} />}
+{kind === 'moving' && <MovingCalc client:load states={states} wages={movers} ratio={moveRatio} state={state ?? 'texas'} lock={lock} methodHref={methodHref} idPrefix={pre} />}

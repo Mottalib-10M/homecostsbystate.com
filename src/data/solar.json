@@ -1,0 +1,37 @@
+{
+ "pvwatts": {
+  "alabama": {
+   "kwhPerKw": 1367,
+   "city": "Birmingham",
+   "station": "NSRDB PSM V3 GOES tmy-2020 3.2.0"
+  },
+  "alaska": {
+   "kwhPerKw": 922,
+   "city": "Anchorage",
+   "station": "NSRDB PSM V4 Polar tmy-2023 1.0.0"
+  },
+  "arizona": {
+   "kwhPerKw": 1755,
+   "city": "Phoenix",
+   "station": "NSRDB PSM V3 GOES tmy-2020 3.2.0"
+  },
+  "arkansas": {
+   "kwhPerKw": 1413,
+   "city": "Little Rock",
+   "station": "NSRDB PSM V3 GOES tmy-2020 3.2.0"
+  },
+  "california": {
+   "kwhPerKw": 1677,
+   "city": "Los Angeles",
+   "station": "NSRDB PSM V3 GOES tmy-2020 3.2.0"
+  }
+ },
+ "nyPanelWattsMedian": 425,
+ "nyReported2025": {
+  "p20": 3.1,
+  "median": 3.85,
+  "p80": 5.43,
+  "n": 8652,
+  "filter": "Residential, purchased, complete, installed in 2025, 2.5 to 20 kWdc, $0.75 to $10/W"
+ }
+}

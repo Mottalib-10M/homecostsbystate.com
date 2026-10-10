@@ -1,0 +1,360 @@
+{
+  "_readme": "Every figure the site uses that is not in the generated data files (states, wages, shares, ahs, energy, solar: scripts/build-data.py) lives here, with its source. Re-read each value on its source before changing it and update retrieved_at.",
+  "year": 2026,
+  "retrieved_at": "2026-10-10",
+  "valid_from": "2026-01-01",
+  "valid_to": "2026-12-31",
+  "jobs": {
+    "roof": {
+      "key": "roof",
+      "ahs": "roof",
+      "naics": "238160",
+      "occ": "roofers",
+      "label": "Roof replacement"
+    },
+    "waterHeater": {
+      "key": "waterHeater",
+      "ahs": "waterHeater",
+      "naics": "238220",
+      "occ": "plumbers",
+      "label": "Water heater replacement"
+    },
+    "centralAc": {
+      "key": "centralAc",
+      "ahs": "centralAc",
+      "naics": "238220",
+      "occ": "hvac",
+      "label": "Central air conditioning"
+    },
+    "heating": {
+      "key": "heating",
+      "ahs": "heating",
+      "naics": "238220",
+      "occ": "hvac",
+      "label": "Furnace or other built-in heating"
+    },
+    "fence": {
+      "key": "fence",
+      "ahs": "fence",
+      "naics": "238990",
+      "occ": "fence",
+      "label": "Fence"
+    },
+    "deckPatio": {
+      "key": "deckPatio",
+      "ahs": "deckPatio",
+      "naics": "238130",
+      "occ": "carpenters",
+      "label": "Deck, porch or patio"
+    },
+    "driveway": {
+      "key": "driveway",
+      "ahs": "driveway",
+      "naics": "238110",
+      "occ": "cement",
+      "label": "Driveway or walkway"
+    }
+  },
+  "solar": {
+    "_source": "nlr_siu_2026, slide 44 (page 45): EnergySage, median gross cost per watt by state, second half of 2025",
+    "quoteMedianPerW": {
+      "arizona": 2.02,
+      "florida": 2.1,
+      "texas": 2.12,
+      "california": 2.3,
+      "us": 2.48,
+      "new-york": 2.7,
+      "maryland": 2.71,
+      "new-jersey": 2.77,
+      "connecticut": 2.77,
+      "massachusetts": 3.0,
+      "illinois": 3.01
+    },
+    "residentialCreditEnded": "2025-12-31",
+    "pvwatts": {
+      "tilt": 20,
+      "azimuth": 180,
+      "losses": 14,
+      "arrayType": "fixed roof mount",
+      "moduleType": "standard"
+    },
+    "medianResidentialKw2023": 7.4,
+    "_medianKwSource": "lbnl_tts_2024, page 14: \"Median residential system sizes reached 7.4 kW in 2023\""
+  },
+  "btu": {
+    "kwh": 3412,
+    "gasCuFt": 1036,
+    "propaneGal": 91452,
+    "oilGal": 138500
+  },
+  "moving": {
+    "naics": "484210"
+  },
+  "sources": {
+    "bls_oews": {
+      "url": "https://www.bls.gov/oes/tables.htm",
+      "label": "U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics, May 2025 state and national estimates (released May 15, 2026)"
+    },
+    "bls_oews_release": {
+      "url": "https://www.bls.gov/news.release/ocwage.nr0.htm",
+      "label": "BLS news release USDL-26-0725, Occupational Employment and Wages, May 2025 (May 15, 2026)"
+    },
+    "bls_roofers": {
+      "url": "https://www.bls.gov/oes/current/oes472181.htm",
+      "label": "BLS OEWS, 47-2181 Roofers, May 2025"
+    },
+    "census_ahs": {
+      "url": "https://www.census.gov/programs-surveys/ahs/data/2023/ahs-2023-public-use-file--puf-.html",
+      "label": "U.S. Census Bureau and HUD, American Housing Survey 2023, national public use file (home improvement jobs, 2021 to 2023)"
+    },
+    "census_ahs_defs": {
+      "url": "https://www2.census.gov/programs-surveys/ahs/2023/2023%20AHS%20Definitions.pdf",
+      "label": "American Housing Survey 2023, Definitions (home improvement, professional or do-it-yourself, primary year of work)"
+    },
+    "census_ec": {
+      "url": "https://www2.census.gov/programs-surveys/economic-census/data/2022/sector23/",
+      "label": "U.S. Census Bureau, 2022 Economic Census, Construction: summary statistics by industry (EC2223BASIC)"
+    },
+    "census_ec48": {
+      "url": "https://www2.census.gov/programs-surveys/economic-census/data/2022/sector48/",
+      "label": "U.S. Census Bureau, 2022 Economic Census, Transportation and Warehousing (EC2248BASIC), NAICS 484210"
+    },
+    "bls_cpi": {
+      "url": "https://www.bls.gov/cpi/",
+      "label": "BLS Consumer Price Index for All Urban Consumers (CPI-U), U.S. city average, all items (CUUR0000SA0)"
+    },
+    "eia_epm": {
+      "url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_06_b",
+      "label": "U.S. Energy Information Administration, Electric Power Monthly, Table 5.6.B, average residential price by state, year to date through July 2026"
+    },
+    "eia_861": {
+      "url": "https://www.eia.gov/electricity/sales_revenue_price/",
+      "label": "EIA, Electric Sales, Revenue, and Average Price 2024, Table 5A: residential average monthly consumption and bill by state"
+    },
+    "eia_gas": {
+      "url": "https://www.eia.gov/dnav/ng/ng_pri_sum_a_EPG0_PRS_DMcf_m.htm",
+      "label": "EIA, Natural Gas Prices, residential price by state (monthly)"
+    },
+    "eia_heating_fuels": {
+      "url": "https://www.eia.gov/petroleum/heatingoilpropane/",
+      "label": "EIA, Heating Oil and Propane Update, weekly residential prices by state (October 2025 to March 2026 season)"
+    },
+    "eia_gasoline": {
+      "url": "https://www.eia.gov/petroleum/gasdiesel/",
+      "label": "EIA, Gasoline and Diesel Fuel Update, weekly U.S. regular retail price"
+    },
+    "eia_btu": {
+      "url": "https://www.eia.gov/energyexplained/units-and-calculators/british-thermal-units.php",
+      "label": "EIA, British thermal units (Btu): sample conversion factors for electricity, natural gas, heating oil and propane"
+    },
+    "eia_recs": {
+      "url": "https://www.eia.gov/consumption/residential/data/2020/index.php?view=consumption",
+      "label": "EIA, Residential Energy Consumption Survey 2020, Table CE4.6: average site energy for space heating by fuel and division"
+    },
+    "nlr_siu_2026": {
+      "url": "https://www.osti.gov/servlets/purl/17028732",
+      "label": "National Laboratory of the Rockies (formerly NREL), Spring 2026 Solar and Storage Industry Update, May 19, 2026 (EnergySage price by state, H2 2025)"
+    },
+    "nyserda_solar": {
+      "url": "https://data.ny.gov/Energy-Environment/Solar-Electric-Programs-Reported-by-NYSERDA-Beginn/3x8r-34rs",
+      "label": "NYSERDA, Solar Electric Programs Reported by NYSERDA: Beginning 2000 (data.ny.gov), residential purchases installed in 2025"
+    },
+    "nlr_pvwatts": {
+      "url": "https://pvwatts.nlr.gov/",
+      "label": "National Laboratory of the Rockies, PVWatts Calculator v8 (NSRDB typical-year weather), annual output of 1 kW"
+    },
+    "irs_25d": {
+      "url": "https://www.irs.gov/credits-deductions/residential-clean-energy-credit",
+      "label": "IRS, Residential Clean Energy Credit: not available for property placed in service after December 31, 2025"
+    },
+    "irs_25c": {
+      "url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
+      "label": "IRS, Energy Efficient Home Improvement Credit: improvements made through December 31, 2025"
+    },
+    "lbnl_tts_2024": {
+      "url": "https://www.osti.gov/servlets/purl/2438480",
+      "label": "Lawrence Berkeley National Laboratory, Tracking the Sun, 2024 Edition (installed prices of systems built in 2023)"
+    },
+    "usgs_stone": {
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-stone-crushed.pdf",
+      "label": "U.S. Geological Survey, Mineral Commodity Summaries 2026: Stone (crushed), average unit value per metric ton"
+    },
+    "quikrete_1101": {
+      "url": "https://www.quikrete.com/pdfs/data_sheet-concrete%20mix%201101.pdf",
+      "label": "QUIKRETE Concrete Mix (No. 1101) product data sheet: yield per bag"
+    },
+    "bm_regal": {
+      "url": "https://media.benjaminmoore.com/WebServices/prod/assets/production/datasheets/TDS_0549/N549_TDS_US.pdf",
+      "label": "Benjamin Moore, Regal Select Waterborne Interior Paint (N549) technical data sheet: spread rate and number of coats"
+    },
+    "bm_primer": {
+      "url": "https://media.benjaminmoore.com/WebServices/prod/assets/production/datasheets/TDS_380/380_TDS_US.pdf",
+      "label": "Benjamin Moore, Fresh Start drywall primer (380) technical data sheet: spread rate"
+    },
+    "valspar_ultra": {
+      "url": "https://www.valspar.com/en/products/interior-paints-primers/ultra-interior-paint-primer",
+      "label": "Valspar, Ultra Interior Paint + Primer: coverage per gallon and coats"
+    },
+    "usg_j371": {
+      "url": "https://www.usg.com/content/dam/USG/pdpmovedocuments/sheetrock-gypsum-panels-installation-guide-en-J371.pdf",
+      "label": "USG, How to Install and Finish Sheetrock Brand Gypsum Panels (J371): panel sizes, screws, tape and joint compound per 1,000 sq ft"
+    },
+    "oc_spec": {
+      "url": "https://www.owenscorning.com/dms/10021602?mime_type=application/pdf",
+      "label": "Owens Corning, Fiberglass-Based Asphalt Shingles and Accessories guide specification (revised January 2026): bundles per square, underlayment coverage"
+    },
+    "oc_starter": {
+      "url": "https://www.owenscorning.com/en-us/roofing/components/products/starter-strip-plus",
+      "label": "Owens Corning, Starter Strip Plus: linear feet per bundle"
+    },
+    "oc_ridge": {
+      "url": "https://www.owenscorning.com/en-us/roofing/components/products/duraridge-hip-ridge",
+      "label": "Owens Corning, DuraRidge hip and ridge shingles: linear feet per carton"
+    },
+    "wisdot_305": {
+      "url": "https://wisconsindot.gov/rdwy/stndspec/ss-03-05.pdf",
+      "label": "Wisconsin DOT 2025 Standard Specifications, Section 305: dense graded base, 1.85 tons per cubic yard in place"
+    },
+    "wisdot_312": {
+      "url": "https://wisconsindot.gov/rdwy/stndspec/ss-03-12.pdf",
+      "label": "Wisconsin DOT 2025 Standard Specifications, Section 312: select crushed material, 1.75 tons per cubic yard in place"
+    },
+    "clemson_mulch": {
+      "url": "https://hgic.clemson.edu/factsheet/mulch/",
+      "label": "Clemson Cooperative Extension, Home and Garden Information Center: Mulch (depth, coverage per cubic yard)"
+    },
+    "ufifas_mulch": {
+      "url": "https://gardeningsolutions.ifas.ufl.edu/care/planting/mulch/",
+      "label": "University of Florida IFAS Extension, Gardening Solutions: Mulch"
+    },
+    "nrmca_cip31": {
+      "url": "https://www.nrmca.org/wp-content/uploads/2021/01/31pr.pdf",
+      "label": "National Ready Mixed Concrete Association, CIP 31: Ordering Ready Mixed Concrete (4% to 10% overage, truck capacity)"
+    },
+    "nrmca_cip8": {
+      "url": "https://www.nrmca.org/wp-content/uploads/2021/01/08pr.pdf",
+      "label": "National Ready Mixed Concrete Association, CIP 8: Discrepancies in Yield"
+    },
+    "awc_dca6": {
+      "url": "https://awc.org/publications/dca6/",
+      "label": "American Wood Council, DCA 6 Prescriptive Residential Wood Deck Construction Guide: joist spans, spacing and footings"
+    },
+    "sfpa_deck": {
+      "url": "https://www.southernpine.com/building-a-southern-pine-deck/",
+      "label": "Southern Forest Products Association, Building a Southern Pine Deck: decking spans"
+    },
+    "barrette_fence": {
+      "url": "https://www.barretteoutdoorliving.com/wp-content/uploads/2021/06/FREEDOM-WEB-PrivacyKit.pdf",
+      "label": "Barrette Outdoor Living, Freedom vinyl privacy fence installation guide: post spacing and holes"
+    },
+    "ecfr_430_32": {
+      "url": "https://www.ecfr.gov/current/title-10/chapter-II/subchapter-D/part-430/subpart-C/section-430.32",
+      "label": "10 CFR 430.32, federal energy conservation standards: heat pumps, central air conditioners, furnaces, water heaters (eCFR, current to October 7, 2026)"
+    },
+    "fe_side_by_side": {
+      "url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=49744&id=49953&id=50204",
+      "label": "U.S. DOE and EPA, fueleconomy.gov: 2026 Tesla Model Y, Chevrolet Equinox EV and Ford Mustang Mach-E, kWh per 100 miles"
+    },
+    "fema_nri_states": {
+      "url": "https://services.arcgis.com/XG15cJAlne2vxtgt/ArcGIS/rest/services/National_Risk_Index_States_Expected_Annual_Loss/FeatureServer/0",
+      "label": "FEMA National Risk Index, state expected annual loss table (ArcGIS feature service, December 2025)"
+    }
+  },
+  "materials": {
+    "concreteYieldCuFt": {
+      "40": 0.3,
+      "50": 0.375,
+      "60": 0.45,
+      "80": 0.6,
+      "90": 0.675
+    },
+    "usgsCrushedStonePerMetricTon2025": 18.5,
+    "paintCoverage": {
+      "default": 350,
+      "bmRegal": [
+        400,
+        450
+      ],
+      "bmPrimer": [
+        350,
+        450
+      ],
+      "valsparUltra": [
+        300,
+        400
+      ]
+    },
+    "paintCoatsRecommended": 2,
+    "drywallSheets": {
+      "4x8": 32,
+      "4x10": 40,
+      "4x12": 48
+    },
+    "drywallPer1000": {
+      "screwsLb": 2.7,
+      "tapeFt": 370,
+      "compoundGal": 10
+    },
+    "shingleBundlesPerSquare": {
+      "architectural": 3,
+      "threeTab": 3,
+      "premium": 4
+    },
+    "underlaymentSquaresPerRoll": 10,
+    "starterFtPerBundle": 105,
+    "ridgeFtPerCarton": 20,
+    "aggregateTonsPerCuYd": {
+      "denseBase": 1.85,
+      "selectCrushed": 1.75
+    },
+    "mulchDepthIn": [
+      2,
+      3
+    ],
+    "mulchSqFtPerCuYdAt1In": 324,
+    "concreteOveragePct": [
+      4,
+      10
+    ],
+    "truckCuYd": [
+      8,
+      12
+    ],
+    "deckJoistSpanSP16": {
+      "2x8": "11'-10\"",
+      "2x10": "14'-0\""
+    },
+    "deckJoistSpanSP16In": {
+      "2x8": 142,
+      "2x10": 168
+    },
+    "deckFootingMinBelowGradeIn": 12,
+    "fenceHoleDiameterIn": {
+      "4x4": 8,
+      "5x5": 10
+    },
+    "woodFencePanelFt": {
+      "height": 6,
+      "width": 8
+    }
+  },
+  "efficiency": {
+    "heatPumpSplit": {
+      "seer2": 14.3,
+      "hspf2": 7.5
+    },
+    "centralAcNorth": 13.4,
+    "centralAcSouth": 14.3,
+    "gasFurnaceAfue": 0.8,
+    "gasFurnaceAfueFuture": 0.95,
+    "gasFurnaceFutureDate": "2028-12-18"
+  },
+  "ev": {
+    "kwhPer100mi": {
+      "Tesla Model Y Long Range AWD": 27,
+      "Chevrolet Equinox EV FWD": 31,
+      "Ford Mustang Mach-E RWD": 31
+    },
+    "default": "Chevrolet Equinox EV FWD"
+  }
+}

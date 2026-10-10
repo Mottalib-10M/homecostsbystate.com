@@ -1,0 +1,21 @@
+{
+ "name": "Home Cost Ledger",
+ "short_name": "Home Cost Ledger",
+ "description": "Roof, water heater, HVAC, solar and fence costs by state, plus concrete, gravel, mulch, paint and drywall calculators. Prices shown at once, no ZIP or phone.",
+ "start_url": "/en/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#B22234",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

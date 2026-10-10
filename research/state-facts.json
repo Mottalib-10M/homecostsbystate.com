@@ -1,0 +1,3066 @@
+{
+ "retrieved_at": "2026-10-10",
+ "nri": {
+  "version": "December 2025 (NRI_VER field)",
+  "url": "https://services.arcgis.com/XG15cJAlne2vxtgt/ArcGIS/rest/services/National_Risk_Index_States_Expected_Annual_Loss/FeatureServer/0",
+  "query_url": "https://services.arcgis.com/XG15cJAlne2vxtgt/ArcGIS/rest/services/National_Risk_Index_States_Expected_Annual_Loss/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json",
+  "publisher": "FEMA National Risk Index (ArcGIS Online org FEMA_NationalRiskIndex, item 'National Risk Index States Expected Annual Loss', service NRI_States_Prod)",
+  "fields": "Per hazard: score = <HZ>_EALS (Expected Annual Loss Score, 0-100 percentile rank among states), rating = <HZ>_EALR (Expected Annual Loss Rating), eal_building_usd = <HZ>_EALB (Expected Annual Loss - Building Value, $), alr_national_percentile = <HZ>_ALR_NPCTL (Expected Annual Loss Rate - National Percentile). Hazard codes: HAIL, SWND (Strong Wind), HRCN, TRND, WNTW (Winter Weather), ISTM (Ice Storm), WFIR.",
+  "caveat": "At STATE level the current NRI (Dec 2025) publishes Expected Annual Loss score/rating per hazard, not a per-hazard Risk Index score/rating (the Risk Index is published at county/census-tract level). hazards.fema.gov (data-resources CSV download) reset the connection from this machine, so the official FEMA ArcGIS Online feature service was used instead."
+ },
+ "states": {
+  "alabama": {
+   "name": "Alabama",
+   "abbr": "AL",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 39.62264150943396,
+     "rating": "Relatively Low",
+     "eal_building_usd": 6718286.793286685,
+     "alr_national_percentile": 22.641509433962266
+    },
+    "strong_wind": {
+     "score": 60.37735849056604,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 17546780.02827261,
+     "alr_national_percentile": 56.60377358490566
+    },
+    "hurricane": {
+     "score": 84.78260869565217,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 426143128.5371892,
+     "alr_national_percentile": 76.08695652173914
+    },
+    "tornado": {
+     "score": 88.67924528301887,
+     "rating": "Relatively High",
+     "eal_building_usd": 189618894.56252733,
+     "alr_national_percentile": 90.56603773584906
+    },
+    "winter_weather": {
+     "score": 30.357142857142854,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 635779.6596521987,
+     "alr_national_percentile": 44.642857142857146
+    },
+    "ice_storm": {
+     "score": 38,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 4585534.476745346,
+     "alr_national_percentile": 52
+    },
+    "wildfire": {
+     "score": 45.09803921568628,
+     "rating": "Relatively Low",
+     "eal_building_usd": 6817784.735352265,
+     "alr_national_percentile": 50.98039215686274
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Alabama Home Builders Licensure Board (HBLB)",
+    "summary": "Alabama law defines a residential home builder to include a residential roofer when the cost of the job is over $2,500, and HBLB issues a separate Roofers License, which requires a $10,000 license/permit bond and a local contractor business license.",
+    "url": "https://hblb.alabama.gov/unlicensed-builders/",
+    "threshold_usd": 2500
+   },
+   "code": null,
+   "notes": [
+    "Roofers License application details: https://hblb.alabama.gov/how-to-get-licensed/",
+    "The HBLB Building Officials page names no statewide residential code edition; no other state code page was read."
+   ]
+  },
+  "alaska": {
+   "name": "Alaska",
+   "abbr": "AK",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 3.773584905660377,
+     "rating": "Very Low",
+     "eal_building_usd": 35338.86745980197,
+     "alr_national_percentile": 11.320754716981133
+    },
+    "strong_wind": {
+     "score": 3.773584905660377,
+     "rating": "Very Low",
+     "eal_building_usd": 993.4171896290852,
+     "alr_national_percentile": 1.8867924528301887
+    },
+    "hurricane": {
+     "score": null,
+     "rating": "Not Applicable",
+     "eal_building_usd": null,
+     "alr_national_percentile": null
+    },
+    "tornado": {
+     "score": 1.886792452830189,
+     "rating": "Very Low",
+     "eal_building_usd": 479.14908228269996,
+     "alr_national_percentile": 1.8867924528301887
+    },
+    "winter_weather": {
+     "score": 48.214285714285715,
+     "rating": "Relatively High",
+     "eal_building_usd": 2309342.0432715905,
+     "alr_national_percentile": 83.92857142857143
+    },
+    "ice_storm": {
+     "score": 4,
+     "rating": "Very Low",
+     "eal_building_usd": 73034.31333761162,
+     "alr_national_percentile": 12
+    },
+    "wildfire": {
+     "score": 68.62745098039215,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 30674020.148218792,
+     "alr_national_percentile": 82.35294117647058
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Alaska Dept. of Commerce, Community, and Economic Development (Division of Corporations, Business and Professional Licensing)",
+    "summary": "Under AS 08.18.011, a person may not bid on or work as a contractor without a certificate of registration, and 'contractor' includes specialty contractors who repair or alter any fixed structure. This is a general contractor registration, not a roofing-specific license. General contractors doing residential work of 1-4 units need a residential contractor endorsement (AS 08.18.025).",
+    "url": "https://www.akleg.gov/basis/statutes.asp?media=print&secStart=08.18.011&secEnd=08.18.025",
+    "threshold_usd": null
+   },
+   "code": null,
+   "notes": [
+    "commerce.alaska.gov returned 403 to both curl and WebFetch, so the source is the Legislature's statute text (akleg.gov), not the agency page.",
+    "Statute sections read (08.18.011-025, 161, 171) state no dollar threshold. The handyman exemption threshold was not confirmed."
+   ]
+  },
+  "arizona": {
+   "name": "Arizona",
+   "abbr": "AZ",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 60.37735849056604,
+     "rating": "Relatively Low",
+     "eal_building_usd": 28343232.2274792,
+     "alr_national_percentile": 60.37735849056604
+    },
+    "strong_wind": {
+     "score": 33.9622641509434,
+     "rating": "Relatively Low",
+     "eal_building_usd": 7621108.473585209,
+     "alr_national_percentile": 47.16981132075472
+    },
+    "hurricane": {
+     "score": 10.869565217391305,
+     "rating": "Very Low",
+     "eal_building_usd": 29677.7235384946,
+     "alr_national_percentile": 13.043478260869565
+    },
+    "tornado": {
+     "score": 24.528301886792452,
+     "rating": "Relatively Low",
+     "eal_building_usd": 4162396.848694725,
+     "alr_national_percentile": 18.867924528301888
+    },
+    "winter_weather": {
+     "score": 33.92857142857143,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 116547.53605622446,
+     "alr_national_percentile": 12.5
+    },
+    "ice_storm": {
+     "score": 10,
+     "rating": "Very Low",
+     "eal_building_usd": 861.0671479291518,
+     "alr_national_percentile": 2
+    },
+    "wildfire": {
+     "score": 98.0392156862745,
+     "rating": "Relatively High",
+     "eal_building_usd": 216665477.09687278,
+     "alr_national_percentile": 86.27450980392157
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Arizona Registrar of Contractors (ROC)",
+    "summary": "ARS 32-1151 bars anyone from contracting without a ROC contractor's license. Under ARS 32-1121, minor work under $1,000 (labor and materials) is exempt unless it needs a local building permit or is part of a larger job. The specific residential roofing classification (e.g. R-42) was not confirmed.",
+    "url": "https://www.azleg.gov/ars/32/01151.htm",
+    "threshold_usd": 1000
+   },
+   "code": null,
+   "notes": [
+    "roc.az.gov and apps.azsos.gov returned 403 to curl and WebFetch, so the source is statute text on azleg.gov.",
+    "Exemption source: https://www.azleg.gov/ars/32/01121.htm",
+    "No statewide residential code page was read."
+   ]
+  },
+  "arkansas": {
+   "name": "Arkansas",
+   "abbr": "AR",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 62.264150943396224,
+     "rating": "Relatively Low",
+     "eal_building_usd": 26255510.1321603,
+     "alr_national_percentile": 73.58490566037736
+    },
+    "strong_wind": {
+     "score": 58.490566037735846,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 16152495.048832616,
+     "alr_national_percentile": 62.264150943396224
+    },
+    "hurricane": {
+     "score": 41.30434782608695,
+     "rating": "Very Low",
+     "eal_building_usd": 3725185.464069609,
+     "alr_national_percentile": 41.30434782608695
+    },
+    "tornado": {
+     "score": 67.9245283018868,
+     "rating": "Relatively High",
+     "eal_building_usd": 90555255.44272797,
+     "alr_national_percentile": 54.71698113207547
+    },
+    "winter_weather": {
+     "score": 53.57142857142857,
+     "rating": "Relatively High",
+     "eal_building_usd": 7191230.294230964,
+     "alr_national_percentile": 100
+    },
+    "ice_storm": {
+     "score": 100,
+     "rating": "Very High",
+     "eal_building_usd": 122169437.26664534,
+     "alr_national_percentile": 100
+    },
+    "wildfire": {
+     "score": 52.94117647058824,
+     "rating": "Relatively Low",
+     "eal_building_usd": 11171641.408958027,
+     "alr_national_percentile": 60.78431372549019
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Arkansas Contractors Licensing Board, Residential Committee (Dept. of Labor and Licensing)",
+    "summary": "Roofing jobs over $2,000 (labor and materials) need a Residential Roofer Registration. This has replaced the Home Improvement Roofing License since January 1, 2022. Holders of a Residential Builder or Residential Remodeler license do not need it.",
+    "url": "https://labor.arkansas.gov/licensing/arkansas-contractors-licensing-board/apply-for-contractors-license-registration/",
+    "threshold_usd": 2000
+   },
+   "code": null,
+   "notes": [
+    "Per the ACLB Building Codes page, the State Fire Marshal adopts the Arkansas Fire Prevention Code. Volume III, the 'Residential Code', is based on the IRC with Arkansas changes and applies statewide. The page does not state the edition, so code is null. URL: https://labor.arkansas.gov/licensing/arkansas-contractors-licensing-board/building-codes/",
+    "aclb.arkansas.gov redirects to labor.arkansas.gov."
+   ]
+  },
+  "california": {
+   "name": "California",
+   "abbr": "CA",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 49.056603773584904,
+     "rating": "Relatively Low",
+     "eal_building_usd": 8486117.190650547,
+     "alr_national_percentile": 18.867924528301888
+    },
+    "strong_wind": {
+     "score": 32.075471698113205,
+     "rating": "Relatively Low",
+     "eal_building_usd": 4353184.542069133,
+     "alr_national_percentile": 16.9811320754717
+    },
+    "hurricane": {
+     "score": 8.695652173913043,
+     "rating": "Very Low",
+     "eal_building_usd": 2404.146931180934,
+     "alr_national_percentile": 8.695652173913043
+    },
+    "tornado": {
+     "score": 47.16981132075472,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 38894866.40416646,
+     "alr_national_percentile": 28.30188679245283
+    },
+    "winter_weather": {
+     "score": 35.714285714285715,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 136508.64557280182,
+     "alr_national_percentile": 10.714285714285714
+    },
+    "ice_storm": {
+     "score": null,
+     "rating": "Not Applicable",
+     "eal_building_usd": null,
+     "alr_national_percentile": null
+    },
+    "wildfire": {
+     "score": 100,
+     "rating": "Very High",
+     "eal_building_usd": 1706431467.3970747,
+     "alr_national_percentile": 92.15686274509804
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Contractors State License Board (CSLB)",
+    "summary": "CSLB licenses roofers under the C-39 Roofing Contractor classification. According to CSLB, unlicensed work is actionable when the job needs a building permit, uses employees, or totals $1,000 or more in labor and materials.",
+    "url": "https://www.cslb.ca.gov/Consumers/Report_Unlicensed_Activity/How_Can_I_Report_Unlicensed_Contractors.aspx",
+    "threshold_usd": 1000
+   },
+   "code": {
+    "summary": "2025 California Building Standards Code (Title 24), including Part 2.5 California Residential Code, published July 1, 2025 and effective January 1, 2026.",
+    "url": "https://www.dgs.ca.gov/BSC/Codes"
+   },
+   "notes": [
+    "C-39 definition: https://www.cslb.ca.gov/About_Us/Library/Licensing_Classifications/Licensing_Classifications_Detail.aspx?Class=C39",
+    "The BSC page does not name the IRC base edition.",
+    "The $500 figure from the brief does not appear on any CSLB page read today. CSLB states $1,000.",
+    "CSLB gives the $1,000 figure as the scope for SWIFT complaints about unlicensed work."
+   ]
+  },
+  "colorado": {
+   "name": "Colorado",
+   "abbr": "CO",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 98.11320754716981,
+     "rating": "Relatively High",
+     "eal_building_usd": 307675938.3785272,
+     "alr_national_percentile": 98.11320754716981
+    },
+    "strong_wind": {
+     "score": 52.83018867924528,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 11322741.413762882,
+     "alr_national_percentile": 35.84905660377358
+    },
+    "hurricane": {
+     "score": null,
+     "rating": "Not Applicable",
+     "eal_building_usd": null,
+     "alr_national_percentile": null
+    },
+    "tornado": {
+     "score": 58.490566037735846,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 118214499.88968734,
+     "alr_national_percentile": 94.33962264150944
+    },
+    "winter_weather": {
+     "score": 87.5,
+     "rating": "Very High",
+     "eal_building_usd": 4062678.536310892,
+     "alr_national_percentile": 58.92857142857143
+    },
+    "ice_storm": {
+     "score": 28.000000000000004,
+     "rating": "Relatively Low",
+     "eal_building_usd": 772221.8156433095,
+     "alr_national_percentile": 14.000000000000002
+    },
+    "wildfire": {
+     "score": 96.07843137254902,
+     "rating": "Relatively High",
+     "eal_building_usd": 201314527.10581103,
+     "alr_national_percentile": 88.23529411764706
+    }
+   },
+   "licensing": null,
+   "code": null,
+   "notes": [
+    "Could not confirm from an official page. The DORA Division of Professions and Occupations home page and FAQ do not mention contractors or roofers. No official page was found that explicitly says there is no state roofing license, and Colorado AG pages tried returned 404."
+   ]
+  },
+  "connecticut": {
+   "name": "Connecticut",
+   "abbr": "CT",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 18.867924528301888,
+     "rating": "Very Low",
+     "eal_building_usd": 1189275.3433444414,
+     "alr_national_percentile": 15.09433962264151
+    },
+    "strong_wind": {
+     "score": 39.62264150943396,
+     "rating": "Relatively Low",
+     "eal_building_usd": 3325770.5064125955,
+     "alr_national_percentile": 20.754716981132077
+    },
+    "hurricane": {
+     "score": 71.73913043478261,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 173529692.60543412,
+     "alr_national_percentile": 73.91304347826086
+    },
+    "tornado": {
+     "score": 39.62264150943396,
+     "rating": "Relatively Low",
+     "eal_building_usd": 17734829.108489987,
+     "alr_national_percentile": 81.13207547169812
+    },
+    "winter_weather": {
+     "score": 26.785714285714285,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 460520.2541685012,
+     "alr_national_percentile": 33.92857142857143
+    },
+    "ice_storm": {
+     "score": 50,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 7955114.473541905,
+     "alr_national_percentile": 68
+    },
+    "wildfire": {
+     "score": 9.803921568627452,
+     "rating": "Very Low",
+     "eal_building_usd": 263258.20195193886,
+     "alr_national_percentile": 7.8431372549019605
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Connecticut Department of Consumer Protection (Commissioner of Consumer Protection)",
+    "summary": "Home Improvement Act, CGS Chapter 400: no one may act as a contractor without a certificate of registration (Sec. 20-420). 'Home improvement' explicitly covers roofs on residential property when the total price exceeds $200. This is a general home improvement registration, not a roofing-specific license.",
+    "url": "https://www.cga.ct.gov/current/pub/chap_400.htm",
+    "threshold_usd": 200
+   },
+   "code": {
+    "summary": "2022 Connecticut State Building Code, based on the 2021 International Codes (including the IRC), applies to projects with permit applications filed from October 1, 2022.",
+    "url": "https://portal.ct.gov/das/services-for-agencies-and-municipalities/safety-codes-and-inspections"
+   },
+   "notes": [
+    "The DCP portal pages tried returned 404, so the source is the General Assembly's statute text."
+   ]
+  },
+  "delaware": {
+   "name": "Delaware",
+   "abbr": "DE",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 9.433962264150944,
+     "rating": "Very Low",
+     "eal_building_usd": 62685.50445279622,
+     "alr_national_percentile": 58.490566037735846
+    },
+    "strong_wind": {
+     "score": 15.09433962264151,
+     "rating": "Relatively Low",
+     "eal_building_usd": 2580634.1583750127,
+     "alr_national_percentile": 73.58490566037736
+    },
+    "hurricane": {
+     "score": 58.69565217391305,
+     "rating": "Relatively Low",
+     "eal_building_usd": 38713297.95687575,
+     "alr_national_percentile": 71.73913043478261
+    },
+    "tornado": {
+     "score": 32.075471698113205,
+     "rating": "Relatively Low",
+     "eal_building_usd": 5329646.583193019,
+     "alr_national_percentile": 49.056603773584904
+    },
+    "winter_weather": {
+     "score": 39.285714285714285,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 1058414.2665084936,
+     "alr_national_percentile": 69.64285714285714
+    },
+    "ice_storm": {
+     "score": 18,
+     "rating": "Relatively Low",
+     "eal_building_usd": 1066744.4092849493,
+     "alr_national_percentile": 44
+    },
+    "wildfire": {
+     "score": 17.647058823529413,
+     "rating": "Very Low",
+     "eal_building_usd": 657395.4436609767,
+     "alr_national_percentile": 37.254901960784316
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Delaware Division of Revenue",
+    "summary": "Any contractor doing business in Delaware must register with the Division of Revenue and get a business license (resident or non-resident contractor package; non-residents also post a bond). This is a general tax/business contractor license, not a roofing-specific trade license.",
+    "url": "https://revenue.delaware.gov/business-tax-forms/contractors-resident-and-non-resident/",
+    "threshold_usd": null
+   },
+   "code": null,
+   "notes": [
+    "No statewide residential code page was read."
+   ]
+  },
+  "district-of-columbia": {
+   "name": "District of Columbia",
+   "abbr": "DC",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 28.30188679245283,
+     "rating": "Very Low",
+     "eal_building_usd": 4133683.522822566,
+     "alr_national_percentile": 45.28301886792453
+    },
+    "strong_wind": {
+     "score": 18.867924528301888,
+     "rating": "Relatively Low",
+     "eal_building_usd": 2253470.4542771024,
+     "alr_national_percentile": 33.9622641509434
+    },
+    "hurricane": {
+     "score": 54.347826086956516,
+     "rating": "Relatively Low",
+     "eal_building_usd": 28297034.652878847,
+     "alr_national_percentile": 52.17391304347826
+    },
+    "tornado": {
+     "score": 22.641509433962266,
+     "rating": "Relatively Low",
+     "eal_building_usd": 6511165.4801470125,
+     "alr_national_percentile": 56.60377358490566
+    },
+    "winter_weather": {
+     "score": 16.071428571428573,
+     "rating": "Relatively Low",
+     "eal_building_usd": 98556.34357944329,
+     "alr_national_percentile": 16.071428571428573
+    },
+    "ice_storm": {
+     "score": 6,
+     "rating": "Very Low",
+     "eal_building_usd": 154787.0714688209,
+     "alr_national_percentile": 18
+    },
+    "wildfire": {
+     "score": 1.96078431372549,
+     "rating": "Very Low",
+     "eal_building_usd": 11073.096951182555,
+     "alr_national_percentile": 1.9607843137254901
+    }
+   },
+   "licensing": null,
+   "code": {
+    "summary": "2017 DC Construction Codes, based on the 2015 ICC model codes (including the IRC) as amended by 12 DCMR, in effect since May 29, 2020.",
+    "url": "https://dob.dc.gov/page/dc-construction-codes"
+   },
+   "notes": [
+    "The DLCP home improvement license pages returned 403 or 404. DC Code 47-2883.01 (code.dccouncil.gov) refers to licensing of the 'home improvement business' (repair and remodeling of residential property) and authorizes bonding, but no page read confirms the license requirement or a threshold, so licensing is null.",
+    "The DOB page may predate a newer adoption. It is reported as stated on the page."
+   ]
+  },
+  "florida": {
+   "name": "Florida",
+   "abbr": "FL",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 58.490566037735846,
+     "rating": "Relatively Low",
+     "eal_building_usd": 21666595.412247017,
+     "alr_national_percentile": 30.18867924528302
+    },
+    "strong_wind": {
+     "score": 94.33962264150944,
+     "rating": "Very High",
+     "eal_building_usd": 119035851.84200378,
+     "alr_national_percentile": 94.33962264150944
+    },
+    "hurricane": {
+     "score": 100,
+     "rating": "Very High",
+     "eal_building_usd": 3906636011.4804354,
+     "alr_national_percentile": 86.95652173913044
+    },
+    "tornado": {
+     "score": 96.22641509433963,
+     "rating": "Relatively High",
+     "eal_building_usd": 190753269.4728307,
+     "alr_national_percentile": 43.39622641509434
+    },
+    "winter_weather": {
+     "score": 14.285714285714285,
+     "rating": "Relatively Low",
+     "eal_building_usd": 180527.8285705704,
+     "alr_national_percentile": 32.142857142857146
+    },
+    "ice_storm": {
+     "score": 8,
+     "rating": "Very Low",
+     "eal_building_usd": 219644.2582298596,
+     "alr_national_percentile": 16
+    },
+    "wildfire": {
+     "score": 80.3921568627451,
+     "rating": "Relatively High",
+     "eal_building_usd": 98112146.73902099,
+     "alr_national_percentile": 64.70588235294117
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Florida DBPR, Construction Industry Licensing Board (CILB)",
+    "summary": "Florida Statutes 489.113(2) say a person must be certified or registered to contract. 489.105 defines a separate Roofing Contractor license, and general, building or residential contractors may not act as roofing contractors unless also certified or registered as one. Under 489.103(9), minor work under $2,500 is exempt unless it is part of a larger job or needs a permit.",
+    "url": "https://www.flsenate.gov/Laws/Statutes/2025/489.113",
+    "threshold_usd": 2500
+   },
+   "code": {
+    "summary": "Florida Building Code, 8th Edition (2023), which includes the Residential volume, effective December 31, 2023.",
+    "url": "https://www.floridabuilding.org/c/default.aspx"
+   },
+   "notes": [
+    "myfloridalicense.com returned 403, so the source is statute text on flsenate.gov (489.103, 489.105, 489.113).",
+    "floridabuilding.org is the Florida Building Commission's own site (DBPR), not a .gov domain."
+   ]
+  },
+  "georgia": {
+   "name": "Georgia",
+   "abbr": "GA",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 77.35849056603774,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 51497805.76562868,
+     "alr_national_percentile": 54.71698113207547
+    },
+    "strong_wind": {
+     "score": 66.0377358490566,
+     "rating": "Relatively High",
+     "eal_building_usd": 20933232.53181874,
+     "alr_national_percentile": 39.62264150943396
+    },
+    "hurricane": {
+     "score": 86.95652173913044,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 455725108.1330701,
+     "alr_national_percentile": 67.3913043478261
+    },
+    "tornado": {
+     "score": 90.56603773584906,
+     "rating": "Relatively High",
+     "eal_building_usd": 207303762.22814545,
+     "alr_national_percentile": 66.0377358490566
+    },
+    "winter_weather": {
+     "score": 32.142857142857146,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 1591636.2203715164,
+     "alr_national_percentile": 67.85714285714286
+    },
+    "ice_storm": {
+     "score": 74,
+     "rating": "Relatively High",
+     "eal_building_usd": 20456439.16103629,
+     "alr_national_percentile": 70
+    },
+    "wildfire": {
+     "score": 58.82352941176471,
+     "rating": "Relatively Low",
+     "eal_building_usd": 12768849.742322383,
+     "alr_national_percentile": 45.09803921568628
+    }
+   },
+   "licensing": null,
+   "code": {
+    "summary": "International Residential Code, 2024 Edition, with Georgia Amendments: a mandatory state minimum code adopted by the DCA Board, effective January 1, 2027.",
+    "url": "https://dca.georgia.gov/community-assistance/construction-codes/current-state-minimum-codes-construction"
+   },
+   "notes": [
+    "sos.ga.gov and rules.sos.ga.gov (State Board of Residential and General Contractors) returned 403, so licensing for roofers could not be confirmed.",
+    "The effective date comes from https://dca.georgia.gov/announcement/2025-12-09/new-codes-jan-2027. The 'current' page already lists the 2024 editions. Until 2027-01-01 the earlier edition may still be enforced; this was not verified."
+   ]
+  },
+  "hawaii": {
+   "name": "Hawaii",
+   "abbr": "HI",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 5.660377358490567,
+     "rating": "Very Low",
+     "eal_building_usd": 40931.9002395003,
+     "alr_national_percentile": 7.547169811320755
+    },
+    "strong_wind": {
+     "score": 7.547169811320755,
+     "rating": "Very Low",
+     "eal_building_usd": 27863.628117217257,
+     "alr_national_percentile": 7.547169811320755
+    },
+    "hurricane": {
+     "score": 32.608695652173914,
+     "rating": "Very Low",
+     "eal_building_usd": 2025463.401483266,
+     "alr_national_percentile": 36.95652173913043
+    },
+    "tornado": {
+     "score": 7.547169811320755,
+     "rating": "Very Low",
+     "eal_building_usd": 500233.3839410012,
+     "alr_national_percentile": 16.9811320754717
+    },
+    "winter_weather": {
+     "score": 10.714285714285714,
+     "rating": "Very Low",
+     "eal_building_usd": 423.7482656461352,
+     "alr_national_percentile": 41.07142857142857
+    },
+    "ice_storm": {
+     "score": 2,
+     "rating": "Very Low",
+     "eal_building_usd": 108424.79230881877,
+     "alr_national_percentile": 26
+    },
+    "wildfire": {
+     "score": 72.54901960784314,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 44324441.16280894,
+     "alr_national_percentile": 80.3921568627451
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Hawaii DCCA, Professional and Vocational Licensing, Contractors License Board",
+    "summary": "Per DCCA, a contractor's license is required for any project over $1,500 in labor and materials or any project that needs a building, electrical or plumbing permit. This is the general contractor licensing regime; the C-42 roofing specialty classification was not confirmed on a page read.",
+    "url": "https://cca.hawaii.gov/pvl/hire-a-licensed-contractor/",
+    "threshold_usd": 1500
+   },
+   "code": {
+    "summary": "State Residential Code: 2018 IRC, as adopted by the State Building Code Council. Counties adopt and amend it locally.",
+    "url": "https://ags.hawaii.gov/bcc/building-code-rules/"
+   },
+   "notes": [
+    "capitol.hawaii.gov (HRS 444) returned 403."
+   ]
+  },
+  "idaho": {
+   "name": "Idaho",
+   "abbr": "ID",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 30.18867924528302,
+     "rating": "Very Low",
+     "eal_building_usd": 3431042.7153237597,
+     "alr_national_percentile": 28.30188679245283
+    },
+    "strong_wind": {
+     "score": 30.18867924528302,
+     "rating": "Relatively Low",
+     "eal_building_usd": 1608215.204871261,
+     "alr_national_percentile": 13.20754716981132
+    },
+    "hurricane": {
+     "score": null,
+     "rating": "Not Applicable",
+     "eal_building_usd": null,
+     "alr_national_percentile": null
+    },
+    "tornado": {
+     "score": 11.320754716981133,
+     "rating": "Relatively Low",
+     "eal_building_usd": 1524341.3883358117,
+     "alr_national_percentile": 20.754716981132077
+    },
+    "winter_weather": {
+     "score": 62.5,
+     "rating": "Relatively High",
+     "eal_building_usd": 219336.26578533612,
+     "alr_national_percentile": 14.285714285714285
+    },
+    "ice_storm": {
+     "score": 26,
+     "rating": "Relatively Low",
+     "eal_building_usd": 358073.85073134804,
+     "alr_national_percentile": 8
+    },
+    "wildfire": {
+     "score": 88.23529411764706,
+     "rating": "Relatively High",
+     "eal_building_usd": 136542555.9776628,
+     "alr_national_percentile": 98.0392156862745
+    }
+   },
+   "licensing": null,
+   "code": null,
+   "notes": [
+    "Every Idaho state domain tried (dopl.idaho.gov, legislature.idaho.gov, idaho.gov, dbs.idaho.gov) timed out or refused connections from this network, through both curl and WebFetch, so nothing could be confirmed. Idaho has a contractor registration under Title 54 Ch. 52 (DOPL), but it was not verified today."
+   ]
+  },
+  "illinois": {
+   "name": "Illinois",
+   "abbr": "IL",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 81.13207547169812,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 79821819.68037064,
+     "alr_national_percentile": 66.0377358490566
+    },
+    "strong_wind": {
+     "score": 90.56603773584906,
+     "rating": "Very High",
+     "eal_building_usd": 62561307.40451653,
+     "alr_national_percentile": 79.24528301886792
+    },
+    "hurricane": {
+     "score": 28.26086956521739,
+     "rating": "Very Low",
+     "eal_building_usd": 848797.5726896699,
+     "alr_national_percentile": 21.73913043478261
+    },
+    "tornado": {
+     "score": 98.11320754716981,
+     "rating": "Relatively High",
+     "eal_building_usd": 369301817.3890509,
+     "alr_national_percentile": 67.9245283018868
+    },
+    "winter_weather": {
+     "score": 80.35714285714286,
+     "rating": "Relatively High",
+     "eal_building_usd": 4803543.640640027,
+     "alr_national_percentile": 62.5
+    },
+    "ice_storm": {
+     "score": 57.99999999999999,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 10780102.447021473,
+     "alr_national_percentile": 36
+    },
+    "wildfire": {
+     "score": 13.725490196078432,
+     "rating": "Very Low",
+     "eal_building_usd": 449220.31136554875,
+     "alr_national_percentile": 3.9215686274509802
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Illinois Department of Financial and Professional Regulation (IDFPR)",
+    "summary": "IDFPR licenses roofing contractors under the Illinois Roofing Industry Licensing Act (225 ILCS 335), with a designated qualifying party who must pass the roofing contractor examination.",
+    "url": "https://idfpr.illinois.gov/profs/roof.html",
+    "threshold_usd": null
+   },
+   "code": null,
+   "notes": [
+    "Roofing-specific state license. The page does not describe the limited (residential) vs unlimited license split or any dollar threshold; ilga.gov (statute text) could not be reached.",
+    "No statewide residential code page read."
+   ]
+  },
+  "indiana": {
+   "name": "Indiana",
+   "abbr": "IN",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 69.81132075471697,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 47152021.62017515,
+     "alr_national_percentile": 67.9245283018868
+    },
+    "strong_wind": {
+     "score": 83.01886792452831,
+     "rating": "Relatively High",
+     "eal_building_usd": 27960878.856190618,
+     "alr_national_percentile": 49.056603773584904
+    },
+    "hurricane": {
+     "score": 21.73913043478261,
+     "rating": "Very Low",
+     "eal_building_usd": 658169.810959255,
+     "alr_national_percentile": 23.91304347826087
+    },
+    "tornado": {
+     "score": 84.90566037735849,
+     "rating": "Relatively High",
+     "eal_building_usd": 214946284.2338238,
+     "alr_national_percentile": 92.45283018867924
+    },
+    "winter_weather": {
+     "score": 66.07142857142857,
+     "rating": "Relatively High",
+     "eal_building_usd": 2374102.206991885,
+     "alr_national_percentile": 50
+    },
+    "ice_storm": {
+     "score": 52,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 4014374.383285491,
+     "alr_national_percentile": 28.000000000000004
+    },
+    "wildfire": {
+     "score": 15.686274509803921,
+     "rating": "Very Low",
+     "eal_building_usd": 608020.1109072018,
+     "alr_national_percentile": 11.76470588235294
+    }
+   },
+   "licensing": null,
+   "code": {
+    "summary": "2020 Indiana Residential Code (675 IAC 14-4.4), based on the 2018 International Residential Code, currently in effect, effective 12/26/2019; one- and two-family dwellings are enforced by local government.",
+    "url": "https://www.in.gov/dhs/boards-and-commissions/fpbsc-rules"
+   },
+   "notes": [
+    "The Indiana Professional Licensing Agency professions list (https://www.in.gov/pla/professions/) has no roofing or general contractor category, but no official page says outright that roofing is unlicensed, so licensing is left null.",
+    "IDHS code-enforcement page: residential dwellings fall under the local government entity (home rule)."
+   ]
+  },
+  "iowa": {
+   "name": "Iowa",
+   "abbr": "IA",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 90.56603773584906,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 54617120.86492264,
+     "alr_national_percentile": 71.69811320754717
+    },
+    "strong_wind": {
+     "score": 88.67924528301887,
+     "rating": "Relatively High",
+     "eal_building_usd": 54738195.88548053,
+     "alr_national_percentile": 86.79245283018868
+    },
+    "hurricane": {
+     "score": 19.565217391304348,
+     "rating": "Very Low",
+     "eal_building_usd": 86883.08808183721,
+     "alr_national_percentile": 15.217391304347828
+    },
+    "tornado": {
+     "score": 79.24528301886792,
+     "rating": "Relatively High",
+     "eal_building_usd": 192056495.2956803,
+     "alr_national_percentile": 100
+    },
+    "winter_weather": {
+     "score": 67.85714285714286,
+     "rating": "Relatively High",
+     "eal_building_usd": 4247156.30320784,
+     "alr_national_percentile": 75
+    },
+    "ice_storm": {
+     "score": 54,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 8639198.123181175,
+     "alr_national_percentile": 60
+    },
+    "wildfire": {
+     "score": 39.21568627450981,
+     "rating": "Relatively Low",
+     "eal_building_usd": 3978022.3840990933,
+     "alr_national_percentile": 41.17647058823529
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Iowa Department of Inspections, Appeals, and Licensing (DIAL)",
+    "summary": "General construction contractor registration, not a roofing-specific license: anyone doing construction work must register with DIAL if they earn at least $2,000 a year from construction ($50 fee; out-of-state contractors need an Iowa UI number, and a $25,000 bond applies in some cases).",
+    "url": "https://dial.iowa.gov/licenses/building/contractors",
+    "threshold_usd": 2000
+   },
+   "code": null,
+   "notes": [
+    "The $2,000 threshold is annual construction earnings, not a per-job amount.",
+    "No statewide residential code page read."
+   ]
+  },
+  "kansas": {
+   "name": "Kansas",
+   "abbr": "KS",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 94.33962264150944,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 74981049.87932271,
+     "alr_national_percentile": 96.22641509433963
+    },
+    "strong_wind": {
+     "score": 67.9245283018868,
+     "rating": "Relatively High",
+     "eal_building_usd": 33093249.957116477,
+     "alr_national_percentile": 84.90566037735849
+    },
+    "hurricane": {
+     "score": 17.391304347826086,
+     "rating": "Very Low",
+     "eal_building_usd": 115972.97803836025,
+     "alr_national_percentile": 17.391304347826086
+    },
+    "tornado": {
+     "score": 73.58490566037736,
+     "rating": "Relatively High",
+     "eal_building_usd": 135300413.80460963,
+     "alr_national_percentile": 79.24528301886792
+    },
+    "winter_weather": {
+     "score": 92.85714285714286,
+     "rating": "Very High",
+     "eal_building_usd": 7910770.379401386,
+     "alr_national_percentile": 76.78571428571429
+    },
+    "ice_storm": {
+     "score": 92,
+     "rating": "Very High",
+     "eal_building_usd": 26404560.25935613,
+     "alr_national_percentile": 57.99999999999999
+    },
+    "wildfire": {
+     "score": 74.50980392156863,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 47991862.43980956,
+     "alr_national_percentile": 72.54901960784314
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Kansas Attorney General (Kansas Roofing Registration Act)",
+    "summary": "K.S.A. 50-6,123: no person may act as a roofing contractor (defined in 50-6,122 to cover commercial or residential roofing services for a fee) without a valid registration certificate; the Act is administered by the Attorney General.",
+    "url": "https://www.ksrevisor.gov/statutes/chapters/ch50/050_006_0123.html",
+    "threshold_usd": null
+   },
+   "code": null,
+   "notes": [
+    "The AG roofing registration pages (ag.ks.gov) returned 403, so the statute text on ksrevisor.gov was used instead (definitions: 050_006_0122.html).",
+    "Exempt general contractors (roofing 50% or less of project cost, no door-to-door sales) are excluded."
+   ]
+  },
+  "kentucky": {
+   "name": "Kentucky",
+   "abbr": "KY",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 79.24528301886792,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 61230267.15670186,
+     "alr_national_percentile": 81.13207547169812
+    },
+    "strong_wind": {
+     "score": 81.13207547169812,
+     "rating": "Relatively High",
+     "eal_building_usd": 33507181.232748292,
+     "alr_national_percentile": 69.81132075471697
+    },
+    "hurricane": {
+     "score": 34.78260869565217,
+     "rating": "Very Low",
+     "eal_building_usd": 1925785.054031437,
+     "alr_national_percentile": 34.78260869565217
+    },
+    "tornado": {
+     "score": 71.69811320754717,
+     "rating": "Relatively High",
+     "eal_building_usd": 118846050.35279337,
+     "alr_national_percentile": 60.37735849056604
+    },
+    "winter_weather": {
+     "score": 60.71428571428571,
+     "rating": "Relatively High",
+     "eal_building_usd": 4658719.667107768,
+     "alr_national_percentile": 82.14285714285714
+    },
+    "ice_storm": {
+     "score": 82,
+     "rating": "Relatively High",
+     "eal_building_usd": 23505491.849884976,
+     "alr_national_percentile": 80
+    },
+    "wildfire": {
+     "score": 43.13725490196079,
+     "rating": "Relatively Low",
+     "eal_building_usd": 5897174.612278668,
+     "alr_national_percentile": 49.01960784313725
+    }
+   },
+   "licensing": null,
+   "code": {
+    "summary": "815 KAR 7:125: the 2015 International Residential Code, with Kentucky amendments in the 2018 Kentucky Residential Code (Third Edition, August 2024), is the mandatory state residential building code for single-family homes, two-family homes and townhouses (latest amendment eff. 12-3-2024).",
+    "url": "https://apps.legislature.ky.gov/law/kar/titles/815/007/125/"
+   },
+   "notes": [
+    "Could not confirm from an official page whether a state roofing license exists. The DHBC site (dhbc.ky.gov) shows none, but nothing states that roofing is unlicensed."
+   ]
+  },
+  "louisiana": {
+   "name": "Louisiana",
+   "abbr": "LA",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 64.15094339622641,
+     "rating": "Relatively Low",
+     "eal_building_usd": 29675829.58620046,
+     "alr_national_percentile": 69.81132075471697
+    },
+    "strong_wind": {
+     "score": 50.943396226415096,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 12138505.772994444,
+     "alr_national_percentile": 50.943396226415096
+    },
+    "hurricane": {
+     "score": 97.82608695652173,
+     "rating": "Relatively High",
+     "eal_building_usd": 1451985138.754756,
+     "alr_national_percentile": 91.30434782608695
+    },
+    "tornado": {
+     "score": 62.264150943396224,
+     "rating": "Relatively High",
+     "eal_building_usd": 72684523.77095853,
+     "alr_national_percentile": 39.62264150943396
+    },
+    "winter_weather": {
+     "score": 21.428571428571427,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 1244213.8414821606,
+     "alr_national_percentile": 73.21428571428571
+    },
+    "ice_storm": {
+     "score": 84,
+     "rating": "Relatively High",
+     "eal_building_usd": 24720194.42031207,
+     "alr_national_percentile": 76
+    },
+    "wildfire": {
+     "score": 41.17647058823529,
+     "rating": "Relatively Low",
+     "eal_building_usd": 5807735.011417196,
+     "alr_national_percentile": 47.05882352941176
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Louisiana State Licensing Board for Contractors (LSLBC)",
+    "summary": "Home improvement work on existing residences (project value $7,500 or more) requires LSLBC home improvement registration or a license; residential construction or home improvement over $50,000 requires a Residential license, and LSLBC has a Residential Roofing subclassification (9.2) with a trade exam.",
+    "url": "https://lslbc.louisiana.gov/types-of-licenses/",
+    "threshold_usd": 7500
+   },
+   "code": null,
+   "notes": [
+    "Classifications: https://lslbc.louisiana.gov/exams-classifications/ ; thresholds also in https://lslbc.louisiana.gov/wp-content/uploads/2025/06/Licensing-Requirements-for-Contractors-in-Louisiana.pdf (registration $7,500 to $50,000; Residential license $50,000 or more).",
+    "The LSUCCC site redirects to lsuccc.la (not .gov), so the code edition was not confirmed."
+   ]
+  },
+  "maine": {
+   "name": "Maine",
+   "abbr": "ME",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 20.754716981132077,
+     "rating": "Very Low",
+     "eal_building_usd": 2936240.7161803707,
+     "alr_national_percentile": 37.735849056603776
+    },
+    "strong_wind": {
+     "score": 22.641509433962266,
+     "rating": "Relatively Low",
+     "eal_building_usd": 565410.2852302482,
+     "alr_national_percentile": 3.7735849056603774
+    },
+    "hurricane": {
+     "score": 60.86956521739131,
+     "rating": "Relatively Low",
+     "eal_building_usd": 73898017.39382793,
+     "alr_national_percentile": 78.26086956521739
+    },
+    "tornado": {
+     "score": 16.9811320754717,
+     "rating": "Relatively Low",
+     "eal_building_usd": 1304831.0302191013,
+     "alr_national_percentile": 13.20754716981132
+    },
+    "winter_weather": {
+     "score": 76.78571428571429,
+     "rating": "Relatively High",
+     "eal_building_usd": 3534284.501044483,
+     "alr_national_percentile": 71.42857142857143
+    },
+    "ice_storm": {
+     "score": 78,
+     "rating": "Relatively High",
+     "eal_building_usd": 24779896.013213426,
+     "alr_national_percentile": 96
+    },
+    "wildfire": {
+     "score": 7.84313725490196,
+     "rating": "Very Low",
+     "eal_building_usd": 224365.25191452514,
+     "alr_national_percentile": 21.568627450980394
+    }
+   },
+   "licensing": {
+    "required": false,
+    "agency": "Maine Office of the Attorney General (consumer protection)",
+    "summary": "The Maine AG states that in Maine general contractors and trades such as roofing are not licensed or regulated; a written contract is required for home construction or repair over $3,000.",
+    "url": "https://www.maine.gov/ag/consumer-protection/consumer-help-topics/housing/home-construction-and-repair",
+    "threshold_usd": 3000
+   },
+   "code": null,
+   "notes": [
+    "The $3,000 threshold is for the mandatory written contract (Home Construction Contracts Act), not for licensing.",
+    "The AG page says municipalities over 4,000 residents must enforce MUBEC but gives no IRC edition; the Fire Marshal building-codes page returned 403."
+   ]
+  },
+  "maryland": {
+   "name": "Maryland",
+   "abbr": "MD",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 43.39622641509434,
+     "rating": "Relatively Low",
+     "eal_building_usd": 12652940.607875003,
+     "alr_national_percentile": 50.943396226415096
+    },
+    "strong_wind": {
+     "score": 49.056603773584904,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 14228380.386535877,
+     "alr_national_percentile": 60.37735849056604
+    },
+    "hurricane": {
+     "score": 65.21739130434783,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 107898600.79659022,
+     "alr_national_percentile": 60.86956521739131
+    },
+    "tornado": {
+     "score": 45.28301886792453,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 23026050.208617896,
+     "alr_national_percentile": 35.84905660377358
+    },
+    "winter_weather": {
+     "score": 71.42857142857143,
+     "rating": "Relatively High",
+     "eal_building_usd": 1237678.0429672722,
+     "alr_national_percentile": 25
+    },
+    "ice_storm": {
+     "score": 32,
+     "rating": "Relatively Low",
+     "eal_building_usd": 1817909.9828023438,
+     "alr_national_percentile": 30
+    },
+    "wildfire": {
+     "score": 31.372549019607842,
+     "rating": "Very Low",
+     "eal_building_usd": 2201027.5930261095,
+     "alr_national_percentile": 31.372549019607842
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Maryland Home Improvement Commission (MHIC), Maryland Department of Labor",
+    "summary": "General home improvement contractor license, not roofing-specific: MHIC licenses and regulates home improvement contractors and salespersons, and home improvement covers alteration, repair or replacement of a building or part of a building used as a residence (this would include reroofing).",
+    "url": "https://www.labor.maryland.gov/license/mhic/",
+    "threshold_usd": null
+   },
+   "code": {
+    "summary": "Maryland Building Performance Standards (COMAR 09.12.51) adopt the 2021 International Residential Code with state modifications; local jurisdictions may amend (except energy and accessibility codes).",
+    "url": "https://regs.maryland.gov/us/md/exec/comar/09.12.51/index.full.html"
+   },
+   "notes": [
+    "Guaranty Fund pays up to $30,000 per homeowner (not a licensing threshold).",
+    "MBPS overview: https://www.labor.maryland.gov/labor/build/buildcodes.shtml"
+   ]
+  },
+  "massachusetts": {
+   "name": "Massachusetts",
+   "abbr": "MA",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 24.528301886792452,
+     "rating": "Very Low",
+     "eal_building_usd": 1534164.5638602492,
+     "alr_national_percentile": 13.20754716981132
+    },
+    "strong_wind": {
+     "score": 43.39622641509434,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 6544708.1180759305,
+     "alr_national_percentile": 28.30188679245283
+    },
+    "hurricane": {
+     "score": 76.08695652173914,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 183092414.12452134,
+     "alr_national_percentile": 63.04347826086957
+    },
+    "tornado": {
+     "score": 41.509433962264154,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 29244011.57012204,
+     "alr_national_percentile": 62.264150943396224
+    },
+    "winter_weather": {
+     "score": 17.857142857142858,
+     "rating": "Relatively Low",
+     "eal_building_usd": 557495.4418012816,
+     "alr_national_percentile": 55.35714285714286
+    },
+    "ice_storm": {
+     "score": 66,
+     "rating": "Relatively High",
+     "eal_building_usd": 18052072.688831367,
+     "alr_national_percentile": 86
+    },
+    "wildfire": {
+     "score": 19.607843137254903,
+     "rating": "Very Low",
+     "eal_building_usd": 705545.7839972979,
+     "alr_national_percentile": 17.647058823529413
+    }
+   },
+   "licensing": null,
+   "code": null,
+   "notes": [
+    "mass.gov returned 403 (curl and WebFetch) for the Home Improvement Contractor registration and Construction Supervisor License pages; malegislature.gov (c.142A) refused the connection. The HIC registration and CSL could not be confirmed today."
+   ]
+  },
+  "michigan": {
+   "name": "Michigan",
+   "abbr": "MI",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 73.58490566037736,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 53384013.1936767,
+     "alr_national_percentile": 64.15094339622641
+    },
+    "strong_wind": {
+     "score": 96.22641509433963,
+     "rating": "Very High",
+     "eal_building_usd": 104911083.89827208,
+     "alr_national_percentile": 88.67924528301887
+    },
+    "hurricane": {
+     "score": 30.434782608695656,
+     "rating": "Very Low",
+     "eal_building_usd": 1200571.114226262,
+     "alr_national_percentile": 26.08695652173913
+    },
+    "tornado": {
+     "score": 94.33962264150944,
+     "rating": "Relatively High",
+     "eal_building_usd": 231029864.2340683,
+     "alr_national_percentile": 71.69811320754717
+    },
+    "winter_weather": {
+     "score": 83.92857142857143,
+     "rating": "Very High",
+     "eal_building_usd": 2736610.340465364,
+     "alr_national_percentile": 42.857142857142854
+    },
+    "ice_storm": {
+     "score": 76,
+     "rating": "Relatively High",
+     "eal_building_usd": 20900001.366081413,
+     "alr_national_percentile": 66
+    },
+    "wildfire": {
+     "score": 29.411764705882355,
+     "rating": "Very Low",
+     "eal_building_usd": 2126137.5534336795,
+     "alr_national_percentile": 25.49019607843137
+    }
+   },
+   "licensing": null,
+   "code": null,
+   "notes": [
+    "michigan.gov LARA builders page and legislature.mi.gov (MCL 339.2401/2403) both returned 403. Residential Builder / Maintenance & Alteration (roofing) licensing could not be confirmed today."
+   ]
+  },
+  "minnesota": {
+   "name": "Minnesota",
+   "abbr": "MN",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 88.67924528301887,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 97056788.02225824,
+     "alr_national_percentile": 84.90566037735849
+    },
+    "strong_wind": {
+     "score": 92.45283018867924,
+     "rating": "Very High",
+     "eal_building_usd": 95875922.37471429,
+     "alr_national_percentile": 90.56603773584906
+    },
+    "hurricane": {
+     "score": 6.521739130434782,
+     "rating": "Very Low",
+     "eal_building_usd": 352.0360611295002,
+     "alr_national_percentile": 6.521739130434782
+    },
+    "tornado": {
+     "score": 77.35849056603774,
+     "rating": "Relatively High",
+     "eal_building_usd": 183635509.36808163,
+     "alr_national_percentile": 86.79245283018868
+    },
+    "winter_weather": {
+     "score": 85.71428571428571,
+     "rating": "Very High",
+     "eal_building_usd": 7651395.318991857,
+     "alr_national_percentile": 85.71428571428571
+    },
+    "ice_storm": {
+     "score": 40,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 5758386.394469715,
+     "alr_national_percentile": 42
+    },
+    "wildfire": {
+     "score": 50.98039215686274,
+     "rating": "Relatively Low",
+     "eal_building_usd": 11419776.093129115,
+     "alr_national_percentile": 58.82352941176471
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Minnesota Department of Labor and Industry (DLI)",
+    "summary": "DLI issues a residential roofing contractor license (roofer license) to companies, each of which must designate a qualifying person who passes the exam and completes continuing education; a certificate of exemption is also offered.",
+    "url": "https://www.dli.mn.gov/business/residential-contractors/roofer-license",
+    "threshold_usd": null
+   },
+   "code": {
+    "summary": "2020 Minnesota Residential Code, part of the 2020 Minnesota State Building Code, effective March 31, 2020 (minimum standard statewide; municipalities enforce it only if adopted by local ordinance).",
+    "url": "https://www.dli.mn.gov/business/codes-and-laws/2020-minnesota-state-building-codes"
+   },
+   "notes": [
+    "The page does not state the gross-receipts limit for the certificate of exemption, so threshold is null.",
+    "Hub: https://www.dli.mn.gov/business/residential-contractors-remodelers-roofers (insurance-deductible rebates for roof repair are prohibited)."
+   ]
+  },
+  "mississippi": {
+   "name": "Mississippi",
+   "abbr": "MS",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 71.69811320754717,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 46382956.9336942,
+     "alr_national_percentile": 83.01886792452831
+    },
+    "strong_wind": {
+     "score": 56.60377358490566,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 17985161.50286486,
+     "alr_national_percentile": 67.9245283018868
+    },
+    "hurricane": {
+     "score": 82.6086956521739,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 260120260.60567734,
+     "alr_national_percentile": 80.43478260869566
+    },
+    "tornado": {
+     "score": 66.0377358490566,
+     "rating": "Relatively High",
+     "eal_building_usd": 114521542.26192804,
+     "alr_national_percentile": 88.67924528301887
+    },
+    "winter_weather": {
+     "score": 23.214285714285715,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 575434.7400135782,
+     "alr_national_percentile": 48.214285714285715
+    },
+    "ice_storm": {
+     "score": 46,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 7755863.102870039,
+     "alr_national_percentile": 78
+    },
+    "wildfire": {
+     "score": 49.01960784313725,
+     "rating": "Relatively Low",
+     "eal_building_usd": 9948953.643937496,
+     "alr_national_percentile": 54.90196078431373
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Mississippi State Board of Contractors (MSBOC)",
+    "summary": "MSBOC licenses residential contractors, Residential Roofing is one of the residential license classifications ($50 application fee), and it is unlawful to perform residential construction or residential improvement without a valid license.",
+    "url": "https://www.msboc.us/contractors/licenses/",
+    "threshold_usd": null
+   },
+   "code": null,
+   "notes": [
+    "Unlawful-activity statement: https://www.msboc.us/consumers/unlicensed-activity/ . No dollar threshold appears on the pages read; msboc.us/licenses/ redirected to an unrelated domain."
+   ]
+  },
+  "missouri": {
+   "name": "Missouri",
+   "abbr": "MO",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 86.79245283018868,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 117174272.39128608,
+     "alr_national_percentile": 88.67924528301887
+    },
+    "strong_wind": {
+     "score": 86.79245283018868,
+     "rating": "Relatively High",
+     "eal_building_usd": 39560256.28007027,
+     "alr_national_percentile": 64.15094339622641
+    },
+    "hurricane": {
+     "score": 26.08695652173913,
+     "rating": "Very Low",
+     "eal_building_usd": 832850.795750783,
+     "alr_national_percentile": 28.26086956521739
+    },
+    "tornado": {
+     "score": 92.45283018867924,
+     "rating": "Relatively High",
+     "eal_building_usd": 187053512.33952117,
+     "alr_national_percentile": 75.47169811320755
+    },
+    "winter_weather": {
+     "score": 75,
+     "rating": "Relatively High",
+     "eal_building_usd": 10447021.442188764,
+     "alr_national_percentile": 98.21428571428571
+    },
+    "ice_storm": {
+     "score": 94,
+     "rating": "Very High",
+     "eal_building_usd": 51842034.58343314,
+     "alr_national_percentile": 94
+    },
+    "wildfire": {
+     "score": 47.05882352941176,
+     "rating": "Relatively Low",
+     "eal_building_usd": 6773746.957406223,
+     "alr_national_percentile": 39.21568627450981
+    }
+   },
+   "licensing": null,
+   "code": null,
+   "notes": [
+    "No official page found that confirms or denies state roofing licensing (the ago.mo.gov home-improvement URLs returned 404; the pr.mo.gov homepage was inconclusive). No statewide residential code page read."
+   ]
+  },
+  "montana": {
+   "name": "Montana",
+   "abbr": "MT",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 37.735849056603776,
+     "rating": "Relatively Low",
+     "eal_building_usd": 5937851.987816987,
+     "alr_national_percentile": 56.60377358490566
+    },
+    "strong_wind": {
+     "score": 24.528301886792452,
+     "rating": "Relatively Low",
+     "eal_building_usd": 1993910.9644586942,
+     "alr_national_percentile": 37.735849056603776
+    },
+    "hurricane": {
+     "score": null,
+     "rating": "Not Applicable",
+     "eal_building_usd": null,
+     "alr_national_percentile": null
+    },
+    "tornado": {
+     "score": 15.09433962264151,
+     "rating": "Relatively Low",
+     "eal_building_usd": 2720835.0400938704,
+     "alr_national_percentile": 30.18867924528302
+    },
+    "winter_weather": {
+     "score": 82.14285714285714,
+     "rating": "Very High",
+     "eal_building_usd": 2295856.4968772177,
+     "alr_national_percentile": 51.78571428571429
+    },
+    "ice_storm": {
+     "score": 30,
+     "rating": "Relatively Low",
+     "eal_building_usd": 1665677.2832518795,
+     "alr_national_percentile": 40
+    },
+    "wildfire": {
+     "score": 78.43137254901961,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 69403891.4527765,
+     "alr_national_percentile": 94.11764705882352
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Montana Department of Labor & Industry (Employment Standards Division) - Construction Contractor Program",
+    "summary": "Under HB 239 (2025), effective January 1, 2026 all construction contractors in Montana must be licensed with DLI (replacing the former registration), and the statutory definition of construction contractor expressly includes installation or repair of roofing; general contractor license, not roofing-specific.",
+    "url": "https://boards.bsd.dli.mt.gov/construction-contractor/index.html",
+    "threshold_usd": null
+   },
+   "code": {
+    "summary": "International Residential Code, 2024 Edition (Montana-adopted), effective September 26, 2026.",
+    "url": "https://bsd.dli.mt.gov/building-codes-permits/current-codes"
+   },
+   "notes": [
+    "Page also contains legacy wording 'All construction contractors with employees must register'; the license framework took effect Jan 1, 2026 and registrations active Dec 31, 2025 were converted.",
+    "Old URL erd.dli.mt.gov/.../construction-contractor-registration returns 404."
+   ]
+  },
+  "nebraska": {
+   "name": "Nebraska",
+   "abbr": "NE",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 96.22641509433963,
+     "rating": "Relatively High",
+     "eal_building_usd": 97471360.596118,
+     "alr_national_percentile": 100
+    },
+    "strong_wind": {
+     "score": 84.90566037735849,
+     "rating": "Relatively High",
+     "eal_building_usd": 42286954.929263204,
+     "alr_national_percentile": 96.22641509433963
+    },
+    "hurricane": {
+     "score": 0,
+     "rating": "No Expected Annual Losses",
+     "eal_building_usd": 0,
+     "alr_national_percentile": 0
+    },
+    "tornado": {
+     "score": 64.15094339622641,
+     "rating": "Relatively High",
+     "eal_building_usd": 126042140.9210202,
+     "alr_national_percentile": 96.22641509433963
+    },
+    "winter_weather": {
+     "score": 69.64285714285714,
+     "rating": "Relatively High",
+     "eal_building_usd": 4193899.051230349,
+     "alr_national_percentile": 78.57142857142857
+    },
+    "ice_storm": {
+     "score": 62,
+     "rating": "Relatively High",
+     "eal_building_usd": 13117788.181383353,
+     "alr_national_percentile": 74
+    },
+    "wildfire": {
+     "score": 64.70588235294117,
+     "rating": "Relatively Low",
+     "eal_building_usd": 20355774.196949728,
+     "alr_national_percentile": 68.62745098039215
+    }
+   },
+   "licensing": null,
+   "code": null,
+   "notes": [
+    "dol.nebraska.gov (contractor registration) and nebraskalegislature.gov refused connections (ECONNREFUSED) from curl and WebFetch on 2026-10-10; could not confirm Nebraska Contractor Registration Act requirements from an official page."
+   ]
+  },
+  "nevada": {
+   "name": "Nevada",
+   "abbr": "NV",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 32.075471698113205,
+     "rating": "Very Low",
+     "eal_building_usd": 4703775.542339467,
+     "alr_national_percentile": 33.9622641509434
+    },
+    "strong_wind": {
+     "score": 11.320754716981133,
+     "rating": "Relatively Low",
+     "eal_building_usd": 844233.3379454031,
+     "alr_national_percentile": 9.433962264150944
+    },
+    "hurricane": {
+     "score": 0,
+     "rating": "No Expected Annual Losses",
+     "eal_building_usd": 0,
+     "alr_national_percentile": 0
+    },
+    "tornado": {
+     "score": 5.660377358490567,
+     "rating": "Very Low",
+     "eal_building_usd": 199059.17665954976,
+     "alr_national_percentile": 11.320754716981133
+    },
+    "winter_weather": {
+     "score": 41.07142857142857,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 462210.29801631416,
+     "alr_national_percentile": 19.642857142857142
+    },
+    "ice_storm": {
+     "score": 12,
+     "rating": "Very Low",
+     "eal_building_usd": 3833.979803515785,
+     "alr_national_percentile": 4
+    },
+    "wildfire": {
+     "score": 90.19607843137256,
+     "rating": "Relatively High",
+     "eal_building_usd": 149641168.2464893,
+     "alr_national_percentile": 96.07843137254902
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Nevada State Contractors Board (NSCB)",
+    "summary": "NRS 624.700 (quoted by NSCB): it is unlawful to engage in the business or act in the capacity of a contractor (anyone who constructs, alters, repairs or improves a building) without an active NSCB license; roofing falls under the Board's C (specialty) classifications, though the specific C-15 roofing classification text could not be read.",
+    "url": "https://www.nvcontractorsboard.com/investigations/contracting-without-a-license-is-a-crime/",
+    "threshold_usd": 1000
+   },
+   "code": null,
+   "notes": [
+    "Threshold: NRS 624.031 exemption (NSCB exemptions page https://www.nvcontractorsboard.com/licensing/exemptions/) for repair/maintenance work under $1,000 incl. labor and materials, but NOT if a building permit is required or the work is part of a larger project of $500 or more - so most reroofing jobs need a license regardless.",
+    "nscb.nv.gov redirects to nvcontractorsboard.com (Board's official domain).",
+    "License-classifications page did not list the 42 C subclassifications (refers to NAC 624); leg.state.nv.us returned 403.",
+    "No statewide residential code page read (Nevada codes adopted locally)."
+   ]
+  },
+  "new-hampshire": {
+   "name": "New Hampshire",
+   "abbr": "NH",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 15.09433962264151,
+     "rating": "Very Low",
+     "eal_building_usd": 99627.91016266381,
+     "alr_national_percentile": 1.8867924528301887
+    },
+    "strong_wind": {
+     "score": 20.754716981132077,
+     "rating": "Relatively Low",
+     "eal_building_usd": 1332674.795355255,
+     "alr_national_percentile": 18.867924528301888
+    },
+    "hurricane": {
+     "score": 56.52173913043478,
+     "rating": "Relatively Low",
+     "eal_building_usd": 38726708.30777627,
+     "alr_national_percentile": 65.21739130434783
+    },
+    "tornado": {
+     "score": 37.735849056603776,
+     "rating": "Relatively Low",
+     "eal_building_usd": 5652383.0295624025,
+     "alr_national_percentile": 26.41509433962264
+    },
+    "winter_weather": {
+     "score": 28.57142857142857,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 709966.8408404334,
+     "alr_national_percentile": 64.28571428571429
+    },
+    "ice_storm": {
+     "score": 44,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 8208140.854389467,
+     "alr_national_percentile": 92
+    },
+    "wildfire": {
+     "score": 11.76470588235294,
+     "rating": "Very Low",
+     "eal_building_usd": 341592.5832170425,
+     "alr_national_percentile": 27.450980392156865
+    }
+   },
+   "licensing": null,
+   "code": null,
+   "notes": [
+    "doj.nh.gov, nh.gov/bldgcode, oplc.nh.gov and gencourt.state.nh.us all returned 403 (Access Denied) to curl and WebFetch on 2026-10-10; widely reported that NH has no state roofing/contractor license but not confirmed from an official page."
+   ]
+  },
+  "new-jersey": {
+   "name": "New Jersey",
+   "abbr": "NJ",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 26.41509433962264,
+     "rating": "Very Low",
+     "eal_building_usd": 2163079.596125504,
+     "alr_national_percentile": 41.509433962264154
+    },
+    "strong_wind": {
+     "score": 100,
+     "rating": "Very High",
+     "eal_building_usd": 203981478.203423,
+     "alr_national_percentile": 100
+    },
+    "hurricane": {
+     "score": 73.91304347826086,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 172322524.28301328,
+     "alr_national_percentile": 56.52173913043478
+    },
+    "tornado": {
+     "score": 49.056603773584904,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 41063429.45481933,
+     "alr_national_percentile": 47.16981132075472
+    },
+    "winter_weather": {
+     "score": 89.28571428571429,
+     "rating": "Very High",
+     "eal_building_usd": 4745299.06646871,
+     "alr_national_percentile": 57.14285714285714
+    },
+    "ice_storm": {
+     "score": 72,
+     "rating": "Relatively High",
+     "eal_building_usd": 14286653.329170829,
+     "alr_national_percentile": 54
+    },
+    "wildfire": {
+     "score": 54.90196078431373,
+     "rating": "Relatively Low",
+     "eal_building_usd": 12349298.51925746,
+     "alr_national_percentile": 52.94117647058824
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "New Jersey Division of Consumer Affairs (Office of the Attorney General)",
+    "summary": "Home improvement contractor businesses must be registered with the Division of Consumer Affairs; a Dec 1, 2025 AG enforcement release cites HICBs bidding on roofing, siding and other projects without an active HICB registration - a general home-improvement registration, not a roofing-specific license.",
+    "url": "https://www.njoag.gov/division-of-consumer-affairs-undercover-enforcement-operations-result-in-notices-of-violations-against-18-unregistered-home-improvement-contractor-businesses-and-11-unlicensed-moving-companies/",
+    "threshold_usd": null
+   },
+   "code": {
+    "summary": "One- and Two-Family Dwelling Subcode (N.J.A.C. 5:23-3.21): International Residential Code/2024, New Jersey edition, adoption date Aug 17, 2026.",
+    "url": "https://www.nj.gov/dca/codes/codreg/current.shtml"
+   },
+   "notes": [
+    "njconsumeraffairs.gov/hic is behind an Incapsula bot wall (not circumvented); registration requirement confirmed via the AG press release instead.",
+    "No dollar threshold for registration found on pages read."
+   ]
+  },
+  "new-mexico": {
+   "name": "New Mexico",
+   "abbr": "NM",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 47.16981132075472,
+     "rating": "Relatively Low",
+     "eal_building_usd": 10578623.130253367,
+     "alr_national_percentile": 52.83018867924528
+    },
+    "strong_wind": {
+     "score": 28.30188679245283,
+     "rating": "Relatively Low",
+     "eal_building_usd": 2607683.0777938636,
+     "alr_national_percentile": 32.075471698113205
+    },
+    "hurricane": {
+     "score": 13.043478260869565,
+     "rating": "Very Low",
+     "eal_building_usd": 52921.687826235015,
+     "alr_national_percentile": 19.565217391304348
+    },
+    "tornado": {
+     "score": 26.41509433962264,
+     "rating": "Relatively Low",
+     "eal_building_usd": 5310641.189316433,
+     "alr_national_percentile": 41.509433962264154
+    },
+    "winter_weather": {
+     "score": 51.78571428571429,
+     "rating": "Relatively High",
+     "eal_building_usd": 1747732.7581793226,
+     "alr_national_percentile": 60.71428571428571
+    },
+    "ice_storm": {
+     "score": 22,
+     "rating": "Relatively Low",
+     "eal_building_usd": 1787104.2936746385,
+     "alr_national_percentile": 46
+    },
+    "wildfire": {
+     "score": 82.35294117647058,
+     "rating": "Relatively High",
+     "eal_building_usd": 108726605.49227507,
+     "alr_national_percentile": 90.19607843137256
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "New Mexico Regulation & Licensing Department - Construction Industries Division (CID)",
+    "summary": "CID's mission statement includes 'requiring licensure for any person practicing or offering to practice construction contracting'; the specific roofing classification (and any handyman exemption amount) could not be confirmed on pages read.",
+    "url": "https://www.rld.nm.gov/construction-industries/",
+    "threshold_usd": null
+   },
+   "code": null,
+   "notes": [
+    "CID page lists the 2021 New Mexico Residential Energy Conservation Code (NMAC 14.7.6, effective 7.30.24) and references 2021 IRC Chapter 9 in a roofing video, but does not state the statewide residential building code edition.",
+    "CID classification pages (GS/GB) not found at guessed URLs."
+   ]
+  },
+  "new-york": {
+   "name": "New York",
+   "abbr": "NY",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 54.71698113207547,
+     "rating": "Relatively Low",
+     "eal_building_usd": 7443174.843978033,
+     "alr_national_percentile": 32.075471698113205
+    },
+    "strong_wind": {
+     "score": 77.35849056603774,
+     "rating": "Relatively High",
+     "eal_building_usd": 23709914.365262926,
+     "alr_national_percentile": 30.18867924528302
+    },
+    "hurricane": {
+     "score": 80.43478260869566,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 226556590.8738351,
+     "alr_national_percentile": 50
+    },
+    "tornado": {
+     "score": 54.71698113207547,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 47291099.31613215,
+     "alr_national_percentile": 22.641509433962266
+    },
+    "winter_weather": {
+     "score": 91.07142857142857,
+     "rating": "Very High",
+     "eal_building_usd": 2942527.1644088235,
+     "alr_national_percentile": 30.357142857142854
+    },
+    "ice_storm": {
+     "score": 80,
+     "rating": "Relatively High",
+     "eal_building_usd": 19425584.80023031,
+     "alr_national_percentile": 48
+    },
+    "wildfire": {
+     "score": 21.568627450980394,
+     "rating": "Very Low",
+     "eal_building_usd": 1167688.8009936118,
+     "alr_national_percentile": 9.803921568627452
+    }
+   },
+   "licensing": {
+    "required": false,
+    "agency": "Office of the New York State Attorney General (consumer guidance)",
+    "summary": "The NY AG states that home-improvement contractors must be licensed in New York City and Suffolk, Nassau, Westchester, Putnam and Rockland counties - i.e. licensing is local, with no state-level contractor/roofing license mentioned.",
+    "url": "https://ag.ny.gov/publications/hiring-home-improvement-contractor",
+    "threshold_usd": null
+   },
+   "code": null,
+   "notes": [
+    "'false' is inferred from the AG's locality-only licensing statement; the page does not literally say 'no state license'.",
+    "dos.ny.gov building codes page returned 403 to curl; WebFetch content did not state the current Residential Code of NYS edition."
+   ]
+  },
+  "north-carolina": {
+   "name": "North Carolina",
+   "abbr": "NC",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 67.9245283018868,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 35997118.46555059,
+     "alr_national_percentile": 49.056603773584904
+    },
+    "strong_wind": {
+     "score": 71.69811320754717,
+     "rating": "Relatively High",
+     "eal_building_usd": 17295404.6568279,
+     "alr_national_percentile": 58.490566037735846
+    },
+    "hurricane": {
+     "score": 93.47826086956522,
+     "rating": "Relatively High",
+     "eal_building_usd": 1123728169.941868,
+     "alr_national_percentile": 82.6086956521739
+    },
+    "tornado": {
+     "score": 75.47169811320755,
+     "rating": "Relatively High",
+     "eal_building_usd": 151674203.18693033,
+     "alr_national_percentile": 52.83018867924528
+    },
+    "winter_weather": {
+     "score": 94.64285714285714,
+     "rating": "Very High",
+     "eal_building_usd": 2896253.4645836167,
+     "alr_national_percentile": 35.714285714285715
+    },
+    "ice_storm": {
+     "score": 90,
+     "rating": "Very High",
+     "eal_building_usd": 43983258.34824326,
+     "alr_national_percentile": 82
+    },
+    "wildfire": {
+     "score": 56.86274509803921,
+     "rating": "Relatively Low",
+     "eal_building_usd": 12182112.62741138,
+     "alr_national_percentile": 43.13725490196079
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "North Carolina Licensing Board for General Contractors (NCLBGC)",
+    "summary": "By law (G.S. 87-1) a general contractor must be licensed by the state when the total project cost is $40,000 or more; this is a general contractor license, and no roofing-specific rule was found on pages read.",
+    "url": "https://nclbgc.org/faq-consumers/",
+    "threshold_usd": 40000
+   },
+   "code": {
+    "summary": "NC OSFM states the 2018 NC codes (2018 NC amendments with the 2015 International Codes, incl. Residential) effective Jan 1, 2019 'are currently effective'; the 2024 NC State Building Code is approved but its effective date is addressed in a separate letter (not read).",
+    "url": "https://www.ncosfm.gov/codes/codes-current-and-past"
+   },
+   "notes": [
+    "nclbgc.org returns 403 to curl; read via WebFetch (homepage and consumer FAQ both state $40,000).",
+    "A $30,000 roofing threshold mentioned in the brief was NOT found on the NCLBGC pages read; Laws & Regulations PDF returned 403."
+   ]
+  },
+  "north-dakota": {
+   "name": "North Dakota",
+   "abbr": "ND",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 75.47169811320755,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 45034708.40935798,
+     "alr_national_percentile": 90.56603773584906
+    },
+    "strong_wind": {
+     "score": 47.16981132075472,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 15715000.448675158,
+     "alr_national_percentile": 98.11320754716981
+    },
+    "hurricane": {
+     "score": null,
+     "rating": "Not Applicable",
+     "eal_building_usd": null,
+     "alr_national_percentile": null
+    },
+    "tornado": {
+     "score": 43.39622641509434,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 31841487.877465166,
+     "alr_national_percentile": 98.11320754716981
+    },
+    "winter_weather": {
+     "score": 96.42857142857143,
+     "rating": "Very High",
+     "eal_building_usd": 13339715.47343834,
+     "alr_national_percentile": 96.42857142857143
+    },
+    "ice_storm": {
+     "score": 70,
+     "rating": "Relatively High",
+     "eal_building_usd": 17238456.642121803,
+     "alr_national_percentile": 90
+    },
+    "wildfire": {
+     "score": 62.745098039215684,
+     "rating": "Relatively Low",
+     "eal_building_usd": 15138238.216146538,
+     "alr_national_percentile": 70.58823529411765
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "North Dakota Secretary of State - Contractor Licensing",
+    "summary": "When the cost, value, or price of a job exceeds $4,000, the person doing the work must be licensed as a contractor in North Dakota (NDCC ch. 43-07); general contractor license, not roofing-specific.",
+    "url": "https://www.sos.nd.gov/business/licensing-registration/contractors",
+    "threshold_usd": 4000
+   },
+   "code": {
+    "summary": "ND State Building Code consists of the IBC, IRC, IMC and IFGC; on Sept. 11, 2025 the 2024 updates (incl. 2024 IRC) with ND amendments were adopted; the code applies only in jurisdictions that elect to adopt and enforce building codes.",
+    "url": "https://www.commerce.nd.gov/community-services/building-codes"
+   },
+   "notes": [
+    "Effective date of the 2024 ND State Building Code not stated on the page."
+   ]
+  },
+  "ohio": {
+   "name": "Ohio",
+   "abbr": "OH",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 83.01886792452831,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 93902870.54184073,
+     "alr_national_percentile": 75.47169811320755
+    },
+    "strong_wind": {
+     "score": 75.47169811320755,
+     "rating": "Relatively High",
+     "eal_building_usd": 49263176.25645771,
+     "alr_national_percentile": 77.35849056603774
+    },
+    "hurricane": {
+     "score": 36.95652173913043,
+     "rating": "Very Low",
+     "eal_building_usd": 4279662.293297111,
+     "alr_national_percentile": 32.608695652173914
+    },
+    "tornado": {
+     "score": 81.13207547169812,
+     "rating": "Relatively High",
+     "eal_building_usd": 223878188.8451409,
+     "alr_national_percentile": 83.01886792452831
+    },
+    "winter_weather": {
+     "score": 78.57142857142857,
+     "rating": "Relatively High",
+     "eal_building_usd": 10375169.896546198,
+     "alr_national_percentile": 94.64285714285714
+    },
+    "ice_storm": {
+     "score": 86,
+     "rating": "Relatively High",
+     "eal_building_usd": 30934303.501296327,
+     "alr_national_percentile": 72
+    },
+    "wildfire": {
+     "score": 25.49019607843137,
+     "rating": "Very Low",
+     "eal_building_usd": 1274959.8724367353,
+     "alr_national_percentile": 15.686274509803921
+    }
+   },
+   "licensing": {
+    "required": false,
+    "agency": "Ohio Department of Commerce - Ohio Construction Industry Licensing Board (OCILB)",
+    "summary": "OCILB licenses only electrical, HVAC, plumbing, hydronics and refrigeration contractors (commercial), so there is no state roofing license; local building departments may impose their own registration.",
+    "url": "https://com.ohio.gov/divisions-and-programs/industrial-compliance/boards/ohio-construction-industry-licensing-board",
+    "threshold_usd": null
+   },
+   "code": null,
+   "notes": [
+    "Board of Building Standards / Residential Code of Ohio pages returned 404 or empty; codes.ohio.gov unreachable - edition not confirmed."
+   ]
+  },
+  "oklahoma": {
+   "name": "Oklahoma",
+   "abbr": "OK",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 84.90566037735849,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 111586532.2269666,
+     "alr_national_percentile": 92.45283018867924
+    },
+    "strong_wind": {
+     "score": 79.24528301886792,
+     "rating": "Relatively High",
+     "eal_building_usd": 73526746.71281603,
+     "alr_national_percentile": 92.45283018867924
+    },
+    "hurricane": {
+     "score": 23.91304347826087,
+     "rating": "Very Low",
+     "eal_building_usd": 767854.1733858243,
+     "alr_national_percentile": 30.434782608695656
+    },
+    "tornado": {
+     "score": 83.01886792452831,
+     "rating": "Relatively High",
+     "eal_building_usd": 131130844.28269844,
+     "alr_national_percentile": 73.58490566037736
+    },
+    "winter_weather": {
+     "score": 55.35714285714286,
+     "rating": "Relatively High",
+     "eal_building_usd": 3435790.4921060177,
+     "alr_national_percentile": 80.35714285714286
+    },
+    "ice_storm": {
+     "score": 98,
+     "rating": "Very High",
+     "eal_building_usd": 96345294.07613087,
+     "alr_national_percentile": 98
+    },
+    "wildfire": {
+     "score": 76.47058823529412,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 45888836.23803555,
+     "alr_national_percentile": 62.745098039215684
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Oklahoma Construction Industries Board (CIB)",
+    "summary": "Roofing contractors must register with the CIB (roofing-specific registration); under HB 1628 a new Residential Roofing Endorsement is required, with SB 1873 moving the transition start to January 1, 2027 and the deadline to obtain it to January 1, 2028.",
+    "url": "https://oklahoma.gov/cib/news/new-residential-roofing-endorsement-required-by-house-bill-1628.html",
+    "threshold_usd": null
+   },
+   "code": {
+    "summary": "Oklahoma Uniform Building Code Commission: 2024 edition of the IRC adopted by permanent rule, effective Sep. 14, 2026 (superseding the 2018 IRC).",
+    "url": "https://oklahoma.gov/oubcc/codes-and-rules/international-residential-code-adoptions.html"
+   },
+   "notes": [
+    "Roofing registration page: https://oklahoma.gov/cib/your-industry/roofing.html"
+   ]
+  },
+  "oregon": {
+   "name": "Oregon",
+   "abbr": "OR",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 22.641509433962266,
+     "rating": "Very Low",
+     "eal_building_usd": 2747513.3568662587,
+     "alr_national_percentile": 20.754716981132077
+    },
+    "strong_wind": {
+     "score": 35.84905660377358,
+     "rating": "Relatively Low",
+     "eal_building_usd": 11470810.3642927,
+     "alr_national_percentile": 81.13207547169812
+    },
+    "hurricane": {
+     "score": null,
+     "rating": "Not Applicable",
+     "eal_building_usd": null,
+     "alr_national_percentile": null
+    },
+    "tornado": {
+     "score": 20.754716981132077,
+     "rating": "Relatively Low",
+     "eal_building_usd": 2207700.2733848845,
+     "alr_national_percentile": 9.433962264150944
+    },
+    "winter_weather": {
+     "score": 42.857142857142854,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 361381.81645189744,
+     "alr_national_percentile": 17.857142857142858
+    },
+    "ice_storm": {
+     "score": 48,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 2226252.250236869,
+     "alr_national_percentile": 20
+    },
+    "wildfire": {
+     "score": 86.27450980392157,
+     "rating": "Relatively High",
+     "eal_building_usd": 120541715.61916205,
+     "alr_national_percentile": 76.47058823529412
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Oregon Construction Contractors Board (CCB)",
+    "summary": "CCB states that work requiring a CCB license includes roofing (as well as siding, painting, carpentry, etc.), with residential or commercial endorsements; general contractor license, not roofing-specific.",
+    "url": "https://www.oregon.gov/ccb/Pages/CCB%20License.aspx",
+    "threshold_usd": null
+   },
+   "code": {
+    "summary": "2026 Oregon Residential Specialty Code (ORSC): chapter 1 effective and mandatory Oct. 1, 2026; chapters 2-44 effective Oct. 1, 2026 and mandatory April 1, 2027 (2023 ORSC applies until then for those chapters).",
+    "url": "https://www.oregon.gov/bcd/codes-stand/Pages/adopted-codes.aspx"
+   },
+   "notes": [
+    "Base IRC edition of the 2026 ORSC not stated on the page.",
+    "No handyman dollar threshold stated on the CCB page read."
+   ]
+  },
+  "pennsylvania": {
+   "name": "Pennsylvania",
+   "abbr": "PA",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 45.28301886792453,
+     "rating": "Relatively Low",
+     "eal_building_usd": 10558886.136532616,
+     "alr_national_percentile": 35.84905660377358
+    },
+    "strong_wind": {
+     "score": 73.58490566037736,
+     "rating": "Relatively High",
+     "eal_building_usd": 30124181.80135221,
+     "alr_national_percentile": 41.509433962264154
+    },
+    "hurricane": {
+     "score": 69.56521739130434,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 143006628.8218046,
+     "alr_national_percentile": 47.82608695652174
+    },
+    "tornado": {
+     "score": 56.60377358490566,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 84120605.20198914,
+     "alr_national_percentile": 58.490566037735846
+    },
+    "winter_weather": {
+     "score": 98.21428571428571,
+     "rating": "Very High",
+     "eal_building_usd": 6432675.735210083,
+     "alr_national_percentile": 53.57142857142857
+    },
+    "ice_storm": {
+     "score": 56.00000000000001,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 7810831.846754041,
+     "alr_national_percentile": 32
+    },
+    "wildfire": {
+     "score": 23.52941176470588,
+     "rating": "Very Low",
+     "eal_building_usd": 1255586.493750904,
+     "alr_national_percentile": 13.725490196078432
+    }
+   },
+   "licensing": null,
+   "code": {
+    "summary": "PA Uniform Construction Code: regulations adopting the 2018 I-Code series (as amended by the RAC) effective February 14, 2022; 2021 I-Code accessibility provisions effective Dec 25, 2021 were later enjoined.",
+    "url": "https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home"
+   },
+   "notes": [
+    "attorneygeneral.gov and hic.attorneygeneral.gov return 403 (redirect to /blocked/) to curl and WebFetch; palegis.us refused connection - Home Improvement Consumer Protection Act registration ($5,000/year threshold) not confirmed from an official page.",
+    "UCC page does not name the IRC explicitly; it states the 2018 I-Code series."
+   ]
+  },
+  "rhode-island": {
+   "name": "Rhode Island",
+   "abbr": "RI",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 11.320754716981133,
+     "rating": "Very Low",
+     "eal_building_usd": 633312.9496617465,
+     "alr_national_percentile": 24.528301886792452
+    },
+    "strong_wind": {
+     "score": 9.433962264150944,
+     "rating": "Relatively Low",
+     "eal_building_usd": 644050.2628613438,
+     "alr_national_percentile": 22.641509433962266
+    },
+    "hurricane": {
+     "score": 50,
+     "rating": "Relatively Low",
+     "eal_building_usd": 18279723.677308965,
+     "alr_national_percentile": 54.347826086956516
+    },
+    "tornado": {
+     "score": 18.867924528301888,
+     "rating": "Relatively Low",
+     "eal_building_usd": 4198975.166573016,
+     "alr_national_percentile": 64.15094339622641
+    },
+    "winter_weather": {
+     "score": 12.5,
+     "rating": "Relatively Low",
+     "eal_building_usd": 63612.13648684846,
+     "alr_national_percentile": 28.57142857142857
+    },
+    "ice_storm": {
+     "score": 16,
+     "rating": "Relatively Low",
+     "eal_building_usd": 775809.8833681997,
+     "alr_national_percentile": 34
+    },
+    "wildfire": {
+     "score": 3.92156862745098,
+     "rating": "Very Low",
+     "eal_building_usd": 37961.36806192189,
+     "alr_national_percentile": 5.88235294117647
+    }
+   },
+   "licensing": null,
+   "code": {
+    "summary": "RISBC-2 Rhode Island State One and Two Family Dwelling Code adopts the International Residential Code (IRC) 2021 edition with Rhode Island amendments; current rule version shown as effective 12/01/2025 (technical revision).",
+    "url": "https://rules.sos.ri.gov/regulations/part/510-00-00-2"
+   },
+   "notes": [
+    "crb.ri.gov returned HTTP 403 (curl and WebFetch); webserver.rilegislature.gov (RIGL 5-65) refused connection; CRLB rules (RICR Title 440) could not be loaded. Licensing left null although CRLB registration/commercial roofer licensing is widely reported - not confirmed today."
+   ]
+  },
+  "south-carolina": {
+   "name": "South Carolina",
+   "abbr": "SC",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 52.83018867924528,
+     "rating": "Relatively Low",
+     "eal_building_usd": 11488314.22001414,
+     "alr_national_percentile": 26.41509433962264
+    },
+    "strong_wind": {
+     "score": 54.71698113207547,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 7382733.782831043,
+     "alr_national_percentile": 24.528301886792452
+    },
+    "hurricane": {
+     "score": 89.13043478260869,
+     "rating": "Relatively High",
+     "eal_building_usd": 1105259181.6671872,
+     "alr_national_percentile": 84.78260869565217
+    },
+    "tornado": {
+     "score": 60.37735849056604,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 76230901.0027955,
+     "alr_national_percentile": 45.28301886792453
+    },
+    "winter_weather": {
+     "score": 37.5,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 486734.46364563174,
+     "alr_national_percentile": 21.428571428571427
+    },
+    "ice_storm": {
+     "score": 88,
+     "rating": "Relatively High",
+     "eal_building_usd": 34710725.983151585,
+     "alr_national_percentile": 88
+    },
+    "wildfire": {
+     "score": 60.78431372549019,
+     "rating": "Relatively Low",
+     "eal_building_usd": 13237599.943443185,
+     "alr_national_percentile": 56.86274509803921
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "South Carolina Residential Builders Commission (SC Dept. of Labor, Licensing and Regulation)",
+    "summary": "SC Code 40-59-20(7) lists roofers as a residential specialty contracting area (undertakings over $500 not regulated by Chapter 11), and 40-59-30 makes it a misdemeanor to engage in residential specialty contracting without first registering with or being licensed by the Commission.",
+    "url": "https://www.scstatehouse.gov/code/t40c059.php",
+    "threshold_usd": 500
+   },
+   "code": null,
+   "notes": [
+    "llr.sc.gov was unreachable (connection refused/timeout), so the source is the official SC Code on scstatehouse.gov rather than the LLR page.",
+    "The statute's sentence assigning trades to 'license' vs 'registration' does not name roofers; whether roofers get a specialty registration or license is set by Commission regulation (not read).",
+    "Residential builder license applies over $5,000 (40-59-20(6)); a licensed residential builder may do specialty work including roofing."
+   ]
+  },
+  "south-dakota": {
+   "name": "South Dakota",
+   "abbr": "SD",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 66.0377358490566,
+     "rating": "Relatively Low",
+     "eal_building_usd": 15740697.964516621,
+     "alr_national_percentile": 77.35849056603774
+    },
+    "strong_wind": {
+     "score": 45.28301886792453,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 10731103.053121408,
+     "alr_national_percentile": 83.01886792452831
+    },
+    "hurricane": {
+     "score": null,
+     "rating": "Not Applicable",
+     "eal_building_usd": null,
+     "alr_national_percentile": null
+    },
+    "tornado": {
+     "score": 52.83018867924528,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 52153653.11351942,
+     "alr_national_percentile": 84.90566037735849
+    },
+    "winter_weather": {
+     "score": 73.21428571428571,
+     "rating": "Relatively High",
+     "eal_building_usd": 6924307.834497379,
+     "alr_national_percentile": 92.85714285714286
+    },
+    "ice_storm": {
+     "score": 68,
+     "rating": "Relatively High",
+     "eal_building_usd": 6583176.855933251,
+     "alr_national_percentile": 38
+    },
+    "wildfire": {
+     "score": 70.58823529411765,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 40092115.684328906,
+     "alr_national_percentile": 78.43137254901961
+    }
+   },
+   "licensing": null,
+   "code": null,
+   "notes": [
+    "Not researched to an official source within budget; no official page confirming absence of a state roofing license was read. Do not state 'no license' without a source."
+   ]
+  },
+  "tennessee": {
+   "name": "Tennessee",
+   "abbr": "TN",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 50.943396226415096,
+     "rating": "Relatively Low",
+     "eal_building_usd": 16004417.87650719,
+     "alr_national_percentile": 43.39622641509434
+    },
+    "strong_wind": {
+     "score": 69.81132075471697,
+     "rating": "Relatively High",
+     "eal_building_usd": 22078952.398006212,
+     "alr_national_percentile": 52.83018867924528
+    },
+    "hurricane": {
+     "score": 39.130434782608695,
+     "rating": "Very Low",
+     "eal_building_usd": 4658557.558375385,
+     "alr_national_percentile": 39.130434782608695
+    },
+    "tornado": {
+     "score": 86.79245283018868,
+     "rating": "Relatively High",
+     "eal_building_usd": 172535227.8964301,
+     "alr_national_percentile": 77.35849056603774
+    },
+    "winter_weather": {
+     "score": 57.14285714285714,
+     "rating": "Relatively High",
+     "eal_building_usd": 5161601.042300756,
+     "alr_national_percentile": 87.5
+    },
+    "ice_storm": {
+     "score": 64,
+     "rating": "Relatively High",
+     "eal_building_usd": 14300711.009748362,
+     "alr_national_percentile": 64
+    },
+    "wildfire": {
+     "score": 35.294117647058826,
+     "rating": "Very Low",
+     "eal_building_usd": 2972802.5411496023,
+     "alr_national_percentile": 29.411764705882355
+    }
+   },
+   "licensing": null,
+   "code": null,
+   "notes": [
+    "All tn.gov pages (Board for Licensing Contractors, license types, home improvement county map) returned 403 or timed out via curl and WebFetch; TN statutes are hosted by LexisNexis, not .gov. Nothing confirmed today."
+   ]
+  },
+  "texas": {
+   "name": "Texas",
+   "abbr": "TX",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 100,
+     "rating": "Very High",
+     "eal_building_usd": 755997414.5161746,
+     "alr_national_percentile": 94.33962264150944
+    },
+    "strong_wind": {
+     "score": 98.11320754716981,
+     "rating": "Very High",
+     "eal_building_usd": 87127424.95017137,
+     "alr_national_percentile": 75.47169811320755
+    },
+    "hurricane": {
+     "score": 91.30434782608695,
+     "rating": "Relatively High",
+     "eal_building_usd": 1160554636.985804,
+     "alr_national_percentile": 69.56521739130434
+    },
+    "tornado": {
+     "score": 100,
+     "rating": "Very High",
+     "eal_building_usd": 554780242.6604077,
+     "alr_national_percentile": 33.9622641509434
+    },
+    "winter_weather": {
+     "score": 100,
+     "rating": "Very High",
+     "eal_building_usd": 10850140.746071951,
+     "alr_national_percentile": 66.07142857142857
+    },
+    "ice_storm": {
+     "score": 96,
+     "rating": "Very High",
+     "eal_building_usd": 59518973.109212875,
+     "alr_national_percentile": 62
+    },
+    "wildfire": {
+     "score": 84.31372549019608,
+     "rating": "Relatively High",
+     "eal_building_usd": 113749714.79917175,
+     "alr_national_percentile": 66.66666666666666
+    }
+   },
+   "licensing": null,
+   "code": null,
+   "notes": [
+    "statutes.capitol.texas.gov is a JavaScript app and returned no statute text (Local Gov't Code ch. 214 IRC adoption for municipalities not readable). No official page read that states Texas has no roofer license; left null.",
+    "Any Texas IRC adoption is municipal (LGC 214.212), not a statewide residential code."
+   ]
+  },
+  "utah": {
+   "name": "Utah",
+   "abbr": "UT",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 16.9811320754717,
+     "rating": "Very Low",
+     "eal_building_usd": 1049504.6040464665,
+     "alr_national_percentile": 16.9811320754717
+    },
+    "strong_wind": {
+     "score": 37.735849056603776,
+     "rating": "Relatively Low",
+     "eal_building_usd": 5541704.095196672,
+     "alr_national_percentile": 43.39622641509434
+    },
+    "hurricane": {
+     "score": null,
+     "rating": "Not Applicable",
+     "eal_building_usd": null,
+     "alr_national_percentile": null
+    },
+    "tornado": {
+     "score": 28.30188679245283,
+     "rating": "Relatively Low",
+     "eal_building_usd": 2830883.368823432,
+     "alr_national_percentile": 15.09433962264151
+    },
+    "winter_weather": {
+     "score": 64.28571428571429,
+     "rating": "Relatively High",
+     "eal_building_usd": 1068980.9654587894,
+     "alr_national_percentile": 26.785714285714285
+    },
+    "ice_storm": {
+     "score": 14.000000000000002,
+     "rating": "Very Low",
+     "eal_building_usd": 283558.28961892705,
+     "alr_national_percentile": 22
+    },
+    "wildfire": {
+     "score": 94.11764705882352,
+     "rating": "Relatively High",
+     "eal_building_usd": 187201463.70422715,
+     "alr_national_percentile": 100
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Utah Division of Professional Licensing (DOPL), Construction Trades Licensing Act",
+    "summary": "Utah Code 58-55-305(1)(h) exempts from contractor licensing only building alteration/repair/improvement work with a contracted value under $7,000 (labor and materials), so reroofing at or above $7,000 requires a DOPL contractor license; exempt jobs over $3,000 require a one-time insurance affirmation filed with DOPL.",
+    "url": "https://le.utah.gov/xcode/Title58/Chapter55/C58-55-S305_2025050720250507.html",
+    "threshold_usd": 7000
+   },
+   "code": {
+    "summary": "Utah Code 15A-2-103 adopts the 2021 edition of the International Residential Code (version effective 7/1/2026; a version effective 1/1/2027 also lists the 2021 IRC), with 2024 IBC.",
+    "url": "https://le.utah.gov/xcode/Title15A/Chapter2/C15A-2-S103_2026050620260701.html"
+   },
+   "notes": [
+    "dopl.utah.gov returned 403; the S280 roofing classification (Admin. Rule R156-55a) was not confirmed today.",
+    "Threshold is $7,000 per current statute, not the older $3,000 figure ($3,000 now only triggers the insurance affirmation)."
+   ]
+  },
+  "vermont": {
+   "name": "Vermont",
+   "abbr": "VT",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 13.20754716981132,
+     "rating": "Very Low",
+     "eal_building_usd": 61257.366070833676,
+     "alr_national_percentile": 9.433962264150944
+    },
+    "strong_wind": {
+     "score": 16.9811320754717,
+     "rating": "Relatively Low",
+     "eal_building_usd": 2279597.2451171908,
+     "alr_national_percentile": 66.0377358490566
+    },
+    "hurricane": {
+     "score": 43.47826086956522,
+     "rating": "Very Low",
+     "eal_building_usd": 6711682.697613565,
+     "alr_national_percentile": 45.65217391304348
+    },
+    "tornado": {
+     "score": 13.20754716981132,
+     "rating": "Relatively Low",
+     "eal_building_usd": 1762593.840397534,
+     "alr_national_percentile": 24.528301886792452
+    },
+    "winter_weather": {
+     "score": 19.642857142857142,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 1061168.5661229372,
+     "alr_national_percentile": 91.07142857142857
+    },
+    "ice_storm": {
+     "score": 24,
+     "rating": "Relatively Low",
+     "eal_building_usd": 2124285.2403482,
+     "alr_national_percentile": 84
+    },
+    "wildfire": {
+     "score": 5.88235294117647,
+     "rating": "Very Low",
+     "eal_building_usd": 108051.44502283164,
+     "alr_national_percentile": 19.607843137254903
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Vermont Secretary of State, Office of Professional Regulation (OPR)",
+    "summary": "General residential contractor registration (not roofing-specific), required since April 1, 2023 under 26 V.S.A. 5501(b) for residential construction estimated at $10,000 or more; the FAQ explicitly lists roofing as residential contracting.",
+    "url": "https://sos.vermont.gov/residential-contractors/residential-contractor-faqs",
+    "threshold_usd": 10000
+   },
+   "code": null,
+   "notes": [
+    "Threshold on the official FAQ is $10,000, not $3,500 as in the starting hint.",
+    "No official page read stating a statewide residential building code."
+   ]
+  },
+  "virginia": {
+   "name": "Virginia",
+   "abbr": "VA",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 56.60377358490566,
+     "rating": "Relatively Low",
+     "eal_building_usd": 16525856.384063281,
+     "alr_national_percentile": 39.62264150943396
+    },
+    "strong_wind": {
+     "score": 64.15094339622641,
+     "rating": "Relatively High",
+     "eal_building_usd": 19910548.418637708,
+     "alr_national_percentile": 45.28301886792453
+    },
+    "hurricane": {
+     "score": 78.26086956521739,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 189643105.86924148,
+     "alr_national_percentile": 58.69565217391305
+    },
+    "tornado": {
+     "score": 50.943396226415096,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 42002358.24519855,
+     "alr_national_percentile": 50.943396226415096
+    },
+    "winter_weather": {
+     "score": 58.92857142857143,
+     "rating": "Relatively High",
+     "eal_building_usd": 1622486.167599298,
+     "alr_national_percentile": 39.285714285714285
+    },
+    "ice_storm": {
+     "score": 42,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 7478772.542275559,
+     "alr_national_percentile": 56.00000000000001
+    },
+    "wildfire": {
+     "score": 37.254901960784316,
+     "rating": "Relatively Low",
+     "eal_building_usd": 3500193.4504188914,
+     "alr_national_percentile": 33.33333333333333
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Virginia Department of Professional and Occupational Regulation (DPOR), Board for Contractors",
+    "summary": "Va. Code 54.1-1100 requires a contractor license (Class C) for work over $1,000 per contract (Class B from $30,000, Class A above), and 18VAC50-22-30 defines the Roofing Contracting (ROC) specialty, also covered by the RBC/CBC classes and HIC/CIC specialties.",
+    "url": "https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1100/",
+    "threshold_usd": 1000
+   },
+   "code": {
+    "summary": "2021 Virginia Uniform Statewide Building Code (based on the 2021 I-codes) effective January 18, 2024.",
+    "url": "https://www.dhcd.virginia.gov/codes"
+   },
+   "notes": [
+    "ROC definition read at https://law.lis.virginia.gov/admincode/title18/agency50/chapter22/section30/ ; DPOR board page (https://www.dpor.virginia.gov/Boards/Contractors) confirms Class A/B/C licensing."
+   ]
+  },
+  "washington": {
+   "name": "Washington",
+   "abbr": "WA",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 33.9622641509434,
+     "rating": "Very Low",
+     "eal_building_usd": 403277.5513236143,
+     "alr_national_percentile": 62.264150943396224
+    },
+    "strong_wind": {
+     "score": 26.41509433962264,
+     "rating": "Relatively Low",
+     "eal_building_usd": 4674377.671156732,
+     "alr_national_percentile": 26.41509433962264
+    },
+    "hurricane": {
+     "score": null,
+     "rating": "Not Applicable",
+     "eal_building_usd": null,
+     "alr_national_percentile": null
+    },
+    "tornado": {
+     "score": 30.18867924528302,
+     "rating": "Relatively Low",
+     "eal_building_usd": 3018118.3743679775,
+     "alr_national_percentile": 5.660377358490567
+    },
+    "winter_weather": {
+     "score": 44.642857142857146,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 849691.6900479532,
+     "alr_national_percentile": 37.5
+    },
+    "ice_storm": {
+     "score": 60,
+     "rating": "Relatively High",
+     "eal_building_usd": 2367562.2796433577,
+     "alr_national_percentile": 10
+    },
+    "wildfire": {
+     "score": 92.15686274509804,
+     "rating": "Relatively High",
+     "eal_building_usd": 164966000.34890983,
+     "alr_national_percentile": 74.50980392156863
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Washington State Department of Labor & Industries (L&I)",
+    "summary": "All construction contractors must register with L&I (bonded and insured); roofing is one of 63 regulated specialties requiring contractor registration, and specialty contractors may only work in their registered specialty.",
+    "url": "https://lni.wa.gov/licensing-permits/contractors/register-as-a-contractor/",
+    "threshold_usd": null
+   },
+   "code": {
+    "summary": "WAC 51-51-003 adopts the 2021 edition of the International Residential Code with Washington amendments (effective 3/15/2024-3/16/2024 per WSR history).",
+    "url": "https://app.leg.wa.gov/wac/default.aspx?cite=51-51-003"
+   },
+   "notes": [
+    "Registration, not a competency license; no dollar threshold stated on the page.",
+    "SBCC is running a 2024 code adoption cycle; WAC text read today still adopts the 2021 IRC."
+   ]
+  },
+  "west-virginia": {
+   "name": "West Virginia",
+   "abbr": "WV",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 35.84905660377358,
+     "rating": "Relatively Low",
+     "eal_building_usd": 7267779.684646672,
+     "alr_national_percentile": 47.16981132075472
+    },
+    "strong_wind": {
+     "score": 41.509433962264154,
+     "rating": "Relatively Low",
+     "eal_building_usd": 5720071.847496933,
+     "alr_national_percentile": 54.71698113207547
+    },
+    "hurricane": {
+     "score": 47.82608695652174,
+     "rating": "Very Low",
+     "eal_building_usd": 7548537.425291019,
+     "alr_national_percentile": 43.47826086956522
+    },
+    "tornado": {
+     "score": 33.9622641509434,
+     "rating": "Relatively Low",
+     "eal_building_usd": 6432882.979430011,
+     "alr_national_percentile": 37.735849056603776
+    },
+    "winter_weather": {
+     "score": 25,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 1402092.7747370622,
+     "alr_national_percentile": 89.28571428571429
+    },
+    "ice_storm": {
+     "score": 34,
+     "rating": "Relatively Low",
+     "eal_building_usd": 2254578.5579736987,
+     "alr_national_percentile": 50
+    },
+    "wildfire": {
+     "score": 33.33333333333333,
+     "rating": "Very Low",
+     "eal_building_usd": 1897117.5020782878,
+     "alr_national_percentile": 35.294117647058826
+    }
+   },
+   "licensing": null,
+   "code": null,
+   "notes": [
+    "Conflicting official sources: the official WV Code site shows §21-11-3 (Definitions) and §21-11-6 (Necessity for license; exemptions) of the Contractor Licensing Act as '[Repealed.]' (https://code.wvlegislature.gov/21-11-6/), and the labor.wv.gov Licensing menu no longer lists contractor licensing (old contractor licensing URLs 404), yet https://labor.wv.gov/licensing still says the Division performs duties for the Contractor Licensing Board. Repeal and effective date not confirmed; the $2,500 threshold could not be verified. Recheck before publishing."
+   ]
+  },
+  "wisconsin": {
+   "name": "Wisconsin",
+   "abbr": "WI",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 92.45283018867924,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 116997324.22452065,
+     "alr_national_percentile": 86.79245283018868
+    },
+    "strong_wind": {
+     "score": 62.264150943396224,
+     "rating": "Relatively High",
+     "eal_building_usd": 26566760.474753834,
+     "alr_national_percentile": 71.69811320754717
+    },
+    "hurricane": {
+     "score": 15.217391304347828,
+     "rating": "Very Low",
+     "eal_building_usd": 89753.23325536928,
+     "alr_national_percentile": 10.869565217391305
+    },
+    "tornado": {
+     "score": 69.81132075471697,
+     "rating": "Relatively High",
+     "eal_building_usd": 151197363.8227373,
+     "alr_national_percentile": 69.81132075471697
+    },
+    "winter_weather": {
+     "score": 50,
+     "rating": "Relatively High",
+     "eal_building_usd": 790930.1197144159,
+     "alr_national_percentile": 23.214285714285715
+    },
+    "ice_storm": {
+     "score": 36,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 2000216.630038862,
+     "alr_national_percentile": 24
+    },
+    "wildfire": {
+     "score": 27.450980392156865,
+     "rating": "Very Low",
+     "eal_building_usd": 1369581.8943933442,
+     "alr_national_percentile": 23.52941176470588
+    }
+   },
+   "licensing": {
+    "required": true,
+    "agency": "Wisconsin Department of Safety and Professional Services (DSPS)",
+    "summary": "General Dwelling Contractor (business) and Dwelling Contractor Qualifier (individual) credentials, not roofing-specific: no person may obtain a building permit for a one- or two-family dwelling without them (owner-occupants exempt), so they apply to reroofing only where a building permit is required.",
+    "url": "https://dsps.wi.gov/a-z-professions-list/dwelling-contractor-qualifier-dcq/",
+    "threshold_usd": null
+   },
+   "code": {
+    "summary": "One- and two-family dwellings are governed by the Wisconsin Uniform Dwelling Code (UDC), SPS 320-325, a state-written code (no IRC edition stated on the page).",
+    "url": "https://dsps.wi.gov/a-z-programs-list/udc/"
+   },
+   "notes": [
+    "Whether a reroof needs a permit (and therefore the credential) was not confirmed on an official page."
+   ]
+  },
+  "wyoming": {
+   "name": "Wyoming",
+   "abbr": "WY",
+   "nri_version": "December 2025",
+   "nri": {
+    "hail": {
+     "score": 41.509433962264154,
+     "rating": "Relatively Low",
+     "eal_building_usd": 9831909.170094376,
+     "alr_national_percentile": 79.24528301886792
+    },
+    "strong_wind": {
+     "score": 13.20754716981132,
+     "rating": "Relatively Low",
+     "eal_building_usd": 578566.5913530858,
+     "alr_national_percentile": 15.09433962264151
+    },
+    "hurricane": {
+     "score": null,
+     "rating": "Not Applicable",
+     "eal_building_usd": null,
+     "alr_national_percentile": null
+    },
+    "tornado": {
+     "score": 35.84905660377358,
+     "rating": "Relatively Low",
+     "eal_building_usd": 4455842.335942824,
+     "alr_national_percentile": 32.075471698113205
+    },
+    "winter_weather": {
+     "score": 46.42857142857143,
+     "rating": "Relatively Moderate",
+     "eal_building_usd": 764791.6806482655,
+     "alr_national_percentile": 46.42857142857143
+    },
+    "ice_storm": {
+     "score": 20,
+     "rating": "Relatively Low",
+     "eal_building_usd": 157430.17583356152,
+     "alr_national_percentile": 6
+    },
+    "wildfire": {
+     "score": 66.66666666666666,
+     "rating": "Relatively Low",
+     "eal_building_usd": 23221178.28542442,
+     "alr_national_percentile": 84.31372549019608
+    }
+   },
+   "licensing": null,
+   "code": null,
+   "notes": [
+    "Not researched to an official source within budget; no official page confirming absence of a state roofing license was read."
+   ]
+  }
+ }
+}

@@ -1,0 +1,410 @@
+[
+ {
+  "slug": "alabama",
+  "name": "Alabama",
+  "abbr": "AL",
+  "fips": "01",
+  "division": 6,
+  "divisionName": "East South Central"
+ },
+ {
+  "slug": "alaska",
+  "name": "Alaska",
+  "abbr": "AK",
+  "fips": "02",
+  "division": 9,
+  "divisionName": "Pacific"
+ },
+ {
+  "slug": "arizona",
+  "name": "Arizona",
+  "abbr": "AZ",
+  "fips": "04",
+  "division": 8,
+  "divisionName": "Mountain"
+ },
+ {
+  "slug": "arkansas",
+  "name": "Arkansas",
+  "abbr": "AR",
+  "fips": "05",
+  "division": 7,
+  "divisionName": "West South Central"
+ },
+ {
+  "slug": "california",
+  "name": "California",
+  "abbr": "CA",
+  "fips": "06",
+  "division": 9,
+  "divisionName": "Pacific"
+ },
+ {
+  "slug": "colorado",
+  "name": "Colorado",
+  "abbr": "CO",
+  "fips": "08",
+  "division": 8,
+  "divisionName": "Mountain"
+ },
+ {
+  "slug": "connecticut",
+  "name": "Connecticut",
+  "abbr": "CT",
+  "fips": "09",
+  "division": 1,
+  "divisionName": "New England"
+ },
+ {
+  "slug": "delaware",
+  "name": "Delaware",
+  "abbr": "DE",
+  "fips": "10",
+  "division": 5,
+  "divisionName": "South Atlantic"
+ },
+ {
+  "slug": "district-of-columbia",
+  "name": "District of Columbia",
+  "abbr": "DC",
+  "fips": "11",
+  "division": 5,
+  "divisionName": "South Atlantic"
+ },
+ {
+  "slug": "florida",
+  "name": "Florida",
+  "abbr": "FL",
+  "fips": "12",
+  "division": 5,
+  "divisionName": "South Atlantic"
+ },
+ {
+  "slug": "georgia",
+  "name": "Georgia",
+  "abbr": "GA",
+  "fips": "13",
+  "division": 5,
+  "divisionName": "South Atlantic"
+ },
+ {
+  "slug": "hawaii",
+  "name": "Hawaii",
+  "abbr": "HI",
+  "fips": "15",
+  "division": 9,
+  "divisionName": "Pacific"
+ },
+ {
+  "slug": "idaho",
+  "name": "Idaho",
+  "abbr": "ID",
+  "fips": "16",
+  "division": 8,
+  "divisionName": "Mountain"
+ },
+ {
+  "slug": "illinois",
+  "name": "Illinois",
+  "abbr": "IL",
+  "fips": "17",
+  "division": 3,
+  "divisionName": "East North Central"
+ },
+ {
+  "slug": "indiana",
+  "name": "Indiana",
+  "abbr": "IN",
+  "fips": "18",
+  "division": 3,
+  "divisionName": "East North Central"
+ },
+ {
+  "slug": "iowa",
+  "name": "Iowa",
+  "abbr": "IA",
+  "fips": "19",
+  "division": 4,
+  "divisionName": "West North Central"
+ },
+ {
+  "slug": "kansas",
+  "name": "Kansas",
+  "abbr": "KS",
+  "fips": "20",
+  "division": 4,
+  "divisionName": "West North Central"
+ },
+ {
+  "slug": "kentucky",
+  "name": "Kentucky",
+  "abbr": "KY",
+  "fips": "21",
+  "division": 6,
+  "divisionName": "East South Central"
+ },
+ {
+  "slug": "louisiana",
+  "name": "Louisiana",
+  "abbr": "LA",
+  "fips": "22",
+  "division": 7,
+  "divisionName": "West South Central"
+ },
+ {
+  "slug": "maine",
+  "name": "Maine",
+  "abbr": "ME",
+  "fips": "23",
+  "division": 1,
+  "divisionName": "New England"
+ },
+ {
+  "slug": "maryland",
+  "name": "Maryland",
+  "abbr": "MD",
+  "fips": "24",
+  "division": 5,
+  "divisionName": "South Atlantic"
+ },
+ {
+  "slug": "massachusetts",
+  "name": "Massachusetts",
+  "abbr": "MA",
+  "fips": "25",
+  "division": 1,
+  "divisionName": "New England"
+ },
+ {
+  "slug": "michigan",
+  "name": "Michigan",
+  "abbr": "MI",
+  "fips": "26",
+  "division": 3,
+  "divisionName": "East North Central"
+ },
+ {
+  "slug": "minnesota",
+  "name": "Minnesota",
+  "abbr": "MN",
+  "fips": "27",
+  "division": 4,
+  "divisionName": "West North Central"
+ },
+ {
+  "slug": "mississippi",
+  "name": "Mississippi",
+  "abbr": "MS",
+  "fips": "28",
+  "division": 6,
+  "divisionName": "East South Central"
+ },
+ {
+  "slug": "missouri",
+  "name": "Missouri",
+  "abbr": "MO",
+  "fips": "29",
+  "division": 4,
+  "divisionName": "West North Central"
+ },
+ {
+  "slug": "montana",
+  "name": "Montana",
+  "abbr": "MT",
+  "fips": "30",
+  "division": 8,
+  "divisionName": "Mountain"
+ },
+ {
+  "slug": "nebraska",
+  "name": "Nebraska",
+  "abbr": "NE",
+  "fips": "31",
+  "division": 4,
+  "divisionName": "West North Central"
+ },
+ {
+  "slug": "nevada",
+  "name": "Nevada",
+  "abbr": "NV",
+  "fips": "32",
+  "division": 8,
+  "divisionName": "Mountain"
+ },
+ {
+  "slug": "new-hampshire",
+  "name": "New Hampshire",
+  "abbr": "NH",
+  "fips": "33",
+  "division": 1,
+  "divisionName": "New England"
+ },
+ {
+  "slug": "new-jersey",
+  "name": "New Jersey",
+  "abbr": "NJ",
+  "fips": "34",
+  "division": 2,
+  "divisionName": "Middle Atlantic"
+ },
+ {
+  "slug": "new-mexico",
+  "name": "New Mexico",
+  "abbr": "NM",
+  "fips": "35",
+  "division": 8,
+  "divisionName": "Mountain"
+ },
+ {
+  "slug": "new-york",
+  "name": "New York",
+  "abbr": "NY",
+  "fips": "36",
+  "division": 2,
+  "divisionName": "Middle Atlantic"
+ },
+ {
+  "slug": "north-carolina",
+  "name": "North Carolina",
+  "abbr": "NC",
+  "fips": "37",
+  "division": 5,
+  "divisionName": "South Atlantic"
+ },
+ {
+  "slug": "north-dakota",
+  "name": "North Dakota",
+  "abbr": "ND",
+  "fips": "38",
+  "division": 4,
+  "divisionName": "West North Central"
+ },
+ {
+  "slug": "ohio",
+  "name": "Ohio",
+  "abbr": "OH",
+  "fips": "39",
+  "division": 3,
+  "divisionName": "East North Central"
+ },
+ {
+  "slug": "oklahoma",
+  "name": "Oklahoma",
+  "abbr": "OK",
+  "fips": "40",
+  "division": 7,
+  "divisionName": "West South Central"
+ },
+ {
+  "slug": "oregon",
+  "name": "Oregon",
+  "abbr": "OR",
+  "fips": "41",
+  "division": 9,
+  "divisionName": "Pacific"
+ },
+ {
+  "slug": "pennsylvania",
+  "name": "Pennsylvania",
+  "abbr": "PA",
+  "fips": "42",
+  "division": 2,
+  "divisionName": "Middle Atlantic"
+ },
+ {
+  "slug": "rhode-island",
+  "name": "Rhode Island",
+  "abbr": "RI",
+  "fips": "44",
+  "division": 1,
+  "divisionName": "New England"
+ },
+ {
+  "slug": "south-carolina",
+  "name": "South Carolina",
+  "abbr": "SC",
+  "fips": "45",
+  "division": 5,
+  "divisionName": "South Atlantic"
+ },
+ {
+  "slug": "south-dakota",
+  "name": "South Dakota",
+  "abbr": "SD",
+  "fips": "46",
+  "division": 4,
+  "divisionName": "West North Central"
+ },
+ {
+  "slug": "tennessee",
+  "name": "Tennessee",
+  "abbr": "TN",
+  "fips": "47",
+  "division": 6,
+  "divisionName": "East South Central"
+ },
+ {
+  "slug": "texas",
+  "name": "Texas",
+  "abbr": "TX",
+  "fips": "48",
+  "division": 7,
+  "divisionName": "West South Central"
+ },
+ {
+  "slug": "utah",
+  "name": "Utah",
+  "abbr": "UT",
+  "fips": "49",
+  "division": 8,
+  "divisionName": "Mountain"
+ },
+ {
+  "slug": "vermont",
+  "name": "Vermont",
+  "abbr": "VT",
+  "fips": "50",
+  "division": 1,
+  "divisionName": "New England"
+ },
+ {
+  "slug": "virginia",
+  "name": "Virginia",
+  "abbr": "VA",
+  "fips": "51",
+  "division": 5,
+  "divisionName": "South Atlantic"
+ },
+ {
+  "slug": "washington",
+  "name": "Washington",
+  "abbr": "WA",
+  "fips": "53",
+  "division": 9,
+  "divisionName": "Pacific"
+ },
+ {
+  "slug": "west-virginia",
+  "name": "West Virginia",
+  "abbr": "WV",
+  "fips": "54",
+  "division": 5,
+  "divisionName": "South Atlantic"
+ },
+ {
+  "slug": "wisconsin",
+  "name": "Wisconsin",
+  "abbr": "WI",
+  "fips": "55",
+  "division": 3,
+  "divisionName": "East North Central"
+ },
+ {
+  "slug": "wyoming",
+  "name": "Wyoming",
+  "abbr": "WY",
+  "fips": "56",
+  "division": 8,
+  "divisionName": "Mountain"
+ }
+]

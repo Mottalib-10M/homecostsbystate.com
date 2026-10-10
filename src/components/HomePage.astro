@@ -1,0 +1,69 @@
+---
+/**
+ * Home, in its own order for this subject: the price board first (pick a state, every job priced at once,
+ * no ZIP), the three public data sets behind each price, the folded answer, the calculators by family,
+ * the 51-row roof table that links every state page, the long text in accordions, then the FAQ.
+ * Text: src/content/home.ts.
+ */
+import PageLayout from '../layouts/PageLayout.astro';
+import Clamp from './Clamp.astro';
+import HomeBoard from './calc/HomeBoard';
+import { HOME } from '../content/home';
+import { route } from '../i18n/routes';
+import { GROUPS } from '../i18n/nav';
+import { helpers, SOURCES, table } from '../lib/helpers';
+import { PAGES, STATE_PAGES, stateId } from '../lib/pages';
+import { KIT } from '../lib/kit';
+import { STATE_LIST, jobInput, JOB_DEFS, AHS_META, centsPerKwh, solarQuote, reportedToQuote, P } from '../lib/data';
+import { price } from '../lib/engine/solar';
+import { usd, num, day, month } from '../lib/fmt';
+import { faqSchema, organizationSchema, websiteSchema, webPageSchema, webApplicationSchema } from '../lib/seo';
+import { LAST_UPDATED } from '../data/site-config';
+const lang = 'en';
+const x = HOME;
+const path = route('home', lang);
+const h = helpers();
+const sources = x.sources.map((k) => ({ name: SOURCES[k].label, url: SOURCES[k].url }));
+const jsonLd = [websiteSchema(lang), organizationSchema(lang), webPageSchema({ name: x.h1, description: x.description, path, lang }), webApplicationSchema({ name: x.h1, description: x.description, path, lang }), faqSchema(x.faqs, lang)];
+const states = [{ value: 'us', label: 'United States (national figure)' }, ...STATE_LIST.map((s) => ({ value: s.slug, label: s.name }))];
+const href = { roof: route('roof-replacement-cost', lang), waterHeater: route('water-heater-replacement-cost', lang), centralAc: route('hvac-replacement-cost', lang), heating: route('hvac-replacement-cost', lang), fence: route('fence-cost-calculator', lang), deckPatio: route('deck-cost-calculator', lang), driveway: route('concrete-calculator', lang) } as Record<string, string>;
+const unit: Record<string, string> = { roof: 'all house sizes', waterHeater: 'any type and size', centralAc: 'added or replaced', heating: 'furnace, boiler or heat pump', fence: 'any length', deckPatio: 'deck, porch or patio', driveway: 'driveway or walkway' };
+const rows = Object.keys(JOB_DEFS).map((k) => ({ input: jobInput(k), label: JOB_DEFS[k].label, href: href[k], unit: unit[k] }));
+const kw = P.solar.medianResidentialKw2023;
+const ratio = reportedToQuote();
+const solar = Object.fromEntries([['us', price(kw, solarQuote('us').perW, ratio)], ...STATE_LIST.map((s) => [s.slug, price(kw, solarQuote(s.slug).perW, ratio)])].map(([k, v]) => [k, { low: Math.round((v as { low: number }).low / 10) * 10, high: Math.round((v as { high: number }).high / 10) * 10 }]));
+const elec = Object.fromEntries([['us', centsPerKwh('us')], ...STATE_LIST.map((s) => [s.slug, centsPerKwh(s.slug)])]);
+const sections = x.sections(h);
+const roofRows = STATE_LIST.map((s) => { const r = KIT.job('roof', s.slug); const w = KIT.wage(s.slug, 'roofers'); const has = STATE_PAGES.some((p) => p.slug === s.slug); return [has ? `<a href="${route(stateId(s.slug), lang)}">${s.name}</a>` : s.name, w ? usd(w.mean, 2) : 'n/a', usd(r.low), usd(r.typical), usd(r.high)]; });
+---
+<PageLayout title={x.title} description={x.description} lang={lang} jsonLd={jsonLd} faqs={x.faqs} sources={sources}>
+  <header class="mb-5">
+    <h1 class="font-serif text-3xl font-bold text-navy-900 md:text-4xl">{x.h1}</h1>
+    <p class="mt-3 text-lg text-navy-700">{x.intro}</p>
+    <p class="mt-2 text-sm text-navy-600">Census and BLS figures updated <time datetime={LAST_UPDATED}>{day(LAST_UPDATED)}</time> · <a href={route('method', lang)} class="underline">How prices are built</a> · <a href={route('about', lang)} class="underline">Who publishes this</a></p>
+  </header>
+  <div data-outil><HomeBoard client:load rows={rows} states={states} solar={solar} solarHref={route('solar-panel-cost', lang)} solarLabel={`${num(kw, 1)} kW system, before incentives`} elec={elec} elecHref={route('electric-bill-calculator', lang)} methodHref={route('method', lang)} years={AHS_META.years} cpiTo={month(AHS_META.cpi.to)} /></div>
+  <section class="my-8 grid gap-4 md:grid-cols-3">
+    {x.pillars.map((p) => <div class="rounded-lg border-t-4 border-accent-600 bg-navy-50 p-4"><p class="text-xs font-semibold uppercase tracking-wide text-accent-700">{p.tag}</p><h2 class="mt-1 font-serif text-lg font-bold text-navy-900">{p.title}</h2><p class="mt-2 text-sm text-navy-700">{p.text}</p></div>)}
+  </section>
+  <Clamp text={x.resume} lang={lang} id="clamp-home" class="my-8" />
+  <section class="mb-10" data-chrome>
+    {GROUPS.map((g) => (
+      <div class="mb-6">
+        <h2 class="font-serif text-xl font-bold text-navy-900">{g.label}</h2>
+        <ul class="mt-3 grid gap-x-6 gap-y-2 text-sm sm:grid-cols-2 lg:grid-cols-3">
+          {PAGES.filter((p) => p.group === g.id).map((p) => <li><a href={route(p.id, lang)} class="font-medium text-accent-700 underline-offset-2 hover:underline">{p.nav}</a><span class="block text-navy-600">{p.card}</span></li>)}
+        </ul>
+      </div>
+    ))}
+  </section>
+  <section class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h2>{x.tableTitle}</h2>
+    <Fragment set:html={x.tableIntro(h)} />
+    <Fragment set:html={table(['State', 'Roofer mean wage', 'Low', 'Typical', 'High'], roofRows, `Professional roof jobs (AHS 2023, in ${month(AHS_META.cpi.to)} dollars), labor share at each state’s roofer wage (BLS, May 2025). Every state name opens its page.`, ['l', 'r', 'r', 'r', 'r'])} />
+  </section>
+  <section class="mt-10">
+    <h2 class="font-serif text-2xl font-bold text-navy-900">{x.foldTitle}</h2>
+    {sections.map((s) => <details class="fold"><summary><h3 class="fold-h">{s.title}</h3></summary><div class="prose prose-slate max-w-none pb-4"><Fragment set:html={s.html} /></div></details>)}
+  </section>
+</PageLayout>

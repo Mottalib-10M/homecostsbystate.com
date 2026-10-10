@@ -1,0 +1,855 @@
+{
+ "retrieved_at": "2026-10-10",
+ "facts": [
+  {
+   "id": "paint_coverage_bm_regal_select",
+   "topic": "paint",
+   "value": [
+    400,
+    450
+   ],
+   "unit": "sq ft per gallon",
+   "quote": "Spread Rate Per Gallon 400 – 450 Sq. Ft. Recommended Film Thickness Wet: 3.6 – 4.0 mils Dry: 1.6 – 1.8 mils Depending on surface texture and porosity.",
+   "source_title": "Regal Select Waterborne Interior Paint Eggshell (N549) Technical Data Sheet",
+   "publisher": "Benjamin Moore & Co.",
+   "url": "https://media.benjaminmoore.com/WebServices/prod/assets/production/datasheets/TDS_0549/N549_TDS_US.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "paint_coats_bm_regal_select",
+   "topic": "paint",
+   "value": 2,
+   "unit": "coats",
+   "quote": "Benjamin Moore® recommends two coats to achieve full color development and to optimize performance. On bare substrates, two coats are recommended; previously painted surfaces can be finished with 1 or 2 coats.",
+   "source_title": "Regal Select Waterborne Interior Paint Eggshell (N549) Technical Data Sheet",
+   "publisher": "Benjamin Moore & Co.",
+   "url": "https://media.benjaminmoore.com/WebServices/prod/assets/production/datasheets/TDS_0549/N549_TDS_US.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "paint_primer_coverage_bm_380",
+   "topic": "paint",
+   "value": [
+    350,
+    450
+   ],
+   "unit": "sq ft per gallon",
+   "quote": "Spread Rate Per Gallon 350 – 450 Sq. Ft.",
+   "source_title": "Benjamin Moore Drywall Primer (380) Technical Data Sheet",
+   "publisher": "Benjamin Moore & Co.",
+   "url": "https://media.benjaminmoore.com/WebServices/prod/assets/production/datasheets/TDS_380/380_TDS_US.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "paint_coverage_valspar_ultra",
+   "topic": "paint",
+   "value": [
+    300,
+    400
+   ],
+   "unit": "sq ft per gallon",
+   "quote": "Coverage 300 ft²/gal - 400 ft²/gal ... Recommended Coats 1, 2 coats",
+   "source_title": "Valspar Ultra Interior Paint + Primer (product page)",
+   "publisher": "Valspar (Sherwin-Williams Company brand)",
+   "url": "https://www.valspar.com/en/products/interior-paints-primers/ultra-interior-paint-primer",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "paint_drastic_color_change_valspar_ultra",
+   "topic": "paint",
+   "value": null,
+   "unit": "guidance",
+   "quote": "For drastic color changes or deep, vivid colors, prime with an appropriate tintable primer for optimal color accuracy and coverage. ... Some deep or bright colors may require an additional coat to obtain complete hide.",
+   "source_title": "Valspar Ultra Interior Paint + Primer (product page)",
+   "publisher": "Valspar (Sherwin-Williams Company brand)",
+   "url": "https://www.valspar.com/en/products/interior-paints-primers/ultra-interior-paint-primer",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "paint_coverage_valspar_2000",
+   "topic": "paint",
+   "value": [
+    350,
+    450
+   ],
+   "unit": "sq ft per gallon",
+   "quote": "Coverage 350 ft²/gal - 450 ft²/gal ... Recommended Coats 2 coats",
+   "source_title": "Valspar 2000 Interior Paint + Primer (product page)",
+   "publisher": "Valspar (Sherwin-Williams Company brand)",
+   "url": "https://www.valspar.com/en/products/interior-paints-primers/2000-interior-paint-primer",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "drywall_panel_sizes_usg",
+   "topic": "drywall",
+   "value": [
+    "4x8",
+    "4x10",
+    "4x12"
+   ],
+   "unit": "ft",
+   "quote": "Gypsum Panel Coverage Calculator No. of Panels Size of Panels (sq. ft.) 4' x 8' 4' x 10' 4' x 12' 10 320 400 480",
+   "source_title": "How to Install and Finish Sheetrock Brand Gypsum Panels (J371)",
+   "publisher": "USG Corporation",
+   "url": "https://www.usg.com/content/dam/USG/pdpmovedocuments/sheetrock-gypsum-panels-installation-guide-en-J371.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "drywall_thicknesses_usg",
+   "topic": "drywall",
+   "value": [
+    "5/8",
+    "1/2",
+    "3/8",
+    "1/4"
+   ],
+   "unit": "in",
+   "quote": "Made in four thicknesses: 5/8\", 1/2\", 3/8\" and 1/4\". (The 1/4\" thick panel should not be applied as a single layer but only to cover existing wall and ceiling surfaces.)",
+   "source_title": "How to Install and Finish Sheetrock Brand Gypsum Panels (J371)",
+   "publisher": "USG Corporation",
+   "url": "https://www.usg.com/content/dam/USG/pdpmovedocuments/sheetrock-gypsum-panels-installation-guide-en-J371.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "drywall_ultralight_dimensions_usg",
+   "topic": "drywall",
+   "value": {
+    "thickness_in": 0.5,
+    "width_ft": 4,
+    "length_ft": "8-16"
+   },
+   "unit": "",
+   "quote": "Thickness 1/2 in. (12.7 mm) Lengths 8-16 ft. (2438-4877 mm) Width 4 ft. (1219 mm), 54 in. (1372 mm) Weight, nominal 1.25 lb./sq. ft.",
+   "source_title": "Sheetrock Brand UltraLight Panels submittal (WB2501)",
+   "publisher": "USG Corporation",
+   "url": "https://www.usg.com/content/dam/USG/pdpmovedocuments/sheetrock-ultralight-panels-submittal-en-wb2501.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "drywall_screws_per_1000sf_usg",
+   "topic": "drywall",
+   "value": 2.7,
+   "unit": "lb Type W screws per 1,000 sq ft",
+   "quote": "[Fastener/Compound/Tape Calculator] sq. ft. ... 1000 5.3 2.7 370 [nails lb / Type W screws lb / joint tape ft]; (2) Spaced 12\" on ceiling; 16\" on wall.",
+   "source_title": "How to Install and Finish Sheetrock Brand Gypsum Panels (J371)",
+   "publisher": "USG Corporation",
+   "url": "https://www.usg.com/content/dam/USG/pdpmovedocuments/sheetrock-gypsum-panels-installation-guide-en-J371.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "drywall_nails_per_1000sf_usg",
+   "topic": "drywall",
+   "value": 5.3,
+   "unit": "lb wallboard nails per 1,000 sq ft",
+   "quote": "1000 5.3 2.7 370 ... (1) Spaced 7\" on ceiling; 8\" on wall. Reduce by 50% for adhesive/ nail-on application.",
+   "source_title": "How to Install and Finish Sheetrock Brand Gypsum Panels (J371)",
+   "publisher": "USG Corporation",
+   "url": "https://www.usg.com/content/dam/USG/pdpmovedocuments/sheetrock-gypsum-panels-installation-guide-en-J371.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "drywall_tape_per_1000sf_usg",
+   "topic": "drywall",
+   "value": 370,
+   "unit": "ft joint tape per 1,000 sq ft",
+   "quote": "Use this amount of USG Sheetrock® Brand Joint Tape sq. ft. lb. lb. ft. 100 0.6 0.3 37 ... 1000 5.3 2.7 370",
+   "source_title": "How to Install and Finish Sheetrock Brand Gypsum Panels (J371)",
+   "publisher": "USG Corporation",
+   "url": "https://www.usg.com/content/dam/USG/pdpmovedocuments/sheetrock-gypsum-panels-installation-guide-en-J371.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "drywall_compound_per_1000sf_usg",
+   "topic": "drywall",
+   "value": {
+    "all_purpose_gal": 10.0,
+    "plus3_lightweight_gal": 9.0,
+    "first_coat_primer_gal": 2.5
+   },
+   "unit": "gal per 1,000 sq ft",
+   "quote": "1000 10.0 9.0 2.50 ... (3) Coverage figures shown here approximate the amount of joint compound needed to treat the flat joints, inside corners and outside corners using metal corner bead, in a typical room.",
+   "source_title": "How to Install and Finish Sheetrock Brand Gypsum Panels (J371)",
+   "publisher": "USG Corporation",
+   "url": "https://www.usg.com/content/dam/USG/pdpmovedocuments/sheetrock-gypsum-panels-installation-guide-en-J371.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "drywall_compound_submittal_usg",
+   "topic": "drywall",
+   "value": 10,
+   "unit": "gal per 1,000 sq ft",
+   "quote": "Coverage: Approximately 10 gal./1,000 sq. ft. (37.8 L/100 sq. m) of gypsum panels.",
+   "source_title": "Sheetrock Brand All Purpose Joint Compound Ready-Mixed submittal (J1969)",
+   "publisher": "USG Corporation",
+   "url": "https://www.usg.com/content/dam/USG/pdpmovedocuments/sheetrock-all-purpose-joint-compound-submittal-J1969.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "drywall_screw_spacing_usg",
+   "topic": "drywall",
+   "value": {
+    "ceiling_in": 12,
+    "wall_in": 16,
+    "edge_min_in": 0.375
+   },
+   "unit": "in",
+   "quote": "Space screws a maximum of 12\" apart on ceilings, 16\" on walls and at least 3/8\" from ends and edges of panels.",
+   "source_title": "How to Install and Finish Sheetrock Brand Gypsum Panels (J371)",
+   "publisher": "USG Corporation",
+   "url": "https://www.usg.com/content/dam/USG/pdpmovedocuments/sheetrock-gypsum-panels-installation-guide-en-J371.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "drywall_framing_spacing_ref_usg",
+   "topic": "drywall",
+   "value": 24,
+   "unit": "in max framing o.c. (1/2 in UltraLight, walls and ceilings)",
+   "quote": "...GA-216, Specifications for the Application and Finishing of Gypsum Panel Products or ASTM C840 ... Walls 1/2 in. (12.7 mm) Parallel 24 in. (610 mm) Perpendicular 24 in. (610 mm)",
+   "source_title": "Sheetrock Brand UltraLight Panels submittal (WB2501)",
+   "publisher": "USG Corporation",
+   "url": "https://www.usg.com/content/dam/USG/pdpmovedocuments/sheetrock-ultralight-panels-submittal-en-wb2501.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "roof_bundles_architectural_oc_trudef_duration",
+   "topic": "roofing",
+   "value": 3,
+   "unit": "bundles per square",
+   "quote": "TruDefinition® Duration® ... Shingles per Square: 64. 5. Bundles per Square: 3 bundles of 20 or 22 shingles. 6. Coverage per Square: 98.4 sq ft (9.1 sq m).",
+   "source_title": "Fiberglass-Based Asphalt Shingles & Accessories, 3-part guide specification (Revised January 2026)",
+   "publisher": "Owens Corning Roofing and Asphalt, LLC",
+   "url": "https://www.owenscorning.com/dms/10021602?mime_type=application/pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "roof_bundles_3tab_oc_supreme",
+   "topic": "roofing",
+   "value": 3,
+   "unit": "bundles per square",
+   "quote": "Supreme® (Algae Resistant) Shingles ... Nominal Size: 12 in (305 mm) by 36 in (914 mm). 2. Exposure: 5 in (127 mm). 3. Shingles per Square: 80. 4. Bundles per Square: 3 bundles of 26, 27, 27 shingles. 5. Coverage per Square: 100.0 sq ft",
+   "source_title": "Fiberglass-Based Asphalt Shingles & Accessories, 3-part guide specification (Revised January 2026)",
+   "publisher": "Owens Corning Roofing and Asphalt, LLC",
+   "url": "https://www.owenscorning.com/dms/10021602?mime_type=application/pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "roof_bundles_heavy_oc_duration_premium",
+   "topic": "roofing",
+   "value": 4,
+   "unit": "bundles per square",
+   "quote": "Duration® Premium ... Shingles per Square: 64. 5. Bundles per Square: 4 bundles of 16 shingles. 6. Coverage per Square: 98.4 sq ft (9.1 sq m).",
+   "source_title": "Fiberglass-Based Asphalt Shingles & Accessories, 3-part guide specification (Revised January 2026)",
+   "publisher": "Owens Corning Roofing and Asphalt, LLC",
+   "url": "https://www.owenscorning.com/dms/10021602?mime_type=application/pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "roof_starter_oc_starter_strip_plus",
+   "topic": "roofing",
+   "value": 105,
+   "unit": "linear ft per bundle",
+   "quote": "Convenient as one bundle provides one square of material (105 linear feet of actual coverage) ... Lineal Feet per Bundle Approximately 105 (32.004 m)",
+   "source_title": "Starter Strip Plus product page",
+   "publisher": "Owens Corning",
+   "url": "https://www.owenscorning.com/en-us/roofing/components/products/starter-strip-plus",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "roof_hip_ridge_oc_duraridge",
+   "topic": "roofing",
+   "value": 20,
+   "unit": "linear ft per carton",
+   "quote": "Exposure 8\" Pieces per Carton 30 Lineal Feet per Carton 20ft.",
+   "source_title": "DuraRidge Hip & Ridge Shingles product page",
+   "publisher": "Owens Corning",
+   "url": "https://www.owenscorning.com/en-us/roofing/components/products/duraridge-hip-ridge",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "roof_underlayment_oc_proarmor",
+   "topic": "roofing",
+   "value": 9.29,
+   "unit": "squares per roll",
+   "quote": "ProArmor® Synthetic Roof Underlayment ... Roll Width: 42 in (106.7 cm). 3. Roll Length: 286 ft (87.2 m). 4. Coverage Per Roll: 9.29 roof squares.",
+   "source_title": "Fiberglass-Based Asphalt Shingles & Accessories, 3-part guide specification (Revised January 2026)",
+   "publisher": "Owens Corning Roofing and Asphalt, LLC",
+   "url": "https://www.owenscorning.com/dms/10021602?mime_type=application/pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "roof_underlayment_oc_rhinoroof_u20",
+   "topic": "roofing",
+   "value": 10,
+   "unit": "squares per roll",
+   "quote": "RhinoRoof® U20 Roof Underlayment. 1. Weather-shedding synthetic polypropylene barrier. 2. Roll Width: 42 in (110 cm). 3. Roll Length: 286 ft (87m) 4. Coverage Per Roll: 10 roof squares.",
+   "source_title": "Fiberglass-Based Asphalt Shingles & Accessories, 3-part guide specification (Revised January 2026)",
+   "publisher": "Owens Corning Roofing and Asphalt, LLC",
+   "url": "https://www.owenscorning.com/dms/10021602?mime_type=application/pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "aggregate_dense_base_wisdot",
+   "topic": "gravel",
+   "value": 1.85,
+   "unit": "tons per cubic yard (in-place, compacted)",
+   "quote": "If the department converts volume to weight as specified in 109.1, the conversion factor for the acceptably completed in-place Base Aggregate Dense bid items is 1.85 tons per cubic yard.",
+   "source_title": "WisDOT 2025 Standard Specifications, Section 305 (Dense Graded Base)",
+   "publisher": "Wisconsin Department of Transportation",
+   "url": "https://wisconsindot.gov/rdwy/stndspec/ss-03-05.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "aggregate_breaker_run_wisdot",
+   "topic": "gravel",
+   "value": 1.75,
+   "unit": "tons per cubic yard (in-place)",
+   "quote": "If the department converts volume to weight as specified in 109.1, the conversion factor for the acceptably completed in-place Breaker Run bid items is 1.75 tons per cubic yard.",
+   "source_title": "WisDOT 2025 Standard Specifications, Section 311 (Breaker Run)",
+   "publisher": "Wisconsin Department of Transportation",
+   "url": "https://wisconsindot.gov/rdwy/stndspec/ss-03-11.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "aggregate_select_crushed_wisdot",
+   "topic": "gravel",
+   "value": 1.75,
+   "unit": "tons per cubic yard (in-place)",
+   "quote": "If the department converts volume to weight as specified in 109.1, the conversion factor for the acceptably completed in-place Select Crushed Material bid items is 1.75 tons per cubic yard.",
+   "source_title": "WisDOT 2025 Standard Specifications, Section 312 (Select Crushed Material)",
+   "publisher": "Wisconsin Department of Transportation",
+   "url": "https://wisconsindot.gov/rdwy/stndspec/ss-03-12.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "mulch_depth_clemson",
+   "topic": "mulch",
+   "value": [
+    2,
+    3
+   ],
+   "unit": "inches (fine wood/bark mulch)",
+   "quote": "Many wood and bark mulches are composed of fine particles and should not be more than 2 to 3 inches deep.",
+   "source_title": "Mulch (HGIC factsheet)",
+   "publisher": "Clemson Cooperative Extension, Home & Garden Information Center",
+   "url": "https://hgic.clemson.edu/factsheet/mulch/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "mulch_trunk_clemson",
+   "topic": "mulch",
+   "value": [
+    2,
+    3
+   ],
+   "unit": "inches clearance from woody stems",
+   "quote": "Keep mulch 2 to 3 inches away from the stems of woody plants. ... Keep mulch 6 to 12 inches away from the walls of buildings. ... do not pile mulch against the trunk.",
+   "source_title": "Mulch (HGIC factsheet)",
+   "publisher": "Clemson Cooperative Extension, Home & Garden Information Center",
+   "url": "https://hgic.clemson.edu/factsheet/mulch/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "mulch_coverage_clemson",
+   "topic": "mulch",
+   "value": 324,
+   "unit": "sq ft per cubic yard at 1 inch",
+   "quote": "There are 27 cubic feet in a cubic yard. One cubic yard will cover a 324-square-foot area with an inch of mulch.",
+   "source_title": "Mulch (HGIC factsheet)",
+   "publisher": "Clemson Cooperative Extension, Home & Garden Information Center",
+   "url": "https://hgic.clemson.edu/factsheet/mulch/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "mulch_depth_ufifas",
+   "topic": "mulch",
+   "value": 3,
+   "unit": "inches",
+   "quote": "Florida-Friendly Landscaping™ recommends mulching to a depth of 3 inches. ... maintain a 2- to 3-inch layer around established trees, shrubs, and bedding plants ... Don't apply more than 3 inches",
+   "source_title": "Mulch (Gardening Solutions)",
+   "publisher": "University of Florida IFAS Extension",
+   "url": "https://gardeningsolutions.ifas.ufl.edu/care/planting/mulch/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "mulch_volcano_ufifas",
+   "topic": "mulch",
+   "value": null,
+   "unit": "guidance",
+   "quote": "Avoid \"volcano mulching.\" When mulch is piled against the base of a tree, it holds moisture. This encourages rot in the trunk. ... For large plants and trees, place the mulch about 1 foot from the base.",
+   "source_title": "Mulch (Gardening Solutions)",
+   "publisher": "University of Florida IFAS Extension",
+   "url": "https://gardeningsolutions.ifas.ufl.edu/care/planting/mulch/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "concrete_order_overage_nrmca_cip31",
+   "topic": "concrete",
+   "value": [
+    4,
+    10
+   ],
+   "unit": "percent over plan volume",
+   "quote": "Quantity of concrete ordered should be 4% to 10% more than an estimate calculated from the plan dimensions to account for contingencies. See CIP 8.",
+   "source_title": "CIP 31 - Ordering Ready Mixed Concrete",
+   "publisher": "National Ready Mixed Concrete Association (NRMCA)",
+   "url": "https://www.nrmca.org/wp-content/uploads/2021/01/31pr.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "concrete_thickness_shortage_nrmca_cip8",
+   "topic": "concrete",
+   "value": 3,
+   "unit": "percent shortage",
+   "quote": "a 1/8-inch (3-mm) difference in a 4-inch (100-mm) thick slab would mean a shortage of 3 percent",
+   "source_title": "CIP 8 - Discrepancies in Yield",
+   "publisher": "National Ready Mixed Concrete Association (NRMCA)",
+   "url": "https://www.nrmca.org/wp-content/uploads/2021/01/08pr.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "concrete_truck_capacity_nrmca_cip31",
+   "topic": "concrete",
+   "value": [
+    8,
+    12
+   ],
+   "unit": "cubic yards per truck",
+   "quote": "The capacity of truck mixers varies between 8 to 12 cubic yards (5 to 9 m3).",
+   "source_title": "CIP 31 - Ordering Ready Mixed Concrete",
+   "publisher": "National Ready Mixed Concrete Association (NRMCA)",
+   "url": "https://www.nrmca.org/wp-content/uploads/2021/01/31pr.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "deck_joist_span_sp_2x8_16oc_dca6",
+   "topic": "decks",
+   "value": "11'-10\"",
+   "unit": "max joist span",
+   "quote": "Table 2. Maximum Joist Spans and Overhangs ... Southern Pine ... 2x8 13' - 1\" 11' - 10\" 9' - 8\" [12\"/16\"/24\" o.c.] ... Assumes 40 psf live load, 10 psf dead load, No. 2 grade, and wet service conditions.",
+   "source_title": "Prescriptive Residential Wood Deck Construction Guide (DCA 6), based on the 2015 IRC, (c) 2018",
+   "publisher": "American Wood Council",
+   "url": "https://awc.org/publications/dca6/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "deck_joist_span_sp_2x10_16oc_dca6",
+   "topic": "decks",
+   "value": "14'-0\"",
+   "unit": "max joist span",
+   "quote": "Southern Pine ... 2x10 16' - 2\" 14' - 0\" 11' - 5\" [12\"/16\"/24\" o.c.]",
+   "source_title": "Prescriptive Residential Wood Deck Construction Guide (DCA 6), based on the 2015 IRC, (c) 2018",
+   "publisher": "American Wood Council",
+   "url": "https://awc.org/publications/dca6/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "deck_joist_spacing_options_dca6",
+   "topic": "decks",
+   "value": [
+    12,
+    16,
+    24
+   ],
+   "unit": "in o.c.",
+   "quote": "Table 2. Maximum Joist Spans and Overhangs. Species Size Joist Spacing (o.c.) 12\" 16\" 24\"",
+   "source_title": "Prescriptive Residential Wood Deck Construction Guide (DCA 6), based on the 2015 IRC, (c) 2018",
+   "publisher": "American Wood Council",
+   "url": "https://awc.org/publications/dca6/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "deck_overhang_rule_dca6",
+   "topic": "decks",
+   "value": "L/4",
+   "unit": "max overhang",
+   "quote": "Overhang length is the lesser of allowable overhang, LO, or one fourth the joist span, L/4.",
+   "source_title": "Prescriptive Residential Wood Deck Construction Guide (DCA 6), based on the 2015 IRC, (c) 2018",
+   "publisher": "American Wood Council",
+   "url": "https://awc.org/publications/dca6/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "deck_footing_depth_dca6",
+   "topic": "decks",
+   "value": 12,
+   "unit": "in min below grade (or frost line)",
+   "quote": "All footings shall bear on undisturbed soil at least 12 inches below the undisturbed ground surface or below the frost line, whichever is deeper.",
+   "source_title": "Prescriptive Residential Wood Deck Construction Guide (DCA 6), based on the 2015 IRC, (c) 2018",
+   "publisher": "American Wood Council",
+   "url": "https://awc.org/publications/dca6/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "deck_footing_size_dca6",
+   "topic": "decks",
+   "value": {
+    "beam_span_6ft_joist_le10ft": {
+     "round_diam_in": 18,
+     "square_in": "16x16",
+     "thickness_in": 7
+    }
+   },
+   "unit": "",
+   "quote": "Table 4 ... Round Footing Diameter Square Footing Footing Thickness 6' ≤10' 14' 14' 14' 14' 14' 18\" 16\"x16\" 7\"",
+   "source_title": "Prescriptive Residential Wood Deck Construction Guide (DCA 6), based on the 2015 IRC, (c) 2018",
+   "publisher": "American Wood Council",
+   "url": "https://awc.org/publications/dca6/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "deck_decking_attach_dca6",
+   "topic": "decks",
+   "value": 3,
+   "unit": "min joists per decking segment",
+   "quote": "Attach decking to each joist with 2-8d threaded nails or 2-#8 screws. Space decking boards approximately 1/8\" apart. ... Each segment of decking must bear on a minimum of 3 joists (or 3 supports).",
+   "source_title": "Prescriptive Residential Wood Deck Construction Guide (DCA 6), based on the 2015 IRC, (c) 2018",
+   "publisher": "American Wood Council",
+   "url": "https://awc.org/publications/dca6/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "deck_decking_span_sfpa",
+   "topic": "decks",
+   "value": {
+    "5/4_RED_max_in": 24,
+    "5/4_RED_recommended_in": 16,
+    "2x6_max_in": 24,
+    "diagonal_in": 16
+   },
+   "unit": "in o.c.",
+   "quote": "Southern Pine 5/4 radius edge decking (R.E.D.) and 2×6 lumber used for decking are both rated to span up to 24 inches on center ... many professionals recommend limiting the R.E.D. span to 16 inches on center",
+   "source_title": "Building a Southern Pine Deck",
+   "publisher": "Southern Forest Products Association (SFPA)",
+   "url": "https://www.southernpine.com/building-a-southern-pine-deck/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "fence_post_hole_vinyl_barrette",
+   "topic": "fences",
+   "value": {
+    "5x5_post_hole_diam_in": 10,
+    "4x4_post_hole_diam_in": 8,
+    "gravel_in": 6
+   },
+   "unit": "in",
+   "quote": "Dig first two post holes in diameter based on size chart below* and down to your specified frost line. ... Diameters based on post size: 10\" for 5\" x 5\" post 8\" for 4\" x 4\" post ... Insert 6\" of gravel/filler into the bottom",
+   "source_title": "Freedom Ready-to-Assemble Privacy Vinyl Fence installation instructions",
+   "publisher": "Barrette Outdoor Living (Freedom brand)",
+   "url": "https://www.barretteoutdoorliving.com/wp-content/uploads/2021/06/FREEDOM-WEB-PrivacyKit.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "fence_post_spacing_vinyl_barrette",
+   "topic": "fences",
+   "value": "panel width + post width",
+   "unit": "post center-to-center",
+   "quote": "Measure the width of the fence panel (X) plus the width of the post (Y). This is the common center-to-center measurement (unless there is a cut-down panel) for post hole location",
+   "source_title": "Freedom Ready-to-Assemble Privacy Vinyl Fence installation instructions",
+   "publisher": "Barrette Outdoor Living (Freedom brand)",
+   "url": "https://www.barretteoutdoorliving.com/wp-content/uploads/2021/06/FREEDOM-WEB-PrivacyKit.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "fence_frost_example_barrette",
+   "topic": "fences",
+   "value": {
+    "frost_line_in": 36,
+    "gravel_in": 12,
+    "concrete_in": 24
+   },
+   "unit": "in",
+   "quote": "Example: When your frost line is 36\" insert 12\" of gravel/ filler and 24\" of post with concrete surrounding (Fig. 3).",
+   "source_title": "Freedom Ready-to-Assemble Privacy Vinyl Fence installation instructions",
+   "publisher": "Barrette Outdoor Living (Freedom brand)",
+   "url": "https://www.barretteoutdoorliving.com/wp-content/uploads/2021/06/FREEDOM-WEB-PrivacyKit.pdf",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "fence_wood_panel_size_yellawood",
+   "topic": "fences",
+   "value": {
+    "panel_height_ft": 6,
+    "panel_width_ft": 8
+   },
+   "unit": "ft",
+   "quote": "pre-assembled 6' x 8' or 48\" x 8' wood fence panels",
+   "source_title": "Pressure Treated Dog Ear Fencing product page",
+   "publisher": "YellaWood (Great Southern Wood Preserving)",
+   "url": "https://www.yellawood.com/products/fence-products/pressure-treated-dog-ear-fencing/",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "hvac_heat_pump_split_seer2_hspf2",
+   "topic": "hvac",
+   "value": {
+    "SEER2": 14.3,
+    "HSPF2": 7.5
+   },
+   "unit": "",
+   "quote": "(5) Central air conditioners and central air conditioning heat pumps manufactured on or after January 1, 2023, must have a SEER2 and HSPF2 not less than: ... (ii) Split systems—heat pumps 14.3 7.5",
+   "source_title": "10 CFR 430.32 Energy and water conservation standards and their compliance dates (eCFR, up to date as of 2026-10-07)",
+   "publisher": "U.S. Government Publishing Office / Office of the Federal Register (eCFR)",
+   "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-10-07/title-10.xml?part=430&section=430.32",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "hvac_central_ac_split_national",
+   "topic": "hvac",
+   "value": 13.4,
+   "unit": "SEER2 (North / national)",
+   "quote": "(i)(A) Split systems—air conditioners with a certified cooling capacity less than 45,000 Btu/hr 13.4 ... (iii) Single-package units—air conditioners 13.4",
+   "source_title": "10 CFR 430.32 Energy and water conservation standards and their compliance dates (eCFR, up to date as of 2026-10-07)",
+   "publisher": "U.S. Government Publishing Office / Office of the Federal Register (eCFR)",
+   "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-10-07/title-10.xml?part=430&section=430.32",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "hvac_central_ac_split_southeast_southwest",
+   "topic": "hvac",
+   "value": {
+    "lt45k_SEER2": 14.3,
+    "ge45k_SEER2": 13.8,
+    "SW_EER2_lt45k": "11.7/9.8",
+    "SW_EER2_ge45k": "11.2/9.8"
+   },
+   "unit": "",
+   "quote": "installed on or after January 1, 2023, in the southeast or southwest ... (i)(A) Split-systems—air conditioners ... less than 45,000 Btu/hr 14.3 14.3 11.7/9.8 † (i)(B) ... ≥45,000 Btu/hr 13.8 13.8 11.2/9.8 ††",
+   "source_title": "10 CFR 430.32 Energy and water conservation standards and their compliance dates (eCFR, up to date as of 2026-10-07)",
+   "publisher": "U.S. Government Publishing Office / Office of the Federal Register (eCFR)",
+   "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-10-07/title-10.xml?part=430&section=430.32",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "hvac_regions_definition",
+   "topic": "hvac",
+   "value": null,
+   "unit": "",
+   "quote": "\"Southeast\" includes the States of Alabama, Arkansas, Delaware, Florida, Georgia, Hawaii, Kentucky, Louisiana, Maryland, Mississippi, North Carolina, Oklahoma, Puerto Rico, South Carolina, Tennessee, Texas, Virginia, the District of Columbia ... \"Southwest\" includes the States of Arizona, Californi",
+   "source_title": "10 CFR 430.32 Energy and water conservation standards and their compliance dates (eCFR, up to date as of 2026-10-07)",
+   "publisher": "U.S. Government Publishing Office / Office of the Federal Register (eCFR)",
+   "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-10-07/title-10.xml?part=430&section=430.32",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "hvac_gas_furnace_afue_current",
+   "topic": "hvac",
+   "value": 80.0,
+   "unit": "AFUE %",
+   "quote": "The AFUE for non-weatherized gas furnaces (not including mobile home gas furnaces) manufactured on or after November 19, 2015, but before December 18, 2028 ... (A) Non-weatherized gas furnaces (not including mobile home furnaces) 80.0",
+   "source_title": "10 CFR 430.32 Energy and water conservation standards and their compliance dates (eCFR, up to date as of 2026-10-07)",
+   "publisher": "U.S. Government Publishing Office / Office of the Federal Register (eCFR)",
+   "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-10-07/title-10.xml?part=430&section=430.32",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "hvac_gas_furnace_afue_2028",
+   "topic": "hvac",
+   "value": 95.0,
+   "unit": "AFUE % (from Dec 18, 2028)",
+   "quote": "The AFUE for non-weatherized gas (not including mobile home gas furnaces) manufactured on and after December 18, 2028 ... (A) Non-weatherized gas furnaces (not including mobile home gas furnaces) 95.0",
+   "source_title": "10 CFR 430.32 Energy and water conservation standards and their compliance dates (eCFR, up to date as of 2026-10-07)",
+   "publisher": "U.S. Government Publishing Office / Office of the Federal Register (eCFR)",
+   "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-10-07/title-10.xml?part=430&section=430.32",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "water_heater_uef_gas_storage",
+   "topic": "water_heater",
+   "value": {
+    "20-55gal": {
+     "very_small": "0.3456 − 0.0020×Vr",
+     "low": "0.5982 − 0.0019×Vr",
+     "medium": "0.6483 − 0.0017×Vr",
+     "high": "0.6920 − 0.0013×Vr"
+    },
+    "55-100gal": {
+     "very_small": "0.6470 − 0.0006×Vr",
+     "low": "0.7689 − 0.0005×Vr",
+     "medium": "0.7897 − 0.0004×Vr",
+     "high": "0.8072 − 0.0003×Vr"
+    }
+   },
+   "unit": "UEF (Vr = rated storage volume, gal)",
+   "quote": "(d) Water Heaters. (1) The uniform energy factor of water heaters manufactured before May 6, 2029, shall not be less than ... Gas-fired Storage Water Heater ≥20 gal and ≤55 gal ... Medium 0.6483 − (0.0017 × Vr)",
+   "source_title": "10 CFR 430.32 Energy and water conservation standards and their compliance dates (eCFR, up to date as of 2026-10-07)",
+   "publisher": "U.S. Government Publishing Office / Office of the Federal Register (eCFR)",
+   "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-10-07/title-10.xml?part=430&section=430.32",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "water_heater_uef_electric_storage",
+   "topic": "water_heater",
+   "value": {
+    "20-55gal": {
+     "very_small": "0.8808 − 0.0008×Vr",
+     "low": "0.9254 − 0.0003×Vr",
+     "medium": "0.9307 − 0.0002×Vr",
+     "high": "0.9349 − 0.0001×Vr"
+    },
+    "55-120gal": {
+     "very_small": "1.9236 − 0.0011×Vr",
+     "low": "2.0440 − 0.0011×Vr",
+     "medium": "2.1171 − 0.0011×Vr",
+     "high": "2.2418 − 0.0011×Vr"
+    }
+   },
+   "unit": "UEF (Vr = rated storage volume, gal)",
+   "quote": "Electric Storage Water Heaters ≥20 gal and ≤55 gal ... Medium 0.9307 − (0.0002 × Vr) ... >55 gal and ≤120 gal ... Medium 2.1171 − (0.0011 × Vr)",
+   "source_title": "10 CFR 430.32 Energy and water conservation standards and their compliance dates (eCFR, up to date as of 2026-10-07)",
+   "publisher": "U.S. Government Publishing Office / Office of the Federal Register (eCFR)",
+   "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-10-07/title-10.xml?part=430&section=430.32",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "ev_2026_tesla_model_y_lr_awd",
+   "topic": "ev",
+   "value": 27,
+   "unit": "kWh/100 mi (combined)",
+   "quote": "Page text (columns: Model Y LR AWD | Equinox EV FWD | Mach-E RWD): \"27 kWh/100 mi 31 kWh/100 mi 31 kWh/100 mi 327 miles Total Range 319 miles Total Range 260 miles Total Range\"",
+   "source_title": "Side-by-side comparison, 2026 models",
+   "publisher": "U.S. DOE / U.S. EPA (fueleconomy.gov)",
+   "url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=49744&id=49953&id=50204",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "ev_2026_chevrolet_equinox_ev_fwd",
+   "topic": "ev",
+   "value": 31,
+   "unit": "kWh/100 mi (combined)",
+   "quote": "Page text (columns: Model Y LR AWD | Equinox EV FWD | Mach-E RWD): \"27 kWh/100 mi 31 kWh/100 mi 31 kWh/100 mi 327 miles Total Range 319 miles Total Range 260 miles Total Range\" ; Equinox: \"Combined MPG: 108 MPGe City MPGe: 117 Highway MPGe: 100\"",
+   "source_title": "Side-by-side comparison, 2026 models",
+   "publisher": "U.S. DOE / U.S. EPA (fueleconomy.gov)",
+   "url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=49744&id=49953&id=50204",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "ev_2026_ford_mustang_mach_e_rwd",
+   "topic": "ev",
+   "value": 31,
+   "unit": "kWh/100 mi (combined)",
+   "quote": "Page text (columns: Model Y LR AWD | Equinox EV FWD | Mach-E RWD): \"27 kWh/100 mi 31 kWh/100 mi 31 kWh/100 mi 327 miles Total Range 319 miles Total Range 260 miles Total Range\" ; Mach-E: \"Combined MPG: 107 MPGe City MPGe: 111 Highway MPGe: 103\"",
+   "source_title": "Side-by-side comparison, 2026 models",
+   "publisher": "U.S. DOE / U.S. EPA (fueleconomy.gov)",
+   "url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=49744&id=49953&id=50204",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "ev_2026_tesla_model_y_std_rwd_18in",
+   "topic": "ev",
+   "value": 24.3451,
+   "unit": "kWh/100 mi (combined, unrounded API value)",
+   "quote": "<comb08>138</comb08> <combE>24.3451</combE> <range>321</range> (2026 Tesla Model Y Standard RWD (18in Wheels), id 50040)",
+   "source_title": "fueleconomy.gov web services, vehicle record 50040",
+   "publisher": "U.S. DOE / U.S. EPA (fueleconomy.gov)",
+   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/50040",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "ev_charging_efficiency_fueleconomy",
+   "topic": "ev",
+   "value": [
+    84,
+    93
+   ],
+   "unit": "percent charging efficiency",
+   "quote": "Battery charging efficiency can vary, but it is often 84% to 93%, based on published studies (Chae et. al., 2011; Gautam et. al., 2011) and data from the Idaho National Laboratory",
+   "source_title": "Where the Energy Goes: Electric Cars (data sources)",
+   "publisher": "U.S. DOE / U.S. EPA (fueleconomy.gov)",
+   "url": "https://www.fueleconomy.gov/feg/evtech.shtml",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  },
+  {
+   "id": "ev_label_kwh_definition",
+   "topic": "ev",
+   "value": null,
+   "unit": "",
+   "quote": "This is an estimated rate of consumption; any given vehicle may or may not be actually capable of traveling 100 miles on a fully charged battery.",
+   "source_title": "Learn More About the Electric Vehicle Label",
+   "publisher": "U.S. DOE / U.S. EPA (fueleconomy.gov)",
+   "url": "https://www.fueleconomy.gov/feg/label/learn-more-electric-label.shtml",
+   "accessed": "2026-10-10",
+   "http_status": 200
+  }
+ ],
+ "not_found": [
+  "Paint: Sherwin-Williams, Behr and PPG data sheets not retrieved (Behr 403; SW/PPG URLs 404/not found in sitemaps). Two manufacturers used: Benjamin Moore (TDS PDF) and Valspar (manufacturer product page, not a TDS PDF).",
+  "Paint: no data sheet gives a coat count specific to 'changing color' or 'new drywall' other than BM 'On bare substrates, two coats are recommended' and Valspar's drastic-color-change primer advice.",
+  "Drywall: USG Gypsum Construction Handbook is a Wiley book, not freely downloadable; screw spacing taken from USG J371 (which follows practice, not quoted from ASTM C840/GA-216 text itself).",
+  "Roofing: GAF (403, bot-blocked), CertainTeed and IKO data sheets not retrieved; Owens Corning used throughout. ProEdge hip & ridge linear-ft per bundle not found on page.",
+  "Roofing: roof pitch multiplier (rafter length factor) table from a primary source: NOT FOUND -> compute sqrt(1+(rise/12)^2).",
+  "Gravel: sand unit weight (tons/cu yd) from a DOT/federal source: NOT FOUND. Loose (uncompacted, as-delivered) crushed stone/gravel weight per cu yd: NOT FOUND (WisDOT values are in-place compacted pay-conversion factors).",
+  "Mulch: standard bagged mulch volume (2 cu ft) from an extension source: NOT FOUND.",
+  "Concrete: IRC R506.1 (3.5 in min slab) primary text: NOT FOUND - codes.iccsafe.org is a JavaScript app (curl returns an empty shell; WebFetch 403); no .gov full-text copy located without search.",
+  "Decks: IRC 2021 R507 text not reachable (same ICC issue); DCA 6 retrieved is the 2015-IRC edition (c)2018, whose spans may differ from IRC 2021 Table R507.6 - verify before publishing. DCA 6 does not contain a decking span table (SFPA used instead).",
+  "Fences: 'post hole depth = one-third of post length' and '8 ft on center for wood privacy' rules from a manufacturer/extension: NOT FOUND (only 6'x8' panel size from YellaWood and Barrette's frost-line rule). Concrete volume per post: NOT FOUND."
+ ],
+ "notes": [
+  "eCFR: the human page https://www.ecfr.gov/current/title-10/chapter-II/subchapter-D/part-430/subpart-C/section-430.32 also returned 200; the versioner API (requires Accept-Encoding: gzip) was used to read the text. The renderer API URL given in the brief returned 404.",
+  "Furnace 95% AFUE rule: compliance date in the eCFR text (up to date as of 2026-10-07) is December 18, 2028; until then 80% AFUE applies to non-weatherized gas furnaces.",
+  "Water heater UEF table applies to units manufactured before May 6, 2029 (new standards follow on that date).",
+  "fueleconomy.gov side-by-side page rounds kWh/100 mi to integers; unrounded combE values from the web-services API: Model Y LR AWD 27.4959, Equinox EV FWD 31.0762, Mach-E RWD 31.4375.",
+  "EPA Volume-to-Weight Conversion Factors memo (2016) lists 'Small Rock/Gravel 999 lb/cu yd' and 'Dirt and Sand 929 lb/cu yd', but these are loose C&D waste densities - deliberately NOT used for purchased aggregate.",
+  "WisDOT conversion factors (1.85 / 1.75 tons per cu yd) are for 'acceptably completed in-place' material per Standard Spec 109.1, 2025 Standard Specifications (effective with the November 2024 letting).",
+  "Owens Corning spec PDF (dms/10021602) is the 3-part guide specification 'Revised January 2026'.",
+  "Valspar product pages show a Lowe's same-day-delivery link but are served by valspar.com (manufacturer)."
+ ]
+}
