@@ -16,7 +16,7 @@ const below = trades.filter((o) => (K.wage('texas', o)?.mean ?? Infinity) < K.na
 export default defineState({
   slug: 'texas',
   title: 'Roof Replacement Cost Texas 2026: Prices and Roofer Wages',
-  description: `Roof replacement cost in Texas for 2026: ${K.usd(r.typical)} typical, ${K.usd(r.low)} to ${K.usd(r.high)} for most jobs, with Texas roofer wages ${gap}% under the U.S. mean.`,
+  description: `Roof replacement cost in Texas for 2026: ${K.usd(r.typical)} typical, ${K.usd(r.low)} to ${K.usd(r.high)} for most jobs, Census data, with Texas roofer wages ${gap}% under the U.S. mean.`,
   intro: `Texas roofers earn less than the national mean, but hail exposure is the highest of any state in FEMA's index.`,
   resume: `A professional roof replacement in Texas costs about ${K.usd(r.typical)}, and most jobs fall between ${K.usd(r.low)} and ${K.usd(r.high)}, slightly under the national median of ${K.usd(us.typical)}. The figure starts from what owners in the West South Central division (Texas, Oklahoma, Louisiana and Arkansas) reported paying professionals in the 2023 American Housing Survey, brought to ${K.month(K.ahsMeta.cpi.to)} dollars. It then moves the labor share of the job to Texas wages: BLS measured a mean of ${K.usd(w.mean, 2)} an hour for roofers in Texas in ${K.wageRef.reference}, ${gap}% below the national ${K.usd(nat.mean, 2)}. Cheaper labor does not make Texas roofs cheap to own, though. FEMA's National Risk Index rates the state's expected yearly hail losses to buildings as ${f.nri.hail.rating}, the top score among all states, so many Texas roofs are replaced after storms rather than at the end of their life.`,
   body: (h) => `

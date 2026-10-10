@@ -41,7 +41,7 @@ const heatBy = Object.fromEntries(STATE_LIST.map((s) => [s.slug, {
   recs: { gas: recsHeating(s.slug, 'gas').value, propane: recsHeating(s.slug, 'propane').value, oil: recsHeating(s.slug, 'oil').value, electricity: recsHeating(s.slug, 'electricity').value },
   recsLevel: { gas: recsHeating(s.slug, 'gas').level, propane: recsHeating(s.slug, 'propane').level, oil: recsHeating(s.slug, 'oil').level, electricity: recsHeating(s.slug, 'electricity').level },
 }]));
-const solarBy = Object.fromEntries(STATE_LIST.filter((s) => pvwatts(s.slug)).map((s) => [s.slug, { kwhPerKw: pvwatts(s.slug)!.kwhPerKw, city: pvwatts(s.slug)!.city, quote: solarQuote(s.slug).perW, quoteScope: solarQuote(s.slug).scope, cents: centsPerKwh(s.slug), kwhMonth: usage2024(s.slug).kwhMonth }]));
+const solarBy = Object.fromEntries(STATE_LIST.filter((s) => pvwatts(s.slug)).map((s) => [s.slug, { kwhPerKw: pvwatts(s.slug)!.kwhPerKw, city: pvwatts(s.slug)!.city, source: pvwatts(s.slug)!.source, quote: solarQuote(s.slug).perW, quoteScope: solarQuote(s.slug).scope, cents: centsPerKwh(s.slug), kwhMonth: usage2024(s.slug).kwhMonth }]));
 const solarStates = states.filter((s) => solarBy[s.value]);
 const solarState = state && solarBy[state] ? state : solarBy.texas ? 'texas' : solarStates[0]?.value;
 const movers = Object.fromEntries(STATE_LIST.map((s) => { const w = stateWage(s.slug, 'movers') ?? nationalWage('movers'); return [s.slug, { p25: w.p25 ?? w.mean, mean: w.mean, p75: w.p75 ?? w.mean }]; }));

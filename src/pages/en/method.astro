@@ -1,0 +1,56 @@
+---
+/** Method: every data set, the formula of a job price, a worked example, the limits. Figures from the kit. */
+import PageLayout from '../../layouts/PageLayout.astro';
+import { route } from '../../i18n/routes';
+import { KIT as K } from '../../lib/kit';
+import { SOURCES, table } from '../../lib/helpers';
+import { breadcrumbSchema, webPageSchema } from '../../lib/seo';
+const lang = 'en';
+const path = route('method', lang);
+const cpi = K.ahsMeta.cpi;
+const cpiMonth = K.month(cpi.to);
+const ex = K.job('roof', 'ohio');
+const exW = K.wage('ohio', 'roofers');
+const roofSh = K.shares('roof');
+const jobs = Object.keys(K.P.jobs);
+const occ: Record<string, string> = Object.fromEntries(jobs.map((k) => [k, K.occ(K.jobDef(k).occ).title]));
+const rowsJobs = jobs.map((k) => { const a = K.ahs(k); const sh = K.shares(k); return [K.jobDef(k).label, K.num(a.pro.n), `${K.usd(a.pro.p25)} / ${K.usd(a.pro.median)} / ${K.usd(a.pro.p75)}`, sh.label, K.pct(sh.payroll + sh.benefits), occ[k]]; });
+const rowsCpi = Object.entries(cpi.annual).filter(([y]) => ['2021', '2022', '2023'].includes(y)).map(([y, v]) => [y, K.num(v as number, 3), K.num(cpi.value / (v as number), 3)]);
+const src = (k: string, t?: string) => `<a href="${SOURCES[k].url}" target="_blank" rel="nofollow noopener noreferrer">${t ?? SOURCES[k].label}</a>`;
+const title = 'Home Cost Data 2026: Census, BLS and EIA Sources Explained';
+const description = 'How each price on Home Cost Ledger is built in 2026: Census survey jobs, BLS wages by state, Economic Census cost shares, EIA energy prices, and their limits.';
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: 'How prices are built', description, path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'How prices are built', path }])]} breadcrumbs={[{ label: 'How prices are built' }]}>
+  <article class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>How the prices on this site are built</h1>
+    <p>No public body publishes an official price for a roof, a water heater or a furnace, and this site does not pretend otherwise. What exists are measurements: what owners told the Census Bureau they paid, what each trade earns in each state, how contractors split their revenue between materials and labor, and what energy costs. Every price on the site is assembled from those measurements with one formula, shown below, and every result is a range rather than a single figure.</p>
+    <h2>1. The national range: jobs reported by homeowners</h2>
+    <p>The <Fragment set:html={src('census_ahs', 'American Housing Survey 2023')} /> (Census Bureau for HUD, national public use file, version 1.1) asks owners about home improvement jobs done in the two previous years: type of job, cost, year, whether someone in the household did most of the work, and how it was paid. We keep jobs done by professionals, weight them with the survey weights, and take the 25th percentile, the median and the 75th percentile. Each cost is moved to {cpiMonth} dollars with the <Fragment set:html={src('bls_cpi', 'CPI-U')} /> of its year: the latest index used is {K.num(cpi.value, 3)}.</p>
+    <Fragment set:html={table(['Job', 'Professional jobs in survey', `25th / median / 75th (${cpiMonth} $)`, 'Economic Census industry', 'Labor share L', 'BLS trade'], rowsJobs, 'Sources: AHS 2023 PUF v1.1; Economic Census 2022 (EC2223BASIC); BLS OEWS May 2025.', ['l', 'r', 'r', 'l', 'r', 'l'])} />
+    <Fragment set:html={table(['Year of the job', 'CPI-U annual average', `Factor to ${cpiMonth}`], rowsCpi, 'BLS series CUUR0000SA0.', ['l', 'r', 'r'])} />
+    <p>For roofs, the survey also gives the living area of the house, in seven groups from under 1,000 to 4,000 square feet or more; the roof calculator uses the group of the size you enter, for one-family detached homes.</p>
+    <h2>2. The regional level: the Census division</h2>
+    <p>Owners report very different prices in different parts of the country. For each of the nine Census divisions with at least 60 professional jobs of a given type in the survey, we compute the ratio of the division median to the national median; divisions with fewer jobs keep the national level (ratio 1). Every state takes the ratio of its division.</p>
+    <h2>3. The state adjustment: only the labor share moves</h2>
+    <p>Within a division, states differ mainly in what labor costs. The <Fragment set:html={src('census_ec', '2022 Economic Census')} /> gives, for each type of contractor, payroll and employer-paid benefits as a share of the value of construction work: that share is L. The <Fragment set:html={src('bls_oews', 'Occupational Employment and Wage Statistics')} /> of May 2025, released on {K.day(K.wageRef.released)}, give the mean hourly wage of the matching trade in each state; we divide it by the division's mean, weighted by each state's employment in that trade. The state price is then:</p>
+    <p><strong>price = national quartile × division ratio × ((1 − L) + L × state wage ÷ division wage)</strong></p>
+    <p>When BLS does not publish a state's wage for a trade, the ratio is set to 1 and the page says so. Results are rounded to the nearest $10.</p>
+    <h3>Worked example: a roof in Ohio</h3>
+    <p>The national median roof job is {K.usd(K.ahs('roof').pro.median)}. Ohio is in the East North Central division, whose ratio is {K.num(ex.region, 3)}. Roofing contractors' labor share is {K.pct(roofSh.payroll + roofSh.benefits)} (payroll {K.pct(roofSh.payroll)} plus benefits {K.pct(roofSh.benefits)}). Ohio roofers earned a mean of {exW ? K.usd(exW.mean, 2) : 'n/a'} an hour, {K.num(ex.index, 3)} times the division mean. The factor is {K.num(ex.region, 3)} × ((1 − {K.num(ex.L, 3)}) + {K.num(ex.L, 3)} × {K.num(ex.index, 3)}) = {K.num(ex.factor, 3)}, so the typical Ohio roof job is {K.usd(ex.typical)}, with a range of {K.usd(ex.low)} to {K.usd(ex.high)}.</p>
+    <h2>4. Material quantities</h2>
+    <p>The concrete, gravel, mulch, paint, drywall and roofing calculators are geometry plus figures printed by manufacturers or public agencies: bag yields from the <Fragment set:html={src('quikrete_1101', 'Quikrete data sheet')} />, ordering overage from the <Fragment set:html={src('nrmca_cip31', 'NRMCA')} />, aggregate weights from the <Fragment set:html={src('wisdot_305', 'Wisconsin DOT')} /> specifications, mulch coverage from <Fragment set:html={src('clemson_mulch', 'Clemson Extension')} />, paint spread rates from <Fragment set:html={src('bm_regal', 'Benjamin Moore')} /> and <Fragment set:html={src('valspar_ultra', 'Valspar')} /> data, drywall accessories from <Fragment set:html={src('usg_j371', 'USG')} />, shingle bundles from <Fragment set:html={src('oc_spec', 'Owens Corning')} />. We do not publish store prices: they change weekly and by store, and retailer sites cannot be read reliably. Each tool lets you type the price on the shelf tag.</p>
+    <h2>5. Energy and solar</h2>
+    <p>Electricity prices are the residential averages of the <Fragment set:html={src('eia_epm', 'EIA Electric Power Monthly')} /> for {K.energyMeta.electricityText}, and average consumption and bills come from <Fragment set:html={src('eia_861', 'EIA-861')} /> for 2024. Gas, propane and heating oil prices are EIA averages over {K.energyMeta.gas}; where EIA does not survey a state, the U.S. average is used. Heat contents come from <Fragment set:html={src('eia_btu', 'EIA')} />, default heating loads from <Fragment set:html={src('eia_recs', 'RECS 2020')} />, efficiency minimums from <Fragment set:html={src('ecfr_430_32', '10 CFR 430.32')} />. Solar output per kW is computed with <Fragment set:html={src('nlr_pvwatts', 'PVWatts')} /> for the largest city of each state (20° tilt, south facing, 14% losses). PVWatts' free access allowed {K.solarCalibration.states} states; for the others we take the yearly sunshine on a roof tilted at latitude minus 15° from <Fragment set:html={src('nasa_power', 'NASA POWER')} /> and multiply it by the median performance ratio PVWatts gives in the states computed both ways ({K.num(K.solarCalibration.performanceRatio, 3)}); in those states the two methods differ by at most {K.num(K.solarCalibration.maxError * 100, 0)}%. Solar prices start from the EnergySage state medians published in the <Fragment set:html={src('nlr_siu_2026', 'NLR Spring 2026 Solar and Storage Industry Update')} />; the high end adds the gap between New York's 2025 reported prices (<Fragment set:html={src('nyserda_solar', 'NYSERDA')} />, median {K.usd(K.nyReported.median, 2)}/W) and New York's median quote, a factor of {K.num(K.reportedToQuote(), 3)}.</p>
+    <h2>6. What this method cannot do</h2>
+    <ul>
+      <li>It cannot see your house: pitch, layers, rot, access, brand and permit fees move a real quote.</li>
+      <li>The job survey covers 2021 to 2023 and records the type of job, not its size or material (except house size for roofs). General inflation (CPI) is used to update it, not the price of shingles or copper.</li>
+      <li>Division ratios rest on tens to a few hundred jobs each and on rounded answers; they are less precise than the national figures.</li>
+      <li>The labor share is an average over each contractor industry, residential and commercial work together.</li>
+      <li>Moving prices use the revenue that moving companies earn per dollar of payroll, an average that includes long-distance hauling; your hours are your own estimate.</li>
+      <li>Incentives, utility rebates and net metering rules vary by state and utility and are not modeled, except the end of the federal 25C and 25D credits on December 31, 2025 (<Fragment set:html={src('irs_25d', 'IRS')} />).</li>
+    </ul>
+    <h2>7. Testing and updates</h2>
+    <p>The data files are rebuilt by a script from the official downloads; automated tests check the engines on known cases (bag yields, pitch factors, the Ohio example above, the order of every quartile) before each release. The site is reread when BLS publishes the next wage survey (spring), when the Census publishes the next American Housing Survey, and monthly for energy prices. Corrections are welcome through the <a href={route('contact', lang)}>contact page</a>.</p>
+  </article>
+</PageLayout>

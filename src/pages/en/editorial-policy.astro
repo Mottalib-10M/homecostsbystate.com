@@ -1,0 +1,19 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { route } from '../../i18n/routes';
+import { AUTHOR_NAME, REVIEW_CYCLE_MONTHS } from '../../data/site-config';
+const lang = 'en';
+---
+<PageLayout title="Editorial policy of Home Cost Ledger: sources, updates, fixes" description="How Home Cost Ledger chooses its data, writes its pages and corrects mistakes: official statistics only, figures computed from data files, ranges instead of single prices." lang={lang} noindex={true} breadcrumbs={[{ label: 'Editorial policy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Editorial policy</h1>
+    <h2>Sources we accept</h2>
+    <p>Prices and wages come from federal statistical agencies (Census Bureau, Bureau of Labor Statistics, Energy Information Administration), from national laboratories for solar, and from state agencies for state rules. Material quantities rely on manufacturers' technical data sheets, state transportation department specifications and university extension services. Industry blogs, lead-generation sites and unsourced "average cost" figures are not sources here.</p>
+    <h2>How a page is written</h2>
+    <p>No figure is typed into a page by hand: every price, wage, share or date is read from a data file rebuilt from the official download, so that an update to the data updates every page that uses it. Each page cites its sources at the bottom and names the release and date of the data. Ranges are preferred to single figures, and the limits of each figure are stated.</p>
+    <h2>Independence</h2>
+    <p>{AUTHOR_NAME} receives nothing from contractors, manufacturers, retailers, lenders or utilities. The site sells no leads and runs no advertising today. If advertising is ever added, it will be marked as such and kept away from the calculators.</p>
+    <h2>Updates and corrections</h2>
+    <p>The whole site is reviewed at least every {REVIEW_CYCLE_MONTHS} months, and earlier when a source publishes a new release: BLS wages each spring, a new American Housing Survey, monthly energy prices. Reported errors are checked against the source; when a figure was wrong, it is corrected and the date at the top of the page changes. Write through the <a href={route('contact', lang)}>contact page</a>. The method is on the <a href={route('method', lang)}>method page</a>.</p>
+  </div>
+</PageLayout>

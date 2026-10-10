@@ -43,6 +43,7 @@ export const KIT = {
   energyMeta: ENERGY_META,
   recs: recsHeating,
   pv: pvwatts,
+  solarCalibration: SOLAR.calibration as { performanceRatio: number; states: number; maxError: number },
   solarQuote,
   reportedToQuote,
   nyReported: NY_REPORTED,

@@ -9,7 +9,7 @@ import { systemKw, panels, price, payback } from '../../lib/engine/solar';
 import { readParams, num as qn, str, updateURL } from '../../lib/url-state';
 import { Card, StatePick, Result, Rows, Note, Actions, usd, num, type Opt } from './parts';
 
-export interface StateSolar { kwhPerKw: number; city: string; quote: number; quoteScope: 'state' | 'us'; cents: number; kwhMonth: number }
+export interface StateSolar { kwhPerKw: number; city: string; source: 'pvwatts' | 'nasa-power'; quote: number; quoteScope: 'state' | 'us'; cents: number; kwhMonth: number }
 interface Props { mode: 'cost' | 'size' | 'payback'; states: Opt[]; byState: Record<string, StateSolar>; state?: string; lock?: boolean; ratio: number; panelW: number; medianKw: number; creditEnded: string; methodHref?: string; idPrefix?: string }
 export default function SolarCalc({ mode, states, byState, state = 'texas', lock = false, ratio, panelW, medianKw, creditEnded, methodHref = '/en/method/', idPrefix = 'so' }: Props) {
   const [slug, setSlug] = useState(state);
@@ -42,7 +42,7 @@ export default function SolarCalc({ mode, states, byState, state = 'texas', lock
   const quoteNote = S.quoteScope === 'state' ? `${name} median quote` : 'U.S. median quote (no state figure published)';
   return (
     <Card form={<>
-      <StatePick id={`${p}-state`} value={slug} onChange={pick} states={states} lock={lock} help={`Sun data: ${S.city} (PVWatts).`} />
+      <StatePick id={`${p}-state`} value={slug} onChange={pick} states={states} lock={lock} help={`Sun data: ${S.city} (${S.source === 'pvwatts' ? 'PVWatts' : 'NASA POWER, scaled to PVWatts'}).`} />
       {mode !== 'size' && <NumberField id={`${p}-kw`} label="System size" value={kw} onChange={pickKw} unit="kW" max={100} decimals={1} help={`${num(medianKw, 1)} kW was the median home system installed in 2023 (Berkeley Lab).`} />}
       {mode === 'size' && <>
         <NumberField id={`${p}-u`} label="Electricity used per month" value={use} onChange={setUse} unit="kWh" max={20000} help={`${name} average in 2024: ${num(S.kwhMonth)} kWh (EIA).`} />
@@ -63,7 +63,7 @@ export default function SolarCalc({ mode, states, byState, state = 'texas', lock
       </Result>}
       {mode === 'size' && <Result label={`Solar to cover ${num(offset)}% of your use in ${name}`} figure={`${num(need, 1)} kW`} sub={<>{num(n)} panels of {num(watts)} W · {num(need * S.kwhPerKw)} kWh a year</>}>
         <Rows rows={[['Use per year', `${num(use * 12)} kWh`], [`Output of 1 kW in ${S.city}`, `${num(S.kwhPerKw)} kWh a year`], ['System size', `${num(need, 2)} kW`, true], ['Panels', num(n)]]} />
-        <Note methodHref={methodHref}>PVWatts output for a south-facing roof at 20° tilt with 14% system losses; shade, orientation and roof angle change it.</Note>
+        <Note methodHref={methodHref}>{S.source === 'pvwatts' ? 'PVWatts output for a south-facing roof at 20° tilt with 14% system losses' : 'NASA POWER sunshine on a south-facing tilted roof, converted with the performance ratio PVWatts gives in states computed both ways'}; shade, orientation and roof angle change it.</Note>
         <Actions />
       </Result>}
       {mode === 'payback' && <Result label={`Simple payback in ${name}`} figure={Number.isFinite(pb.years) ? `${num(pb.years, 1)} years` : 'No saving'} sub={<>{usd(pb.saving)} saved a year on {num(pb.kwh)} kWh produced</>}>

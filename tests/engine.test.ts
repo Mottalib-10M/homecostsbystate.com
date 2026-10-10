@@ -41,7 +41,7 @@ describe('paint and drywall', () => {
   it('12 x 12 x 8 room: 384 sq ft of wall, 334 net', () => { expect(room.walls).toBe(384); expect(room.wallNet).toBe(334); });
   it('2 coats at 350 sq ft/gal', () => { const g = paintGallons(334, 2, 350); expect(g.exact).toBeCloseTo(1.9086, 3); expect(g.gallons).toBe(2); expect(g.quarts).toBe(8); });
   it('USG: 1,000 sq ft of board takes 370 ft of tape', () => {
-    const d = drywall({ areaSqFt: 1000, sheetSqFt: 32, wastePct: 0, per1000: { tapeFt: 370, screws: 2.7, compoundLb: 10 } });
+    const d = drywall({ areaSqFt: 1000, sheetSqFt: 32, wastePct: 0, per1000: { tapeFt: 370, screws: 2.7, compoundGal: 10 } });
     expect(d.sheets).toBe(32); expect(d.boardSqFt).toBe(1024); expect(d.tapeFt).toBeCloseTo(378.88, 2);
   });
 });

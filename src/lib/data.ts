@@ -83,7 +83,8 @@ export function recsHeating(slug: string, fuel: 'electricity' | 'gas' | 'propane
 }
 
 // ---------------------------------------------------------------- solar
-type Pv = Record<string, { kwhPerKw: number; city: string; station: string }>;
+type Pv = Record<string, { kwhPerKw: number; city: string; source: 'pvwatts' | 'nasa-power' }>;
+export const SOLAR_CALIBRATION = SOLAR.calibration;
 export const pvwatts = (slug: string) => (SOLAR.pvwatts as Pv)[slug] ?? null;
 export const NY_REPORTED = SOLAR.nyReported2025;
 export const solarQuote = (slug: string): { perW: number; scope: 'state' | 'us' } => {

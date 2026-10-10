@@ -42,13 +42,13 @@ export function paintGallons(areaSqFt: number, coats: number, coverage: number) 
 }
 
 /** Drywall sheets for walls (and ceiling) of a room, with a waste allowance. */
-export function drywall(o: { areaSqFt: number; sheetSqFt: number; wastePct: number; per1000: { compoundLb?: number; tapeFt?: number; screws?: number } }) {
+export function drywall(o: { areaSqFt: number; sheetSqFt: number; wastePct: number; per1000: { compoundGal?: number; tapeFt?: number; screws?: number } }) {
   const a = Math.max(0, o.areaSqFt) * (1 + Math.max(0, o.wastePct) / 100);
   const sheets = a > 0 ? Math.ceil(a / o.sheetSqFt) : 0;
   const k = (sheets * o.sheetSqFt) / 1000;
   return {
     sheets, boardSqFt: sheets * o.sheetSqFt,
-    compoundLb: o.per1000.compoundLb != null ? k * o.per1000.compoundLb : null,
+    compoundGal: o.per1000.compoundGal != null ? k * o.per1000.compoundGal : null,
     tapeFt: o.per1000.tapeFt != null ? k * o.per1000.tapeFt : null,
     screws: o.per1000.screws != null ? k * o.per1000.screws : null,
   };

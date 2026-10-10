@@ -1,0 +1,26 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { CONTACT_EMAIL } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { contactPageSchema } from '../../lib/seo';
+const lang = 'en';
+const path = route('contact', lang);
+const description = 'Write to the publisher of Home Cost Ledger about a figure, a source or a calculator. We answer data questions; we do not refer contractors or review individual quotes.';
+---
+<PageLayout title="Contact Home Cost Ledger: corrections, data and embed questions" description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contact', description, path, lang })]} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Contact</h1>
+    <p>E-mail: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. There is no form on purpose: a form would be one more place where a phone number gets typed.</p>
+    <h2>What we can help with</h2>
+    <ul>
+      <li>A figure that looks wrong: tell us the page, the state and the inputs (or paste the share link). We check it against the source release and correct it if needed.</li>
+      <li>A newer official release we have missed, or an official source for your state that would improve a page.</li>
+      <li>Embedding the roof cost or concrete calculator on your own site: see the <a href={route('widget', lang)}>embed page</a> first.</li>
+    </ul>
+    <h2>What we cannot do</h2>
+    <p>We do not recommend contractors, we have no partners to pass you to, and we cannot judge whether a specific quote is fair: we have not seen the house. The price ranges and the <a href={route('method', lang)}>method page</a> are there to help you ask the right questions.</p>
+    <h2>Publisher</h2>
+    <LegalIdentity lang={lang} />
+  </div>
+</PageLayout>

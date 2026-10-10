@@ -258,6 +258,10 @@
     "fema_nri_states": {
       "url": "https://services.arcgis.com/XG15cJAlne2vxtgt/ArcGIS/rest/services/National_Risk_Index_States_Expected_Annual_Loss/FeatureServer/0",
       "label": "FEMA National Risk Index, state expected annual loss table (ArcGIS feature service, December 2025)"
+    },
+    "nasa_power": {
+      "url": "https://power.larc.nasa.gov/",
+      "label": "NASA Prediction Of Worldwide Energy Resources (POWER), climatology of solar irradiance on a tilted surface (latitude minus 15 degrees)"
     }
   },
   "materials": {
@@ -336,7 +340,8 @@
     "woodFencePanelFt": {
       "height": 6,
       "width": 8
-    }
+    },
+    "usgsCrushedStonePerMetricTon2021": 13.26
   },
   "efficiency": {
     "heatPumpSplit": {

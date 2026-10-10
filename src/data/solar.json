@@ -3,28 +3,263 @@
   "alabama": {
    "kwhPerKw": 1367,
    "city": "Birmingham",
-   "station": "NSRDB PSM V3 GOES tmy-2020 3.2.0"
+   "source": "pvwatts"
   },
   "alaska": {
    "kwhPerKw": 922,
    "city": "Anchorage",
-   "station": "NSRDB PSM V4 Polar tmy-2023 1.0.0"
+   "source": "pvwatts"
   },
   "arizona": {
    "kwhPerKw": 1755,
    "city": "Phoenix",
-   "station": "NSRDB PSM V3 GOES tmy-2020 3.2.0"
+   "source": "pvwatts"
   },
   "arkansas": {
    "kwhPerKw": 1413,
    "city": "Little Rock",
-   "station": "NSRDB PSM V3 GOES tmy-2020 3.2.0"
+   "source": "pvwatts"
   },
   "california": {
    "kwhPerKw": 1677,
    "city": "Los Angeles",
-   "station": "NSRDB PSM V3 GOES tmy-2020 3.2.0"
+   "source": "pvwatts"
+  },
+  "colorado": {
+   "kwhPerKw": 1595,
+   "city": "Denver",
+   "source": "pvwatts"
+  },
+  "connecticut": {
+   "kwhPerKw": 1252,
+   "city": "Hartford",
+   "source": "pvwatts"
+  },
+  "delaware": {
+   "kwhPerKw": 1364,
+   "city": "Wilmington",
+   "source": "pvwatts"
+  },
+  "district-of-columbia": {
+   "kwhPerKw": 1411,
+   "city": "Washington",
+   "source": "pvwatts"
+  },
+  "florida": {
+   "kwhPerKw": 1544,
+   "city": "Orlando",
+   "source": "pvwatts"
+  },
+  "georgia": {
+   "kwhPerKw": 1405,
+   "city": "Atlanta",
+   "source": "nasa-power"
+  },
+  "hawaii": {
+   "kwhPerKw": 1755,
+   "city": "Honolulu",
+   "source": "nasa-power"
+  },
+  "idaho": {
+   "kwhPerKw": 1523,
+   "city": "Boise",
+   "source": "nasa-power"
+  },
+  "illinois": {
+   "kwhPerKw": 1236,
+   "city": "Chicago",
+   "source": "nasa-power"
+  },
+  "indiana": {
+   "kwhPerKw": 1270,
+   "city": "Indianapolis",
+   "source": "nasa-power"
+  },
+  "iowa": {
+   "kwhPerKw": 1346,
+   "city": "Des Moines",
+   "source": "nasa-power"
+  },
+  "kansas": {
+   "kwhPerKw": 1504,
+   "city": "Wichita",
+   "source": "nasa-power"
+  },
+  "kentucky": {
+   "kwhPerKw": 1282,
+   "city": "Louisville",
+   "source": "nasa-power"
+  },
+  "louisiana": {
+   "kwhPerKw": 1440,
+   "city": "New Orleans",
+   "source": "nasa-power"
+  },
+  "maine": {
+   "kwhPerKw": 1252,
+   "city": "Portland",
+   "source": "nasa-power"
+  },
+  "maryland": {
+   "kwhPerKw": 1300,
+   "city": "Baltimore",
+   "source": "nasa-power"
+  },
+  "massachusetts": {
+   "kwhPerKw": 1264,
+   "city": "Boston",
+   "source": "nasa-power"
+  },
+  "michigan": {
+   "kwhPerKw": 1217,
+   "city": "Detroit",
+   "source": "nasa-power"
+  },
+  "minnesota": {
+   "kwhPerKw": 1291,
+   "city": "Minneapolis",
+   "source": "nasa-power"
+  },
+  "mississippi": {
+   "kwhPerKw": 1442,
+   "city": "Jackson",
+   "source": "nasa-power"
+  },
+  "missouri": {
+   "kwhPerKw": 1379,
+   "city": "Kansas City",
+   "source": "nasa-power"
+  },
+  "montana": {
+   "kwhPerKw": 1403,
+   "city": "Billings",
+   "source": "nasa-power"
+  },
+  "nebraska": {
+   "kwhPerKw": 1377,
+   "city": "Omaha",
+   "source": "nasa-power"
+  },
+  "nevada": {
+   "kwhPerKw": 1861,
+   "city": "Las Vegas",
+   "source": "nasa-power"
+  },
+  "new-hampshire": {
+   "kwhPerKw": 1264,
+   "city": "Manchester",
+   "source": "nasa-power"
+  },
+  "new-jersey": {
+   "kwhPerKw": 1271,
+   "city": "Newark",
+   "source": "nasa-power"
+  },
+  "new-mexico": {
+   "kwhPerKw": 1831,
+   "city": "Albuquerque",
+   "source": "nasa-power"
+  },
+  "new-york": {
+   "kwhPerKw": 1271,
+   "city": "New York",
+   "source": "nasa-power"
+  },
+  "north-carolina": {
+   "kwhPerKw": 1420,
+   "city": "Charlotte",
+   "source": "nasa-power"
+  },
+  "north-dakota": {
+   "kwhPerKw": 1341,
+   "city": "Fargo",
+   "source": "nasa-power"
+  },
+  "ohio": {
+   "kwhPerKw": 1214,
+   "city": "Columbus",
+   "source": "nasa-power"
+  },
+  "oklahoma": {
+   "kwhPerKw": 1520,
+   "city": "Oklahoma City",
+   "source": "nasa-power"
+  },
+  "oregon": {
+   "kwhPerKw": 1214,
+   "city": "Portland",
+   "source": "nasa-power"
+  },
+  "pennsylvania": {
+   "kwhPerKw": 1311,
+   "city": "Philadelphia",
+   "source": "nasa-power"
+  },
+  "rhode-island": {
+   "kwhPerKw": 1301,
+   "city": "Providence",
+   "source": "nasa-power"
+  },
+  "south-carolina": {
+   "kwhPerKw": 1467,
+   "city": "Charleston",
+   "source": "nasa-power"
+  },
+  "south-dakota": {
+   "kwhPerKw": 1380,
+   "city": "Sioux Falls",
+   "source": "nasa-power"
+  },
+  "tennessee": {
+   "kwhPerKw": 1327,
+   "city": "Nashville",
+   "source": "nasa-power"
+  },
+  "texas": {
+   "kwhPerKw": 1409,
+   "city": "Houston",
+   "source": "nasa-power"
+  },
+  "utah": {
+   "kwhPerKw": 1592,
+   "city": "Salt Lake City",
+   "source": "nasa-power"
+  },
+  "vermont": {
+   "kwhPerKw": 1155,
+   "city": "Burlington",
+   "source": "nasa-power"
+  },
+  "virginia": {
+   "kwhPerKw": 1373,
+   "city": "Virginia Beach",
+   "source": "nasa-power"
+  },
+  "washington": {
+   "kwhPerKw": 1138,
+   "city": "Seattle",
+   "source": "nasa-power"
+  },
+  "west-virginia": {
+   "kwhPerKw": 1245,
+   "city": "Charleston",
+   "source": "nasa-power"
+  },
+  "wisconsin": {
+   "kwhPerKw": 1208,
+   "city": "Milwaukee",
+   "source": "nasa-power"
+  },
+  "wyoming": {
+   "kwhPerKw": 1545,
+   "city": "Cheyenne",
+   "source": "nasa-power"
   }
+ },
+ "calibration": {
+  "performanceRatio": 0.801,
+  "states": 10,
+  "maxError": 0.1045
  },
  "nyPanelWattsMedian": 425,
  "nyReported2025": {

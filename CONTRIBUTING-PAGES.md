@@ -21,7 +21,7 @@ Les sites concurrents (Angi, HomeBuddy, roofingcalculator.com…) sont des gén�
 | Salaires horaires par métier et par État | BLS OEWS mai 2025 (publié le 15 mai 2026) | `src/data/wages.json` |
 | Part matériaux, salaires, avantages, sous-traitance par type d'entreprise | Census, Economic Census 2022 (EC2223BASIC, EC2248BASIC) | `src/data/shares.json` |
 | Électricité, gaz, propane, fioul, essence, consommation moyenne | EIA (EPM 5.6.B jan.-juil. 2026, EIA-861 2024, prix saison oct. 2025-mars 2026), RECS 2020 | `src/data/energy.json` |
-| Production solaire par kW, dispersion des prix NY, puissance médiane des panneaux | NLR PVWatts v8, NYSERDA (data.ny.gov) | `src/data/solar.json` |
+| Production solaire par kW, dispersion des prix NY, puissance médiane des panneaux | NLR PVWatts v8 (10 États : la clé DEMO_KEY ne permet que 10 appels par jour), sinon NASA POWER × ratio de performance calé sur PVWatts (écart max 10 %) ; NYSERDA (data.ny.gov) | `src/data/solar.json` |
 | Aléas FEMA (pertes annuelles attendues), licence de couvreur, code du bâtiment | FEMA NRI déc. 2025, sites officiels des États | `src/data/state-facts.json` (dossier complet : `research/state-facts.json`) |
 | Constantes (rendement des sacs, couverture peinture, bundles par square, densités, rendements énergétiques, prix solaires EnergySage, sources) | fiches fabricants, DOT, extension universitaire, eCFR, NLR | `src/data/params-2026.json` |
 
@@ -134,6 +134,10 @@ node $S/check-layout.mjs dist > /tmp/layout-uhc.log 2>&1   # long
 ```
 
 Arrêter un serveur par son port (`lsof -ti tcp:4423 | xargs kill`), jamais `pkill -f`.
+
+## Compléter PVWatts
+
+`scripts/pvwatts-fetch.sh` (villes : `research/solar/cities.tsv`) récupère un État toutes les 6 minutes et saute ceux déjà présents dans `.cache-raw/pvwatts/`. Avec DEMO_KEY, 10 États par jour ; avec une clé gratuite NLR (à demander par l'éditeur), tout en une heure. Puis `python3 scripts/build-data.py` : chaque État passe de `nasa-power` à `pvwatts`.
 
 ## Mise à jour annuelle
 

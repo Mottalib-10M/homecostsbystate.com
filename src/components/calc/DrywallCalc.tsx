@@ -16,7 +16,7 @@ export default function DrywallCalc({ sheets, per1000, methodHref = '/en/method/
   useEffect(() => { const u = readParams(window.location.search); setL(qn(u, 'l', 12)); setW(qn(u, 'w', 12)); setH(qn(u, 'h', 8)); setCeiling(str(u, 'ce', '1') === '0' ? '0' : '1'); const s = str(u, 'sz', '4x8'); setSize(sheets[s] ? s : '4x8'); setDoors(qn(u, 'do', 1)); setWindows(qn(u, 'wi', 1)); setWaste(qn(u, 'wa', 10)); setPrice(qn(u, 'pr', 0)); }, []);
   useEffect(() => { updateURL({ l, w, h, ce: ceiling, sz: size, do: doors, wi: windows, wa: waste, pr: price || undefined }); }, [l, w, h, ceiling, size, doors, windows, waste, price]);
   const a = useMemo(() => roomPaintArea({ lengthFt: l, widthFt: w, heightFt: h, doors, windows, doorSqFt: 21, windowSqFt: 15, ceiling: ceiling === '1' }), [l, w, h, doors, windows, ceiling]);
-  const d = drywall({ areaSqFt: a.total, sheetSqFt: sheets[size], wastePct: waste, per1000: { screws: per1000.screwsLb, tapeFt: per1000.tapeFt, compoundLb: per1000.compoundGal } });
+  const d = drywall({ areaSqFt: a.total, sheetSqFt: sheets[size], wastePct: waste, per1000: { screws: per1000.screwsLb, tapeFt: per1000.tapeFt, compoundGal: per1000.compoundGal } });
   const p = idPrefix;
   return (
     <Card form={<>
@@ -31,7 +31,7 @@ export default function DrywallCalc({ sheets, per1000, methodHref = '/en/method/
       <NumberField id={`${p}-pr`} label="Price per sheet (optional)" value={price} onChange={setPrice} unit="$" max={1000} decimals={2} />
     </>}>
       <Result label="Drywall sheets" figure={num(d.sheets)} sub={<>{size.replace('x', ' x ')} ft sheets for {num(a.total)} sq ft of walls{ceiling === '1' ? ' and ceiling' : ''}, plus {num(waste)}%</>}>
-        <Rows rows={[['Board installed', `${num(d.boardSqFt)} sq ft`], ['Drywall screws', `${num(d.screws ?? 0, 1)} lb`], ['Joint tape', `${num(d.tapeFt ?? 0)} ft`], ['All-purpose joint compound', `${num(d.compoundLb ?? 0, 1)} gal`], ...(price > 0 ? [['Cost of the sheets', usd(d.sheets * price), true] as [string, string, boolean]] : [])]} />
+        <Rows rows={[['Board installed', `${num(d.boardSqFt)} sq ft`], ['Drywall screws', `${num(d.screws ?? 0, 1)} lb`], ['Joint tape', `${num(d.tapeFt ?? 0)} ft`], ['All-purpose joint compound', `${num(d.compoundGal ?? 0, 1)} gal`], ...(price > 0 ? [['Cost of the sheets', usd(d.sheets * price), true] as [string, string, boolean]] : [])]} />
         <Note methodHref={methodHref}>Screws, tape and compound scale USG’s figures for 1,000 sq ft of board ({num(per1000.screwsLb, 1)} lb, {num(per1000.tapeFt)} ft, {num(per1000.compoundGal)} gal) to the board you hang.</Note>
         <Actions />
       </Result>

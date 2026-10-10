@@ -303,25 +303,41 @@ def energy():
 
 # ---------------------------------------------------------------- Solaire
 def solar():
+    """Output of 1 kW (DC) per year for the largest city of each state. NLR PVWatts v8 where its API answered
+    (DEMO_KEY: 10 calls a day); elsewhere NASA POWER plane-of-array insolation (tilt = latitude - 15 deg)
+    times the median performance ratio PVWatts / POWER measured on the states computed both ways."""
     pv = {}
     pvdir = os.path.join(RAW, 'pvwatts')
     cities = {}
-    for line in open(os.path.join(pvdir, 'cities.tsv')):
+    for line in open(os.path.join(ROOT, 'research', 'solar', 'cities.tsv')):
         ab, city, lat, lon = line.rstrip('\n').split('\t')
         cities[ab] = (city, float(lat), float(lon))
+    poa = {}
+    for ab, name, _, _ in STATES:
+        f = os.path.join(RAW, 'nasa-power', f'{ab}.json')
+        if os.path.exists(f):
+            poa[ab] = json.load(open(f))['properties']['parameter']['SI_TILTED_AVG_LAT_MINUS15']['ANN'] * 365
+    calib = {}
     for ab, name, _, _ in STATES:
         f = os.path.join(pvdir, f'{ab}.json')
         if os.path.exists(f):
             j = json.load(open(f))
             if 'outputs' in j and j['outputs'].get('ac_annual'):
-                pv[slug(name)] = {'kwhPerKw': round(j['outputs']['ac_annual']), 'city': cities[ab][0], 'station': j.get('station_info', {}).get('weather_data_source')}
+                pv[slug(name)] = {'kwhPerKw': round(j['outputs']['ac_annual']), 'city': cities[ab][0], 'source': 'pvwatts'}
+                if ab in poa:
+                    calib[ab] = j['outputs']['ac_annual'] / poa[ab]
+    pr = float(np.median(list(calib.values())))
+    for ab, name, _, _ in STATES:
+        if slug(name) not in pv and ab in poa:
+            pv[slug(name)] = {'kwhPerKw': round(poa[ab] * pr), 'city': cities[ab][0], 'source': 'nasa-power'}
+    errs = [abs(poa[ab] * pr / (calib[ab] * poa[ab]) - 1) for ab in calib]
     ny = json.load(open(raw('ny-solar-2025.json')))
     x = [float(r['project_cost']) / float(r['totalnameplatekwdc']) / 1000 for r in ny
          if r.get('project_cost') and r.get('totalnameplatekwdc') and 2.5 <= float(r['totalnameplatekwdc']) <= 20]
     x = [v for v in x if 0.75 <= v <= 10]
     q = np.percentile(x, [20, 50, 80])
     w = [float(r['totalnameplatekwdc']) * 1000 / float(r['pv_module_quantity']) for r in ny if r.get('pv_module_quantity') and float(r['pv_module_quantity']) > 0 and r.get('totalnameplatekwdc')]
-    return {'pvwatts': pv, 'nyPanelWattsMedian': round(float(np.median(w))), 'nyReported2025': {'p20': round(float(q[0]), 2), 'median': round(float(q[1]), 2), 'p80': round(float(q[2]), 2), 'n': len(x),
+    return {'pvwatts': pv, 'calibration': {'performanceRatio': round(pr, 4), 'states': len(calib), 'maxError': round(max(errs), 4)}, 'nyPanelWattsMedian': round(float(np.median(w))), 'nyReported2025': {'p20': round(float(q[0]), 2), 'median': round(float(q[1]), 2), 'p80': round(float(q[2]), 2), 'n': len(x),
             'filter': 'Residential, purchased, complete, installed in 2025, 2.5 to 20 kWdc, $0.75 to $10/W'}}
 
 
