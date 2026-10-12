@@ -34,13 +34,13 @@ const statePages = page.id === ROOF_PILLAR ? STATE_PAGES : [];
 ---
 <PageLayout title={page.title} description={page.description} lang={lang} jsonLd={jsonLd} faqs={page.faqs} related={related} sources={sources} breadcrumbs={[{ label: group.label }, { label: page.nav }]}>
   <article>
-    <header class="mb-5">
-      <p class="text-sm font-semibold uppercase tracking-wide text-accent-700">{group.label} · no ZIP code asked</p>
-      <h1 class="mt-1 font-serif text-3xl font-bold text-navy-900 md:text-4xl">{page.h1}</h1>
-      <p class="mt-3 text-lg text-navy-700">{page.intro}</p>
-      <p class="mt-3 text-sm text-navy-600">{ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> · <a href={route('method', lang)} class="underline hover:text-navy-900">{label('method')}</a> · <a href={route('editorial', lang)} class="underline hover:text-navy-900">{ui.editorialPolicy}</a></p>
+    <header class="mb-4">
+      <p class="text-xs font-semibold uppercase tracking-wide text-accent-700 sm:text-sm">{group.label} · no ZIP code asked</p>
+      <h1 class="mt-1 font-serif text-[1.75rem] font-bold text-navy-900 max-sm:leading-tight sm:text-3xl md:text-4xl">{page.h1}</h1>
+      <p class="mt-2 text-base text-navy-700 sm:text-lg">{page.intro}</p>
     </header>
-    <div data-outil class="mb-8"><Tool kind={page.tool} state={page.toolProps?.state} idPrefix={page.id.slice(0, 6)} /></div>
+    <div data-outil class="mb-4"><Tool kind={page.tool} state={page.toolProps?.state} idPrefix={page.id.slice(0, 6)} /></div>
+    <p class="mb-6 text-sm text-navy-600">{ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> · <a href={route('method', lang)} class="underline hover:text-navy-900">{label('method')}</a> · <a href={route('editorial', lang)} class="underline hover:text-navy-900">{ui.editorialPolicy}</a></p>
     <Clamp text={page.resume} lang={lang} id={`clamp-${page.id}`} class="mb-8" />
     {statePages.length > 0 && (
       <section data-chrome class="mb-10">

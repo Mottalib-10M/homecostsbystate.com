@@ -67,7 +67,7 @@ export default function JobCalc({ jobs, states, state = US, lock = false, sqft =
   }, [extra, deck, dw, dl, joist]);
   return (
     <Card form={<>
-      <StatePick id={`${p}-state`} value={slug} onChange={setSlug} states={states} lock={lock} help={lock ? 'Prices use this state’s trade wages.' : 'Only the labor part changes from state to state.'} />
+      <StatePick id={`${p}-state`} value={slug} onChange={setSlug} states={states} lock={lock} help={lock ? 'Prices use this state’s trade wages.' : 'Only the labor part changes from state to state.'} className={extra ? 'sm:col-span-2' : ''} />
       {sqft && <NumberField id={`${p}-area`} label="Size of the house (living area)" value={area} onChange={setArea} unit="sq ft" max={20000} help="The Census survey groups roof jobs by house size." />}
       {extra === 'fence' && <>
         <NumberField id={`${p}-len`} label="Fence length" value={len} onChange={setLen} unit="ft" max={10000} />

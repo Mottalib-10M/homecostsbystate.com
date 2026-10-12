@@ -19,7 +19,7 @@ export default function MovingCalc({ states, wages, ratio, state = 'texas', lock
     <Card form={<>
       <StatePick id={`${p}-state`} value={slug} onChange={setSlug} states={states} lock={lock} />
       <NumberField id={`${p}-m`} label="Movers in the crew" value={movers} onChange={setMovers} unit="" max={20} />
-      <NumberField id={`${p}-h`} label="Hours of loading and unloading" value={hours} onChange={setHours} unit="h" max={100} decimals={1} help="Your estimate, or the hours on the mover’s written estimate." />
+      <NumberField id={`${p}-h`} label="Hours of loading and unloading" value={hours} onChange={setHours} unit="h" max={100} decimals={1} help="Your estimate, or the hours on the mover’s written estimate." className="sm:col-span-2" />
       <NumberField id={`${p}-t`} label="Driving time billed" value={travel} onChange={setTravel} unit="h" max={48} decimals={1} />
     </>}>
       <Result label={`Local move in ${name}`} figure={usd(r.typical)} sub={<>Range {usd(r.low)} to {usd(r.high)} for {num(r.crewHours, 1)} mover-hours</>}>

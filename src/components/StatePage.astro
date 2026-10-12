@@ -1,7 +1,7 @@
 ---
 /**
- * Roof replacement cost in one state: the state's figures in a strip (roofer wage, index, typical price),
- * the calculator locked on the state, the folded answer, the prose written for this state, then the
+ * Roof replacement cost in one state: the calculator locked on the state first (RECETTE §5, 2026-10-11), then
+ * the state's figures in a strip (roofer wage, index, typical price), the folded answer, the prose written for this state, then the
  * generated tables (other jobs in the state, trade wages), marked data-chrome because their form repeats
  * on every state page (RECETTE §6.4).
  */
@@ -44,19 +44,19 @@ const sizes = KIT.jobInput('roof').bySize!.map((b) => { const r = KIT.job('roof'
 ---
 <PageLayout title={def.title} description={def.description} lang={lang} jsonLd={jsonLd} faqs={def.faqs} related={related} sources={sources} breadcrumbs={[{ label: 'Roof replacement cost', href: route(ROOF_PILLAR, lang) }, { label: S.name }]}>
   <article>
-    <header class="mb-5">
-      <p class="text-sm font-semibold uppercase tracking-wide text-accent-700">Roof replacement · {S.abbr} · {S.divisionName}</p>
-      <h1 class="mt-1 font-serif text-3xl font-bold text-navy-900 md:text-4xl">{h1}</h1>
-      <p class="mt-3 text-lg text-navy-700">{def.intro}</p>
-      <p class="mt-3 text-sm text-navy-600">Wages: BLS, {WAGE_REF.reference} (released <time datetime={WAGE_REF.released}>{day(WAGE_REF.released)}</time>) · figures checked <time datetime={LAST_UPDATED}>{day(LAST_UPDATED)}</time> · {ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> · <a href={route('method', lang)} class="underline hover:text-navy-900">{label('method')}</a></p>
+    <header class="mb-4">
+      <p class="text-xs font-semibold uppercase tracking-wide text-accent-700 sm:text-sm">Roof replacement · {S.abbr} · {S.divisionName}</p>
+      <h1 class="mt-1 font-serif text-[1.75rem] font-bold text-navy-900 max-sm:leading-tight sm:text-3xl md:text-4xl">{h1}</h1>
+      <p class="mt-2 text-base text-navy-700 sm:text-lg">{def.intro}</p>
     </header>
+    <div data-outil class="mb-4"><Tool kind="roof-cost" state={def.slug} lock={true} idPrefix={`${S.abbr.toLowerCase()}rf`} /></div>
+    <p class="mb-6 text-sm text-navy-600">Wages: BLS, {WAGE_REF.reference} (released <time datetime={WAGE_REF.released}>{day(WAGE_REF.released)}</time>) · figures checked <time datetime={LAST_UPDATED}>{day(LAST_UPDATED)}</time> · {ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> · <a href={route('method', lang)} class="underline hover:text-navy-900">{label('method')}</a></p>
     <dl data-chrome class="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
       <div class="rounded-lg border border-navy-200 p-3"><dt class="text-xs text-navy-600">Typical roof job, all house sizes</dt><dd class="tabular-nums text-xl font-bold text-navy-900">{usd(roof.typical)}</dd></div>
       <div class="rounded-lg border border-navy-200 p-3"><dt class="text-xs text-navy-600">Middle half of jobs</dt><dd class="tabular-nums text-base font-semibold text-navy-900">{usd(roof.low)} to {usd(roof.high)}</dd></div>
       <div class="rounded-lg border border-navy-200 p-3"><dt class="text-xs text-navy-600">Roofer mean wage</dt><dd class="tabular-nums text-xl font-bold text-navy-900">{w ? `${usd(w.mean, 2)}/h` : 'n/a'}</dd></div>
       <div class="rounded-lg border border-navy-200 p-3"><dt class="text-xs text-navy-600">Versus U.S. roofers</dt><dd class="tabular-nums text-xl font-bold text-navy-900">{w ? `${w.mean >= nat.mean ? '+' : '−'}${num(Math.abs(w.mean / nat.mean - 1) * 100, 0)}%` : 'n/a'}</dd></div>
     </dl>
-    <div data-outil class="mb-8"><Tool kind="roof-cost" state={def.slug} lock={true} idPrefix={`${S.abbr.toLowerCase()}rf`} /></div>
     <Clamp text={def.resume} lang={lang} id={`clamp-roof-${def.slug}`} class="mb-8" />
     <div class="prose prose-slate max-w-none prose-headings:font-serif">
       {parts.map((p, i) => i % 3 === 0 ? <Fragment set:html={p ?? ''} /> : i % 3 === 1 ? <MiniSim client:load kind={p} arg={decode(parts[i + 1])} href={route(ROOF_PILLAR, lang)} /> : null)}

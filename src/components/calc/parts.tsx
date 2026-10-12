@@ -1,5 +1,5 @@
 /** Shared pieces of the calculators: card, state picker, result box, ledger rows, actions. */
-import { useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import SelectField from '../ui/SelectField';
 import { formatMoney, formatNumber } from '../../lib/format';
 
@@ -9,32 +9,49 @@ export interface Opt { value: string; label: string }
 
 export function Card({ children, form }: { children: ReactNode; form: ReactNode }) {
   return (
-    <div className="rechner rounded-xl border border-navy-200 bg-white p-4 sm:p-6">
-      <form className="grid gap-x-5 gap-y-4 sm:grid-cols-2" onSubmit={(e) => e.preventDefault()}>{form}</form>
-      {children}
+    <div className="rechner grid gap-6 rounded-xl border border-navy-200 bg-white p-4 sm:p-6 lg:grid-cols-2 lg:items-start">
+      <form className="grid content-start gap-x-5 gap-y-4 sm:grid-cols-2" onSubmit={(e) => e.preventDefault()}>{form}</form>
+      <div>{children}</div>
     </div>
   );
 }
 
-export function StatePick({ id, value, onChange, states, lock, label = 'State', help }: { id: string; value: string; onChange: (v: string) => void; states: Opt[]; lock?: boolean; label?: string; help?: string }) {
+export function StatePick({ id, value, onChange, states, lock, label = 'State', help, className = '' }: { id: string; value: string; onChange: (v: string) => void; states: Opt[]; lock?: boolean; label?: string; help?: string; className?: string }) {
   const name = states.find((s) => s.value === value)?.label ?? value;
   if (lock) return (
-    <div className="grid grid-rows-subgrid row-span-3 content-start gap-y-0">
+    <div className={`grid grid-rows-subgrid row-span-3 content-start gap-y-0 ${className}`}>
       <span className="mb-1 block text-sm font-medium text-navy-700">{label}</span>
       <p className="flex h-12 items-center rounded-lg border border-navy-200 bg-navy-50 px-4 font-semibold text-navy-900">{name}</p>
       {help && <span className="mt-1 text-xs text-navy-500">{help}</span>}
     </div>
   );
-  return <SelectField id={id} label={label} value={value} onChange={onChange} options={states} help={help} />;
+  return <SelectField id={id} label={label} value={value} onChange={onChange} options={states} help={help} className={className} />;
 }
 
 export function Result({ label, figure, sub, children }: { label: string; figure: string; sub?: ReactNode; children?: ReactNode }) {
+  // Phone: while the result card is below the screen, a bar pinned to the bottom shows the key figure (RECETTE §5, 2026-10-11).
+  const card = useRef<HTMLDivElement>(null);
+  const [below, setBelow] = useState(false);
+  useEffect(() => {
+    const el = card.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver(([e]) => setBelow(!e.isIntersecting && e.boundingClientRect.top > 0));
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
   return (
-    <div aria-live="polite" className="mt-6 rounded-xl bg-accent-50 p-4 sm:p-5">
+    <div ref={card} aria-live="polite" data-resultat className="rounded-xl bg-accent-50 p-4 sm:p-5">
       <p className="text-sm font-medium text-navy-700">{label}</p>
       <p className="tabular-nums mt-1 text-4xl font-bold text-navy-900">{figure}</p>
       {sub && <p className="ledger-range mt-1 text-sm">{sub}</p>}
       {children}
+      {below && (
+        <button type="button" aria-hidden="true" tabIndex={-1} onClick={() => card.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+          className="fixed inset-x-0 bottom-0 z-40 flex items-baseline justify-between gap-3 border-t border-accent-200 bg-accent-50 px-4 py-3 text-left shadow-lg lg:hidden">
+          <span className="text-sm font-medium text-navy-700">{label}</span>
+          <span className="tabular-nums text-xl font-bold text-navy-900">{figure}</span>
+        </button>
+      )}
     </div>
   );
 }
