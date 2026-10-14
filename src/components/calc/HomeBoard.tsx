@@ -18,7 +18,7 @@ export default function HomeBoard({ rows, states, solar, solarHref, solarLabel, 
   const name = slug === 'us' ? 'United States' : states.find((s) => s.value === slug)?.label ?? slug;
   return (
     <div className="rechner rounded-xl border border-navy-200 bg-white p-4 sm:p-6">
-      <form className="grid gap-x-5 gap-y-4 sm:grid-cols-2" onSubmit={(e) => e.preventDefault()}>
+      <form className="grid content-start gap-x-5 gap-y-4 sm:grid-cols-2" onSubmit={(e) => e.preventDefault()}>
         <SelectField id="board-state" label="Your state" value={slug} onChange={setSlug} options={states} help="Prices change at once; nothing is sent anywhere." />
       </form>
       <div aria-live="polite" className="mt-5 overflow-x-auto">
